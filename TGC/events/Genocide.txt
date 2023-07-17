@@ -1,8 +1,10 @@
 #Graves Discovered in $PROVINCENAME$ - Province has majority
 province_event = {
+			
 	id = 169000
 	title = "EVTNAME169000"
 	desc = "EVTDESC169000"
+	picture = "prov_warcrime"
 
 	trigger = {
 		owner = { has_country_modifier = internment_camps_modifier }
@@ -717,7 +719,7 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.8
-			owner = { invention = the_police_state }
+			owner = { invention = police_state }
 		}
 		modifier = {
 			factor = 0.7
@@ -8951,11 +8953,11 @@ country_event = {
 
 		add_country_modifier = { name = evidence_of_massacre duration = 730 }
 		random_owned = {
-			limit = { owner = { NOT = { prestige = 100 } } }
-			owner = { prestige = -25 }
+			limit = { owner = { NOT = { prestige = 200 } } }
+			owner = { prestige = -50 }
 		}
 		random_owned = {
-			limit = { owner = { prestige = 100 } }
+			limit = { owner = { prestige = 200 } }
 			owner = { prestige_factor = -0.25 }
 		}
 		any_country = {

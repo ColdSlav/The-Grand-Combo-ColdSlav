@@ -189,7 +189,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA37710"
-		prestige = -25
+		#prestige = -50
 		set_country_flag = carlism_prevails
 		remove_country_modifier = la_guardia_civil
 
@@ -471,7 +471,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA37713"
-		prestige = -2
+		prestige = -4
 		random_owned = {
 			limit = {
 				is_colonial = no
@@ -539,9 +539,11 @@ country_event = {
 
 #Carlist Propaganda
 province_event = {
+			
 	id = 37743
 	title = "EVTNAME37743"
 	desc = "EVTDESC37743"
+	picture = "prov_propaganda"
 
 	trigger = {
 		owner = {
@@ -660,7 +662,7 @@ province_event = {
 
 	option = {
 		name = "EVTOPTA37743"
-		owner = { prestige = -2 }
+		owner = { prestige = -4 }
 		random_pop = {
 			limit = {
 				OR = {
@@ -727,9 +729,11 @@ province_event = {
 
 #Carlist Sympathies
 province_event = {
+			
 	id = 37714
 	title = "EVTNAME37714"
 	desc = "EVTDESC37714"
+	picture = "prov_carlists"
 
 	trigger = {
 		NOT = { has_global_flag = carlists_pacified }
@@ -895,9 +899,11 @@ province_event = {
 
 #Carlist Cell Discovered!
 province_event = {
+			
 	id = 37715
 	title = "EVTNAME37715"
 	desc = "EVTDESC37715"
+	picture = "prov_terrorists"
 
 	trigger = {
 		owner = { tag = SPA }
@@ -1034,7 +1040,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA37716"
-		prestige = -25
+		prestige = -50
 		clr_country_flag = carlism_prevails
 
 
@@ -1185,7 +1191,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA37717"
-		prestige = -2
+		prestige = -4
 		random_owned = {
 			limit = {
 			is_colonial = no
@@ -1243,9 +1249,11 @@ country_event = {
 
 #Christino Propaganda
 province_event = {
+			
 	id = 37744
 	title = "EVTNAME37744"
 	desc = "EVTDESC37744"
+	picture = "prov_propaganda"
 
 	trigger = {
 		NOT = { has_global_flag = carlists_pacified }
@@ -1342,7 +1350,7 @@ province_event = {
 
 	option = {
 		name = "EVTOPTA37744"
-		owner = { prestige = -2 }
+		owner = { prestige = -4 }
 		random_pop = {
 			limit = {
 				NOT = { culture = basque }
@@ -1407,9 +1415,11 @@ province_event = {
 
 #Christino Sympathies
 province_event = {
+			
 	id = 37718
 	title = "EVTNAME37718"
 	desc = "EVTDESC37718"
+	picture = "prov_christianos"
 
 	trigger = {
 		NOT = { has_global_flag = carlists_pacified }
@@ -1549,9 +1559,11 @@ province_event = {
 
 #Christino Cell Discovered!
 province_event = {
+			
 	id = 37719
 	title = "EVTNAME37719"
 	desc = "EVTDESC37719"
+	picture = "prov_terrorists"
 
 	trigger = {
 		owner = { tag = SPA }

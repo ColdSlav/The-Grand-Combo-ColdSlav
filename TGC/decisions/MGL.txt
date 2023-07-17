@@ -2,7 +2,7 @@ political_decisions = {
 	
 #from Irredentism.txt
 	claim_greater_mongolia = {
-	picture = claim_greater_mongolia
+		picture = claim_greater_mongolia
 		potential = {
 			tag = MGL
 			NOT = { has_country_flag = claim_greater_mongolia }
@@ -11,11 +11,8 @@ political_decisions = {
 		allow = {
 			war = no
 			is_vassal = no
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-			prestige = 45
+			rank = 16
+			prestige = 90
 		}
 
 		effect = {

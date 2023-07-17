@@ -35,7 +35,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA40000"
 
-		prestige = 5
+		prestige = 10
 	}
 }
 
@@ -53,7 +53,7 @@ country_event = {
 		name = "EVTOPTA110011"
 
 		treasury = 135000
-		prestige = 5
+		prestige = 10
 		years_of_research = 2.0
 		FROM = {
 			diplomatic_influence = { who = THIS value = 400 }
@@ -215,7 +215,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA900020"
 
-		prestige = 5
+		prestige = 10
 		any_pop	= {
 			consciousness = -0.50
 			militancy = -0.50
@@ -254,7 +254,7 @@ country_event = {
 			militancy = 1
 			consciousness = 1
 		}
-		prestige = -15
+		prestige = -30
 		remove_country_modifier = silver_age
 		clr_country_flag = silver_age
 	}
@@ -612,14 +612,13 @@ country_event = {
 	option = {
 		name = "EVTOPTA110029"
 
-		prestige = 5
+		prestige = 10
 		relation = { who = RUS value = 50 }
 		add_country_modifier = { name = exemplary_troops duration = 1825 }
 		any_pop = {
 			limit = {
 				OR = {
 					has_pop_culture = circassian
-					has_pop_culture = dagestani
 					has_pop_culture = chechen
 				}
 			}
@@ -720,16 +719,24 @@ country_event = {
 		name = "EVTOPTA100019"
 
 		prestige_factor = -0.25
-		1204 = { secede_province = FROM remove_core = THIS }
+		### Old Karakum Desert (1204) ###
+		1204 = { secede_province = FROM remove_core = THIS } # Karakum Desert
+		3630 = { secede_province = FROM remove_core = THIS } # Firuza
+		3631 = { secede_province = FROM remove_core = THIS } # Sarakhs
+		3641 = { secede_province = FROM remove_core = THIS } # Kala-e Naw
 		random_owned = {
-			limit = { province_id = 686 }
+			limit = { province_id = 686 } # Merv
 			secede_province = FROM
 			remove_core = THIS
 		}
-		686 = { remove_core = KHR }
+		686 = { remove_core = KHR } 
 		1116 = { remove_core = TKM }
 		1150 = { remove_core = TKM }
 		1147 = { remove_core = TKM }
+		### Old Kyzyl-Su (1205) ###
+		1205 = { add_core = TKM } # Kyzyl-Su
+		3632 = { add_core = TKM } # Kara-Kum
+		
 		relation = { who = FROM value = 100 }
 		any_pop = { limit = { is_primary_culture = yes } militancy = 1 }
 		FROM = {
@@ -807,7 +814,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA110043"
 
-		prestige = 5
+		prestige = 10
 		capital = 1121
 		1121 = {
 			any_pop = {
@@ -821,7 +828,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB110043"
 
-		prestige = 5
+		prestige = 10
 		capital = 1125
 		1125 = {
 			any_pop = {
@@ -835,7 +842,7 @@ country_event = {
 	option = {
 		name = "EVTOPTC110043"
 
-		prestige = 5
+		prestige = 10
 		capital = 1108
 		1108 = {
 			any_pop = {
@@ -849,7 +856,7 @@ country_event = {
 	option = {
 		name = "EVTOPTD110043"
 
-		prestige = 5
+		prestige = 10
 		capital = 1127
 		1127 = {
 			any_pop = {
@@ -863,7 +870,7 @@ country_event = {
 	option = {
 		name = "EVTOPTE110043"
 
-		prestige = 5
+		prestige = 10
 		capital = 1135
 		1135 = {
 			any_pop = {
@@ -898,7 +905,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA110085"
 		remove_country_modifier = amir_kabir
-		prestige = 5
+		prestige = 10
 		PER = {
 			relation = { who = ENG value = 25 }
 			relation = { who = RUS value = 25 }
@@ -965,7 +972,7 @@ country_event = {
 		name = "EVTOPTA110086"
 
 		remove_country_modifier = amir_kabir
-		prestige = -5
+		prestige = -10
 		any_pop = {
 			scaled_militancy = { ideology = liberal factor = 3 }
 			scaled_militancy = { ideology = reactionary factor = -1 }
@@ -980,7 +987,7 @@ country_event = {
 
 		remove_country_modifier = amir_kabir
 		set_global_flag = amir_kabir_exiled
-		prestige = -3
+		prestige = -6
 
 		clergymen = { reduce_pop = 0.99 }
 		bureaucrats = { reduce_pop = 0.99 }
@@ -1145,7 +1152,7 @@ country_event = {
 		option = {
 			name = "EVTOPTB301000"
 
-			prestige = 2
+			prestige = 4
 			any_pop = {
 				limit = { has_pop_culture = kurdish }
 				militancy = 4
@@ -1207,18 +1214,18 @@ country_event = {
 
 		trigger = {
 			tag = PER
-			owns = 1205 # TODO which province is this supposed to be?
+			owns = 1204 # TODO which province is this supposed to be? #Perfo: I don't know either but 1205 was uncolonized before so this one should do
 		}
 
 		mean_time_to_happen = {
 			months = 72
 			modifier = {
 				factor = 0.5
-				1205 = { average_militancy = 3 }
+				1204 = { average_militancy = 3 }
 			}
 			modifier = {
 				factor = 0.5
-				1205 = { average_militancy = 6 }
+				1204 = { average_militancy = 6 }
 			}
 		}
 
@@ -1227,7 +1234,7 @@ country_event = {
 		option = {
 			name = "EVTOPTA301013"
 
-			1205 = {
+			1204 = {
 				any_pop = {
 					limit = { has_pop_culture = turkmen }
 					militancy = -1
@@ -1304,7 +1311,7 @@ country_event = {
 			option = {
 				name = "EVTOPTA301020"
 
-				prestige = 2
+				prestige = 4
 				1121 = { any_pop = { scaled_militancy = { factor = -1 ideology = reactionary } } }
 				RUS = {
 					relation = { who = THIS value = -10 }
@@ -1319,7 +1326,7 @@ country_event = {
 			option = {
 				name = "EVTOPTB301020"
 
-				prestige = -5
+				prestige = -10
 				1121 = {
 					any_pop = {
 						scaled_consciousness = { factor = 2 ideology = reactionary }
@@ -1382,7 +1389,7 @@ country_event = {
 				set_country_flag = the_war_drums
 				PER = { country_event = { id = 301023 days = 10 } }
 				badboy = 4
-				prestige = 2
+				prestige = 4
 				any_pop = {
 					limit = {
 						OR = {
@@ -1424,7 +1431,7 @@ country_event = {
 			option = {
 				name = "EVTOPTC301021"
 
-				prestige = -5
+				prestige = -10
 				badboy = -2
 				diplomatic_influence = { who = PER value = -25 }
 				any_pop = {
@@ -1479,7 +1486,7 @@ country_event = {
 			option = {
 				name = "EVTOPTA301022"
 
-				prestige = -2
+				prestige = -4
 				RUS = {
 					diplomatic_influence = { who = PER value = 15 }
 					country_event = { id = 301025 days = 10 }
@@ -1522,7 +1529,7 @@ country_event = {
 			option = {
 				name = "EVTOPTC301022"
 
-				prestige = 1
+				prestige = 2
 				RUS = {
 					relation = { who = THIS value = -25 }
 					diplomatic_influence = { who = THIS value = -30 }
@@ -1553,7 +1560,7 @@ country_event = {
 			option = {
 				name = "EVTOPTA301023"
 
-				prestige = -2
+				prestige = -4
 				RUS = {
 					diplomatic_influence = { who = THIS value = 20 }
 					country_event = { id = 301025 days = 10 }
@@ -1600,7 +1607,7 @@ country_event = {
 			option = {
 				name = "EVTOPTD301023"
 
-				prestige = 2
+				prestige = 4
 				RUS = {
 					relation = { who = THIS value = -20 }
 					diplomatic_influence = { who = THIS value = -25 }
@@ -1747,7 +1754,7 @@ country_event = {
 				name = "EVTOPTA301025"
 
 				clr_country_flag = the_war_drums
-				prestige = 2
+				prestige = 4
 				relation = { who = PER value = 30 }
 				diplomatic_influence = { value = 5 who = PER }
 				PER = { country_event = { id = 301028 days = 10 } }
@@ -1822,7 +1829,7 @@ country_event = {
 			option = {
 				name = "EVTOPTA301030"
 
-				prestige = 10
+				prestige = 20
 				PER = { release = AZB }
 				create_vassal = AZB
 				diplomatic_influence = { who = AZB value = 400 }
@@ -1911,7 +1918,7 @@ country_event = {
 			option = {
 				name = "EVTOPTA301030"
 
-				prestige = 10
+				prestige = 20
 				PER = {
 					release = AZB
 					create_vassal = AZB
@@ -2084,7 +2091,7 @@ country_event = {
 				name = "EVTOPTA301026"
 
 				clr_country_flag = the_war_drums
-				prestige = -5
+				prestige = -10
 				badboy = -2
 				any_pop = {
 					limit = {
@@ -2217,12 +2224,16 @@ country_event = {
 			RDL = { any_owned = { limit = { is_core = TUR } remove_core = TUR } }
 			MKN = { any_owned = { limit = { is_core = TUR } remove_core = TUR } }
 			URM = { any_owned = { limit = { is_core = TUR } remove_core = TUR } }
+			MKU = { any_owned = { limit = { is_core = TUR } remove_core = TUR } }
 
 			SRN = { any_owned = { limit = { is_core = PER } remove_core = PER } }
 			BNB = { any_owned = { limit = { is_core = PER } remove_core = PER } }
 			BDN = { any_owned = { limit = { is_core = PER } remove_core = PER } }
+			BZD = { any_owned = { limit = { is_core = PER } remove_core = PER } }
 			BTL = { any_owned = { limit = { is_core = PER } remove_core = PER } }
 			BHT = { any_owned = { limit = { is_core = PER } remove_core = PER } }
+			MLN = { any_owned = { limit = { is_core = PER } remove_core = PER } }
+			KHL = { any_owned = { limit = { is_core = PER } remove_core = PER } }
 
 			ENG = {
 				diplomatic_influence = { who = PER value = 15 }
@@ -2248,10 +2259,14 @@ country_event = {
 				inherit = RDL
 				inherit = MKN
 				inherit = URM
+				inherit = MKU
 			}
 			1108 = { add_core = TUR }
 			1109 = { add_core = TUR }
-			1110 = { add_core = TUR }
+			### Old Urmia (1110)
+			1110 = { add_core = TUR } # Urmia
+			3608 = { add_core = TUR } # Dustan
+			3612 = { add_core = TUR } # Qotur
 			1111 = { add_core = TUR }
 			1117 = { add_core = TUR }
 			1118 = { add_core = TUR }
@@ -2259,6 +2274,7 @@ country_event = {
 			1120 = { add_core = TUR }
 			1133 = { add_core = TUR }
 			inherit = BDN
+			inherit = BZD
 			relation = { who = PER value = -200 }
 			war = {
 				target = PER
@@ -2380,10 +2396,15 @@ country_event = {
 				any_owned = {
 					limit = {
 						OR = {
-							region = TUR_885
+							### Old Kars (TUR_885) ###
+							region = TUR_885 # Kars
+							region = TUR_1096 # Batum
+							region = RUS_2548 # Sumarli
+							region = TUR_3383 # Qerekose
 							region = TUR_890
 							region = TUR_923
 							region = TUR_931
+							region = TUR_3292
 							region = TUR_935
 							region = ABU_1162
 						}
@@ -2397,6 +2418,8 @@ country_event = {
 				limit = {
 					OR = {
 						region = RUS_1098
+						region = RUS_1101
+						region = RUS_3767
 						region = PER_1112
 						region = PER_1122
 						region = PER_1128
@@ -2675,9 +2698,11 @@ country_event = {
 
 	# Province event after the formation of the Baha'i faith - missionaries in $PROVINCENAME$, results in religious insurrection
 	province_event = {
+			
 		id = 190303
 		title = "EVTNAME190303"
 		desc = "EVTDESC190303"
+		picture = "prov_imam"
 
 		trigger = {
 			OR = {
@@ -2796,7 +2821,7 @@ country_event = {
 		option = {
 			name = "EVTOPTB190304"
 
-			prestige = -3
+			prestige = -6
 
 			ai_chance = { factor = 2 }
 		}
@@ -2818,7 +2843,7 @@ country_event = {
 			money = 50000
 			set_country_flag = tobacco_regie_accepted
 			FROM = {
-				prestige = 5
+				prestige = 10
 				relation = { who = PER value = 50 }
 				diplomatic_influence = { who = PER value = 100 }
 			}
@@ -2837,7 +2862,7 @@ country_event = {
 		option = {
 			name = "EVTOPTB190305"
 
-			prestige = 5
+			prestige = 10
 			FROM = { country_event = 190307 }
 			any_pop = {
 				ideology = { factor = 0.04 value = liberal }
@@ -2863,7 +2888,7 @@ country_event = {
 		option = {
 			name = "EVTOPTA190306"
 
-			prestige = -3
+			prestige = -6
 			diplomatic_influence = { who = PER value = -25 }
 		}
 	}
@@ -2880,7 +2905,7 @@ country_event = {
 		option = {
 			name = "EVTOPTA190307"
 
-			prestige = -3
+			prestige = -6
 			money = 50000
 			relation = { who = PER value = -25 }
 			diplomatic_influence = { who = PER value = -150 }
@@ -2971,7 +2996,10 @@ country_event = {
 				scaled_consciousness = { factor = 3 ideology = reactionary }
 				scaled_militancy = { factor = 3 ideology = reactionary }
 			}
-			1110 = { add_province_modifier = { name = rgo_boycott_modifier duration = -1 } }
+			### Old Urmia (1110) ###
+			1110 = { add_province_modifier = { name = rgo_boycott_modifier duration = -1 } } # Urmia
+			3608 = { add_province_modifier = { name = rgo_boycott_modifier duration = -1 } } # Dustan
+			3612 = { add_province_modifier = { name = rgo_boycott_modifier duration = -1 } } # Qotur
 			1124 = { add_province_modifier = { name = rgo_boycott_modifier duration = -1 } }
 			1135 = { add_province_modifier = { name = rgo_boycott_modifier duration = -1 } }
 			1141 = { add_province_modifier = { name = rgo_boycott_modifier duration = -1 } }
@@ -3036,7 +3064,7 @@ country_event = {
 			name = "EVTOPTA190309"
 
 			clr_country_flag = tobacco_fatwa_happened
-			prestige = -10
+			prestige = -20
 			plurality = 5
 			money = -100000
 			any_pop = {
@@ -3074,7 +3102,7 @@ country_event = {
 			name = "EVTOPTB190309"
 
 			money = 10000
-			prestige = 5
+			prestige = 10
 			plurality = 2.5
 			set_country_flag = not_repealed_tobacco
 			any_greater_power = {
@@ -3135,7 +3163,7 @@ country_event = {
 			name = "EVTOPTA190310"
 
 			money = 100000
-			prestige = -5
+			prestige = -10
 			relation = { who = PER value = -100 }
 			diplomatic_influence = { who = PER value = -100 }
 
@@ -3145,7 +3173,7 @@ country_event = {
 		option = {
 			name = "EVTOPTB190310"
 
-			prestige = 10
+			prestige = 20
 			badboy = 5
 			relation = { who = ENG value = -100 }
 			relation = { who = PER value = -125 }
@@ -3270,7 +3298,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB190311"
 
-		prestige = -5
+		prestige = -10
 		years_of_research = 0.05
 		upper_house = { ideology = liberal value = 0.25 }
 		RUS = { diplomatic_influence = { who = PER value = 10 } }
@@ -3341,7 +3369,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA190312"
 
-		prestige = 10
+		prestige = 20
 		treasury = -25000
 		capital_scope = {
 			life_rating = 1
@@ -3361,7 +3389,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB190312"
 
-		prestige = -3
+		prestige = -6
 		random_country = {
 			limit = { neighbour = THIS }
 			relation = { who = PER value = 50 }
@@ -3535,7 +3563,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA190315"
 
-		prestige = -5
+		prestige = -10
 		plurality = 1
 		any_pop = {
 			limit = {
@@ -3602,7 +3630,7 @@ country_event = {
 		name = "EVTOPTB190316"
 
 		set_country_flag = hataria_visited
-		prestige = 2
+		prestige = 4
 		plurality = 3
 		money = -3000
 		years_of_research = 0.05
@@ -3677,7 +3705,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB190317"
 
-		prestige = 5
+		prestige = 10
 		1121 = { # Tehran
 			life_rating = -1
 			any_pop = { consciousness = -2 }
@@ -3728,7 +3756,7 @@ country_event = {
 		name = "EVTOPTA190318"
 
 		activate_technology = private_bank_money_bill_printing
-		prestige = 3
+		prestige = 6
 		money = 25000
 		any_pop = {
 			limit = {
@@ -3915,16 +3943,18 @@ country_event = {
 	option = {
 		name = "EVTOPTA190320"
 
-		prestige = 5
+		prestige = 10
 		plurality = 1
 	}
 }
 
 # Ahmadiyya Islam province event, Mirza Ghulam Ahmad first claims to be the Messiah - can fire in any HND-core province owned by a civilized country
 province_event = {
+			
 	id = 190321
 	title = "EVTNAME190321"
 	desc = "EVTDESC190321"
+	picture = "prov_imam"
 
 	trigger = {
 		is_core = HND
@@ -4030,7 +4060,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA190323"
 
-		prestige = 5
+		prestige = 10
 		any_pop = {
 			limit = { has_pop_culture = persian }
 			consciousness = 1
@@ -4128,7 +4158,7 @@ country_event = {
 		name = "EVTOPTA190325"
 
 		set_country_flag = using_persian_cossacks
-		prestige = -5
+		prestige = -10
 		any_pop = {
 			limit = {
 				OR = {
@@ -4140,7 +4170,7 @@ country_event = {
 			militancy = 1
 		}
 		RUS = {
-			prestige = 2
+			prestige = 4
 			relation = { who = THIS value = 50 }
 			diplomatic_influence = { who = THIS value = 25 }
 		}
@@ -4153,7 +4183,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB190325"
 
-		prestige = 3
+		prestige = 6
 		any_pop = {
 			limit = {
 				OR = {
@@ -4234,7 +4264,6 @@ country_event = {
 			remove_country_modifier = ambitious_union_boss
 			remove_country_modifier = dour_economist
 			remove_country_modifier = has_political_leader
-			remove_country_modifier = has_political_leader
 		random_owned = {
 			limit = { NOT = { has_global_flag = leader_events_disabled } }
 			owner = { add_country_modifier = { name = military_man duration = 3650 } add_country_modifier = { name = has_political_leader duration = 3650 } }
@@ -4299,7 +4328,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA190327"
 
-		prestige = -3
+		prestige = -6
 		set_country_flag = using_swedish_police
 		random_country = {
 			limit = {
@@ -4329,7 +4358,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB190327"
 
-		prestige = 2
+		prestige = 4
 		any_pop = {
 			consciousness = -1
 			militancy = 1
@@ -4466,7 +4495,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB190328"
 
-		prestige = 10
+		prestige = 20
 		set_country_flag = persian_constitution_rejected
 		plurality = -10
 		any_pop = {
@@ -4489,9 +4518,11 @@ country_event = {
 
 	# Province event - trouble brewing in Khorasan, +MIL, -Prestige; none of these "troubles" events can happen if Persia is a great power, or has very low average MIL
 	province_event = {
+			
 		id = 190329
 		title = "EVTNAME190329"
 		desc = "EVTDESC190329"
+		picture = "prov_unrest"
 
 		trigger = {
 			province_id = 1147 #Mashhad, capital of Khorasan
@@ -4526,7 +4557,7 @@ country_event = {
 			name = "EVTOPTA190329"
 
 			PER = {
-				prestige = -5
+				prestige = -10
 				set_country_flag = khorasan_secessionism
 			}
 			KHR = {
@@ -4578,14 +4609,14 @@ country_event = {
 		option = {
 			name = "EVTOPTA190330"
 
-			prestige = -5
+			prestige = -10
 			release = KHR
 			any_owned = {
 				limit = { is_core = KHR }
 				secede_province = KHR
 			}
 			KHR = {
-				prestige = 20
+				prestige = 40
 				leadership = 80
 				add_country_modifier = { name = small_country_draft duration = 895 }
 			}
@@ -4595,14 +4626,17 @@ country_event = {
 				defender_goal = { casus_belli = status_quo }
 			}
 			KHR = { inherit = ZFN }
+			KHR = { inherit = SHD }
 		}
 	}
 
 	# Province event - trouble brewing in Gilan, Jangali movement, +MIL, -Prestige
 	province_event = {
+			
 		id = 190331
 		title = "EVTNAME190331"
 		desc = "EVTDESC190331"
+		picture = "prov_unrest"
 
 		trigger = {
 			province_id = 1113 #Rasht, capital of Gilan
@@ -4637,7 +4671,7 @@ country_event = {
 			name = "EVTOPTA190331"
 
 			PER = {
-				prestige = -5
+				prestige = -10
 				set_country_flag = gilan_secessionism
 			}
 			GLN = {
@@ -4692,13 +4726,13 @@ country_event = {
 		option = {
 			name = "EVTOPTA190332"
 
-			prestige = -5
+			prestige = -10
 			any_owned = {
 				limit = { is_core = GLN }
 				secede_province = GLN
 			}
 			GLN = {
-				prestige = 20
+				prestige = 40
 				leadership = 80
 				add_country_modifier = { name = small_country_draft duration = 895 }
 			}
@@ -4741,14 +4775,14 @@ country_event = {
 		option = {
 			name = "EVTOPTA190333"
 
-			prestige = -5
+			prestige = -10
 			any_owned = {
 				limit = { is_core = GLN }
 				secede_province = GLN
 			}
 			GLN = {
 				government = proletarian_dictatorship
-				prestige = 20
+				prestige = 40
 				leadership = 80
 				add_country_modifier = { name = small_country_draft duration = 895 }
 				any_country = {
@@ -4770,9 +4804,11 @@ country_event = {
 
 	# Province event - trouble brewing in Kurdistan, with Simko Shikak rousing Kurds against Assyrians and attempting to create a new state
 	province_event = {
+			
 		id = 190334
 		title = "EVTNAME190334"
 		desc = "EVTDESC190334"
+		picture = "prov_unrest"
 
 		trigger = {
 			is_core = KDS
@@ -4806,7 +4842,7 @@ country_event = {
 			name = "EVTOPTA190334"
 
 			PER = {
-				prestige = -5
+				prestige = -10
 				remove_accepted_culture = kurdish
 			}
 			state_scope = {
@@ -4827,9 +4863,11 @@ country_event = {
 
 	# Province event - trouble brewing in Khuzestan, +MIL, -Prestige
 	province_event = {
+			
 		id = 190335
 		title = "EVTNAME190335"
 		desc = "EVTDESC190335"
+		picture = "prov_unrest"
 
 		trigger = {
 			province_id = 1135 #Shiraz, as Khuzestan will be independent
@@ -4863,7 +4901,7 @@ country_event = {
 			name = "EVTOPTA190335"
 
 			PER = {
-				prestige = -5
+				prestige = -10
 				set_country_flag = khuzestan_secessionism
 			}
 			KHZ = {
@@ -4929,14 +4967,14 @@ country_event = {
 		option = {
 			name = "EVTOPTA190336"
 
-			prestige = -5
+			prestige = -10
 			release = KHZ
 			any_owned = {
 				limit = { is_core = KHZ }
 				secede_province = KHZ
 			}
 			KHZ = {
-				prestige = 20
+				prestige = 40
 				leadership = 80
 				add_country_modifier = { name = small_country_draft duration = 895 }
 			}
@@ -4986,7 +5024,7 @@ country_event = {
 		# Audax Validator "." Ignore_NEXT
 		kill_leader = "Reza Khan"
 		war_exhaustion = -50
-		prestige = -15
+		prestige = -30
 		years_of_research = 0.1
 		set_country_flag = pahlavis_usurped
 		any_pop = {
@@ -5031,7 +5069,6 @@ country_event = {
 			remove_country_modifier = ambitious_union_boss
 			remove_country_modifier = dour_economist
 			remove_country_modifier = has_political_leader
-			remove_country_modifier = has_political_leader
 		random_owned = {
 			limit = { NOT = { has_global_flag = leader_events_disabled } }
 			owner = { add_country_modifier = { name = military_man duration = 3650 } add_country_modifier = { name = has_political_leader duration = 3650 } }
@@ -5071,7 +5108,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA190338"
 
-		prestige = 5
+		prestige = 10
 		any_pop = { consciousness = -2 }
 		plurality = -2
 	}
@@ -5108,7 +5145,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA190339"
 
-		prestige = -5
+		prestige = -10
 		any_owned = {
 			limit = { is_core = AZB }
 			secede_province = AZB
@@ -5116,7 +5153,7 @@ country_event = {
 		AZB = {
 			civilized = yes
 			government = democracy
-			prestige = 20
+			prestige = 40
 			leadership = 80
 			add_country_modifier = { name = small_country_draft duration = 895 }
 		}
@@ -5205,12 +5242,12 @@ country_event = {
 	option = {
 		name = "EVTOPTA190344"
 
-		prestige = -3
+		prestige = -6
 		money = -20000
 		years_of_research = -0.5
 		ENG = { diplomatic_influence = { who = THIS value = -30 } }
 		RUS = {
-			prestige = 2
+			prestige = 4
 			relation = { who = THIS value = 25 }
 			diplomatic_influence = { who = THIS value = 25 }
 		}
@@ -5239,7 +5276,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB190344"
 
-		ENG = { prestige = 5 }
+		ENG = { prestige = 10 }
 		RUS = {
 			relation = { who = THIS value = -50 }
 			diplomatic_influence = { who = THIS value = -25 }
@@ -5279,9 +5316,11 @@ country_event = {
 
 #The Allahdad
 province_event = {
+			
 	id = 190345
 	title = "EVTNAME190345"
 	desc = "EVTDESC190345"
+	picture = "prov_violence"
 
 	trigger = {
 		province_id = 1147 #Mashhad
@@ -5333,7 +5372,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA190346"
 
-		prestige = -3
+		prestige = -6
 		plurality = -1
 		1135 = {
 			any_pop = {
@@ -5434,7 +5473,10 @@ country_event = {
 			militancy = -2
 		}
 		all_core = { remove_province_modifier = rgo_boycott_modifier }
-		1110 = { trade_goods = tobacco add_province_modifier = { name = colonial_exploitation duration = -1 } }
+		### Old Urmia (1110) ###
+		1110 = { trade_goods = tobacco add_province_modifier = { name = colonial_exploitation duration = -1 } } # Urmia
+		3608 = { trade_goods = tobacco add_province_modifier = { name = colonial_exploitation duration = -1 } } # Dustan
+		3612 = { trade_goods = tobacco add_province_modifier = { name = colonial_exploitation duration = -1 } } # Qotur
 		1124 = { trade_goods = tobacco add_province_modifier = { name = colonial_exploitation duration = -1 } }
 		1135 = { trade_goods = tobacco add_province_modifier = { name = colonial_exploitation duration = -1 } }
 		1141 = { trade_goods = tobacco add_province_modifier = { name = colonial_exploitation duration = -1 } }
@@ -5467,7 +5509,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA190348"
 
-		prestige = -2
+		prestige = -4
 		KHR = { any_owned = { add_core = PER } }
 		war = {
 			target = KHR
@@ -5536,7 +5578,7 @@ country_event = {
 				country_event = { id = 190350 days = 15 }
 				release_vassal = HRT
 			}
-			prestige = 3
+			prestige = 6
 			money = 10000
 			relation = { who = PER value = -25 }
 			any_pop = { militancy = 3 }
@@ -5578,7 +5620,7 @@ country_event = {
 
 		trigger = {
 			tag = PER
-			owns = 1212
+			owns = 3646
 			HRT = { exists = no }
 			civilized = no
 			NOT = {
@@ -5622,7 +5664,7 @@ country_event = {
 				country_event = { id = 190352 days = 5 }
 				set_country_flag = herat_question
 			}
-			casus_belli ={
+			casus_belli = {
 				target = HRT
 				type = conquest
 				months = 5
@@ -5641,7 +5683,7 @@ country_event = {
 		option = {
 			name = "EVTOPTB190350"
 
-			prestige = -5
+			prestige = -10
 			HRT = { set_country_flag = herat_question }
 			any_owned = {
 				limit = { is_core = HRT }
@@ -5689,7 +5731,7 @@ country_event = {
 		option = {
 			name = "EVTOPTB190352"
 
-			prestige = 3
+			prestige = 6
 
 			ai_chance = { factor = 5 }
 		}
@@ -5729,7 +5771,7 @@ country_event = {
 
 			end_war = HRT
 			create_vassal = HRT
-			prestige = 3
+			prestige = 6
 			money = 5000
 
 			ai_chance = {
@@ -5848,7 +5890,7 @@ country_event = {
 		option = {
 			name = "EVTOPTB190355"
 
-			prestige = -5
+			prestige = -10
 
 			ai_chance = {
 				factor = 25
@@ -5901,7 +5943,7 @@ country_event = {
 			name = "EVTOPTA190357"
 
 			clr_country_flag = intervened_herat
-			prestige = 5
+			prestige = 10
 			war_exhaustion = -2
 			random_country = {
 				limit = {
@@ -6211,7 +6253,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA190360"
 
-		prestige = 5
+		prestige = 10
 		plurality = 2
 		any_pop = {
 			limit = {
@@ -6350,17 +6392,16 @@ country_event = {
 ## Molla Nasreddin ##
 
 	# Molla Nasreddin
-	province_event = {
+	country_event = {
+			
 		id = 190362
 		title = "EVTNAME190362"
 		desc = "EVTDESC190362"
 		picture = "molla_nasreddin"
 
 		trigger = {
-			# id = 1090 # What is this meant to do?
-			owned_by = PER
 			year = 1880
-			owner = { NOT = { press_rights = state_press } }
+			NOT = { press_rights = state_press }
 		}
 
 		mean_time_to_happen = {
@@ -6385,57 +6426,55 @@ country_event = {
 		option = {
 			name = "EVTOPTA190362"
 
-			owner = {
-				plurality = 1
-				any_pop = {
-					limit = {
-						OR = {
-							has_pop_religion = sunni
-							has_pop_religion = shiite
-							has_pop_religion = ibadi
-							has_pop_religion = druze
-							has_pop_religion = bektashi
-						}
-						NOT = {
-							type = clergymen
-							type = aristocrats
-						}
+			plurality = 1
+			any_pop = {
+				limit = {
+					OR = {
+						has_pop_religion = sunni
+						has_pop_religion = shiite
+						has_pop_religion = ibadi
+						has_pop_religion = druze
+						has_pop_religion = bektashi
 					}
-					ideology = { factor = 0.01 value = liberal }
-					ideology = { factor = 0.03 value = socialist }
-				}
-				any_pop = {
-					limit = {
-						OR = {
-							has_pop_religion = sunni
-							has_pop_religion = shiite
-							has_pop_religion = ibadi
-							has_pop_religion = druze
-							has_pop_religion = bektashi
-						}
+					NOT = {
+						type = clergymen
+						type = aristocrats
 					}
-					scaled_consciousness = { factor = 2 ideology = liberal }
-					scaled_militancy = { factor = 1 ideology = liberal }
-					scaled_militancy = { factor = 1 ideology = socialist }
-					scaled_consciousness = { factor = 2 ideology = reactionary }
-					scaled_militancy = { factor = 2 ideology = reactionary }
 				}
-				any_pop = {
-					limit = {
-						OR = {
-							has_pop_religion = sunni
-							has_pop_religion = shiite
-							has_pop_religion = ibadi
-							has_pop_religion = druze
-							has_pop_religion = bektashi
-						}
-						OR = {
-							type = clergymen
-							type = aristocrats
-						}
+				ideology = { factor = 0.01 value = liberal }
+				ideology = { factor = 0.03 value = socialist }
+			}
+			any_pop = {
+				limit = {
+					OR = {
+						has_pop_religion = sunni
+						has_pop_religion = shiite
+						has_pop_religion = ibadi
+						has_pop_religion = druze
+						has_pop_religion = bektashi
 					}
-					ideology = { factor = 0.075 value = reactionary }
 				}
+				scaled_consciousness = { factor = 2 ideology = liberal }
+				scaled_militancy = { factor = 1 ideology = liberal }
+				scaled_militancy = { factor = 1 ideology = socialist }
+				scaled_consciousness = { factor = 2 ideology = reactionary }
+				scaled_militancy = { factor = 2 ideology = reactionary }
+			}
+			any_pop = {
+				limit = {
+					OR = {
+						has_pop_religion = sunni
+						has_pop_religion = shiite
+						has_pop_religion = ibadi
+						has_pop_religion = druze
+						has_pop_religion = bektashi
+					}
+					OR = {
+						type = clergymen
+						type = aristocrats
+					}
+				}
+				ideology = { factor = 0.075 value = reactionary }
 			}
 			random_country = {
 				limit = {
@@ -7002,7 +7041,7 @@ country_event = {
 		name = "EVTOPTB190366"
 
 		set_country_flag = ulama_reigned_in
-		prestige = -10
+		prestige = -20
 		plurality = 5
 		years_of_research = 0.75
 		add_country_modifier = { name = national_instability duration = 750 }
@@ -7257,7 +7296,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB190368"
 
-		prestige = 2
+		prestige = 4
 		any_pop = { consciousness = -0.5 }
 
 		ai_chance = { factor = 0 }
@@ -7293,7 +7332,7 @@ country_event = {
 		name = "EVTOPTA190369"
 
 		money = -5000
-		prestige = 1
+		prestige = 2
 		1121 = {
 			any_pop = {
 				limit = { has_pop_religion = shiite }
@@ -7327,9 +7366,11 @@ country_event = {
 
 #Reaction event for GPs to the Dar al-Funun
 province_event = {
+			
 	id = 190370
 	title = "EVTNAME190370"
 	desc = "EVTDESC190370"
+	picture = "prov_uprising"
 
 	is_triggered_only = yes
 
@@ -7342,7 +7383,7 @@ province_event = {
 		clergymen = { reduce_pop = 0.99 }
 		owner = {
 			treasury = -5000
-			prestige = 1
+			prestige = 2
 			diplomatic_influence = { who = PER value = 15 }
 		}
 
@@ -7375,6 +7416,7 @@ province_event = {
 
 	#Blundering in $PROVINCENAME$
 	province_event = {
+			
 		id = 301110
 		title = "EVTNAME301110"
 		desc = "EVTDESC301110"
@@ -7390,7 +7432,7 @@ province_event = {
 			owned_by = PER
 			controlled_by = PER
 			OR = {
-				province_id = 1098 #Erivan
+				region = RUS_1098 #Erivan
 				province_id = 1108 #Tabriz
 				province_id = 1127 #Isfahan
 				province_id = 1135 #Shiraz
@@ -7603,12 +7645,7 @@ province_event = {
 		option = {
 			name = "EVTOPTA301111"
 
-			PER = {
-				random_owned = {
-					limit = { has_province_modifier = futile }
-					province_event = 301113
-				}
-			}
+			PER = { country_event = { id = 301113 days = 5 } } #This was a province event for some reason and it crashed the game
 			any_pop = {
 				limit = { has_pop_culture = armenian }
 				consciousness = -1
@@ -7621,13 +7658,8 @@ province_event = {
 		option = {
 			name = "EVTOPTB301111"
 
-			prestige = -10
-			PER = {
-				random_owned = {
-					limit = { has_province_modifier = futile }
-					province_event = 301112
-				}
-			}
+			prestige = -20
+			PER = { country_event = { id = 301112 days = 5 } }
 			any_pop = {
 				limit = { has_pop_culture = armenian }
 				consciousness = 1
@@ -7644,7 +7676,7 @@ province_event = {
 	}
 
 	#Russia returned the Armenian
-	province_event = {
+	country_event = {
 		id = 301112
 		title = "EVTNAME301112"
 		desc = "EVTDESC301112"
@@ -7669,27 +7701,25 @@ province_event = {
 				consciousness = -2
 				ideology = { factor = -0.01 value = reactionary }
 			}
-			owner = {
-				prestige = 5
-				any_pop = {
-					limit = {
-						OR = {
-							has_pop_religion = shiite
-							has_pop_religion = sunni
-							has_pop_religion = ibadi
-							has_pop_religion = druze
-							has_pop_religion = bektashi
-						}
+			prestige = 10
+			any_pop = {
+				limit = {
+					OR = {
+						has_pop_religion = shiite
+						has_pop_religion = sunni
+						has_pop_religion = ibadi
+						has_pop_religion = druze
+						has_pop_religion = bektashi
 					}
-					consciousness = -1
 				}
-				change_variable = { which = persian_ulama value = 3 }
+				consciousness = -1
 			}
+			change_variable = { which = persian_ulama value = 3 }
 		}
 	}
 
 	#Russia did not return the Armenian
-	province_event = {
+	country_event = {
 		id = 301113
 		title = "EVTNAME301113"
 		desc = "EVTDESC301113"
@@ -7708,7 +7738,7 @@ province_event = {
 				consciousness = 3
 				militancy = -2
 			}
-			owner = { change_variable = { which = persian_ulama value = -1 } }
+			change_variable = { which = persian_ulama value = -1 }
 
 			ai_chance = {
 				factor = 35
@@ -7727,7 +7757,7 @@ province_event = {
 		option = {
 			name = "EVTOPTB301113"
 
-			owner = { badboy = 8 }
+			badboy = 8
 			RUS = {
 				country_event = { id = 301115 days = 5 }
 				diplomatic_influence = { who = PER value = -50 }
@@ -7739,10 +7769,7 @@ province_event = {
 			}
 			any_country = {
 				limit = {
-					OR = {
-						is_secondary_power = yes
-						is_greater_power = yes
-					}
+					rank = 16
 					NOT = { tag = TUR }
 				}
 				relation = { who = PER value = -50 }
@@ -7760,7 +7787,7 @@ province_event = {
 				}
 				modifier = {
 					factor = 0.1
-					owner = { badboy = 0.4 }
+					badboy = 0.4
 				}
 			}
 		}
@@ -7789,22 +7816,20 @@ province_event = {
 				scaled_militancy = { factor = 3 ideology = conservative }
 				scaled_militancy = { factor = 6	ideology = reactionary }
 			}
-			owner = {
-				any_pop = {
-					limit = {
-						OR = {
-							has_pop_religion = shiite
-							has_pop_religion = sunni
-							has_pop_religion = ibadi
-							has_pop_religion = druze
-							has_pop_religion = bektashi
-						}
+			any_pop = {
+				limit = {
+					OR = {
+						has_pop_religion = shiite
+						has_pop_religion = sunni
+						has_pop_religion = ibadi
+						has_pop_religion = druze
+						has_pop_religion = bektashi
 					}
-					scaled_militancy = { factor = 2 ideology = reactionary }
-					scaled_consciousness = { factor = 1 ideology = reactionary }
 				}
-				change_variable = { which = persian_ulama value = -2 }
+				scaled_militancy = { factor = 2 ideology = reactionary }
+				scaled_consciousness = { factor = 1 ideology = reactionary }
 			}
+			change_variable = { which = persian_ulama value = -2 }
 
 			ai_chance = {
 				factor = 20
@@ -7873,10 +7898,7 @@ province_event = {
 			}
 			any_country = {
 				limit = {
-					OR = {
-						is_secondary_power = yes
-						is_greater_power = yes
-					}
+					rank = 16
 					NOT = { tag = TUR }
 				}
 				leave_alliance = PER
@@ -7916,7 +7938,7 @@ province_event = {
 		option = {
 			name = "EVTOPTB301115"
 
-			prestige = -20
+			prestige = -40
 			PER = {
 				random_owned = {
 					limit = { has_province_modifier = futile }
@@ -7937,6 +7959,7 @@ province_event = {
 
 	#Another Russo-Persian War
 	province_event = {
+			
 		id = 301116
 		title = "EVTNAME301116"
 		desc = "EVTDESC301116"
@@ -7948,7 +7971,7 @@ province_event = {
 			name = "EVTOPTA301116"
 
 			owner = {
-				prestige = -10
+				prestige = -20
 				change_variable = { which = persian_ulama value = -5 }
 			}
 		}
@@ -7956,6 +7979,7 @@ province_event = {
 
 	#Another Russo-Persian War
 	province_event = {
+			
 		id = 301117
 		title = "EVTNAME301117"
 		desc = "EVTDESC301117"

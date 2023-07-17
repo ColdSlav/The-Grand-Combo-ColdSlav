@@ -6,11 +6,7 @@ political_decisions = {
 	mobilize_tribesmen = {
 		picture = form_the_ikhwan
 		potential = {
-			OR = {
-				tag = CYR
-				tag = ALD
-				primary_culture = kurdish
-			}
+			has_country_flag = can_mobilize_tribesman
 			NOT = {	has_country_modifier = rally_tribesmen }
 			civilized = no
 		}
@@ -48,13 +44,13 @@ political_decisions = {
 	#Description: Tangier protocol - selling your Moroccan provinces to Spain or France.
 	cleanup_morocco = {
 		potential = {
+			is_greater_power = yes
 			OR = {
 				owns = 1683 # Taza
 				owns = 1680 # Fez
 				owns = 1690 # Marrakesh
 				owns = 1694 # Agadir
 			}
-			is_greater_power = yes
 			capital_scope = { continent = europe }
 			has_global_flag = tangier_protocol_succeeded
 			NOT = {
@@ -131,10 +127,7 @@ political_decisions = {
 		allow = {
 			civilized = yes
 			nationalism_n_imperialism = 1
-			OR = {
-				is_secondary_power = yes
-				is_greater_power = yes
-			}
+			rank = 16
 			war = no
 			ALD = {
 				all_core = {
@@ -231,7 +224,7 @@ political_decisions = {
 
 		effect = {
 			set_global_flag = maghreb_formed
-			prestige = 20
+			prestige = 40
 			all_core = {
 				remove_core = THIS
 				add_core = MGH
@@ -302,12 +295,9 @@ political_decisions = {
 
 		allow = {
 			civilized = yes
+			rank = 16
 			OR = {
-				is_secondary_power = yes
-				is_greater_power = yes
-			}
-			OR = {
-				prestige = 100
+				prestige = 200
 				military_score = 75
 			}
 			all_core = {
@@ -323,7 +313,7 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = maghrebi_claims
-			prestige = 10
+			prestige = 20
 			badboy = 5
 			MOR_1696 = { add_core = THIS }
 			FRA_1775 = { add_core = THIS }
@@ -347,6 +337,8 @@ political_decisions = {
 	conquest_of_the_saharan_desert = {
 		picture = form_the_ikhwan
 		potential = {
+			civilized = yes
+			has_global_flag = berlin_conference
 			OR = {
 				AND = {						# Algeria
 					owns = 1719				# Ardar
@@ -385,7 +377,6 @@ political_decisions = {
 					1826 = { empty = yes }	# Faya
 				}
 			}
-			has_global_flag = berlin_conference
 		}
 
 		allow = {
@@ -397,7 +388,7 @@ political_decisions = {
 						capital_scope = { continent = africa }
 						capital_scope = { continent = west_africa }
 						capital_scope = { continent = east_africa }
-						capital_scope = { continent = south_west_africa }
+						capital_scope = { continent = south_africa }
 						capital_scope = { continent = central_africa }
 					}
 					civilized = yes
@@ -412,7 +403,7 @@ political_decisions = {
 					1717 = { empty = yes }
 				}
 				1717 = { secede_province = THIS add_core = ALD any_pop = { literacy = -0.99 } }
-				owner = { prestige = 1 }
+				owner = { prestige = 2 }
 			}
 			random_owned = {				# Algeria
 				limit = {
@@ -420,7 +411,7 @@ political_decisions = {
 					1717 = { empty = yes }
 				}
 				1717 = { add_core = THIS }
-				owner = { prestige = 1 }
+				owner = { prestige = 2 }
 			}
 			random_owned = {				# Tripolitania unorganized
 				limit = {
@@ -428,7 +419,7 @@ political_decisions = {
 					1742 = { empty = yes }
 				}
 				1742 = { secede_province = THIS add_core = TRI any_pop = { literacy = -0.99 } }
-				owner = { prestige = 1 }
+				owner = { prestige = 2 }
 			}
 			random_owned = {				# Tripolitania organized
 				limit = {
@@ -436,7 +427,7 @@ political_decisions = {
 					1742 = { empty = yes }
 				}
 				1742 = { secede_province = THIS add_core = LBY any_pop = { literacy = -0.99 } }
-				owner = { prestige = 1 }
+				owner = { prestige = 2 }
 			}
 			random_owned = {				# Tripolitania
 				limit = {
@@ -451,7 +442,7 @@ political_decisions = {
 					2585 = { empty = yes }
 				}
 				2585 = { secede_province = THIS add_core = CYR any_pop = { literacy = -0.99 } }
-				owner = { prestige = 1 }
+				owner = { prestige = 2 }
 			}
 			random_owned = {				# Cyrenaica organized
 				limit = {
@@ -459,7 +450,7 @@ political_decisions = {
 					2585 = { empty = yes }
 				}
 				2585 = { secede_province = THIS add_core = LBY any_pop = { literacy = -0.99 } }
-				owner = { prestige = 1 }
+				owner = { prestige = 2 }
 			}
 			random_owned = {				# Cyrenaica
 				limit = {
@@ -474,7 +465,7 @@ political_decisions = {
 					1758 = { empty = yes }
 				}
 				1758 = { secede_province = THIS add_core = EGY any_pop = { literacy = -0.99 } }
-				owner = { prestige = 1 }
+				owner = { prestige = 2 }
 			}
 			random_owned = {				# Egypt
 				limit = {
@@ -482,7 +473,7 @@ political_decisions = {
 					1758 = { empty = yes }
 				}
 				1758 = { add_core = THIS }
-				owner = { prestige = 1 }
+				owner = { prestige = 2 }
 			}
 			random_owned = {				# Sudan
 				limit = {
@@ -491,7 +482,7 @@ political_decisions = {
 				}
 				2564 = { secede_province = THIS add_core = SUD any_pop = { literacy = -0.99 } }
 				1817 = { secede_province = THIS add_core = SUD any_pop = { literacy = -0.99 } }
-				owner = { prestige = 1 }
+				owner = { prestige = 2 }
 			}
 			random_owned = {				# Sudan
 				limit = {
@@ -500,7 +491,7 @@ political_decisions = {
 				}
 				2564 = { add_core = THIS }
 				1817 = { add_core = THIS }
-				owner = { prestige = 1 }
+				owner = { prestige = 2 }
 			}
 			random_owned = { 				# Chad
 				limit = {
@@ -509,7 +500,7 @@ political_decisions = {
 				}
 				1826 = { secede_province = THIS any_pop = { literacy = -0.99 } }
 				1744 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-				owner = { prestige = 1 }
+				owner = { prestige = 2 }
 			}
 			random_owned = {				# Niger
 				limit = {
@@ -521,7 +512,7 @@ political_decisions = {
 				1812 = { secede_province = THIS any_pop = { literacy = -0.99 } }
 				1813 = { secede_province = THIS any_pop = { literacy = -0.99 } }
 				1814 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-				owner = { prestige = 1 }
+				owner = { prestige = 2 }
 			}
 			random_owned = {				# Mali
 				limit = {
@@ -533,7 +524,7 @@ political_decisions = {
 				2609 = { secede_province = THIS any_pop = { literacy = -0.99 } }
 				1807 = { secede_province = THIS any_pop = { literacy = -0.99 } }
 				1805 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-				owner = { prestige = 1 }
+				owner = { prestige = 2 }
 			}
 			random_owned = {				# Mauritania
 				limit = {
@@ -545,7 +536,7 @@ political_decisions = {
 				1781 = { secede_province = THIS any_pop = { literacy = -0.99 } }
 				1782 = { secede_province = THIS any_pop = { literacy = -0.99 } }
 				1781 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-				owner = { prestige = 1 }
+				owner = { prestige = 2 }
 			}
 		}
 

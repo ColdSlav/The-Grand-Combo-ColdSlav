@@ -4,15 +4,7 @@ political_decisions = {
 	new_life_in_the_new_world = {
 		picture = new_life
 		potential = {
-			OR = {
-				is_culture_group = latin_american_cultures
-				is_culture_group = american_cultures
-				is_culture_group = african_diaspora_cultures
-				is_culture_group = native_american
-				primary_culture = australian
-				primary_culture = anglo_canadian
-				primary_culture = french_canadian
-			}
+			has_country_flag = new_life_in_the_new_world_allowed
 			OR = {
 				capital_scope = { continent = north_america }
 				capital_scope = { continent = south_america }
@@ -58,18 +50,11 @@ political_decisions = {
 		picture = native_integration_status
 		alert = no
 		potential = {
+			has_country_flag = native_integration_policies
 			OR = {
 				capital_scope = { continent = north_america }
 				capital_scope = { continent = south_america }
 				capital_scope = { continent = australia_new_zealand }
-			}
-			OR = {
-				is_culture_group = latin_american_cultures
-				is_culture_group = american_cultures
-				primary_culture = australian
-				primary_culture = anglo_canadian
-				primary_culture = french_canadian
-				primary_culture = alaskan
 			}
 			any_owned_province = {
 				is_core = THIS
@@ -402,11 +387,6 @@ political_decisions = {
 					random_owned = {
 						limit = { is_core = THIS any_pop = { has_pop_culture = yupik } NOT = { owner = { accepted_culture = yupik } } }
 						owner = { add_accepted_culture = yupik }
-					}
-
-					random_owned = {
-						limit = { is_core = THIS any_pop = { has_pop_culture = native_american_minor } NOT = { owner = { accepted_culture = native_american_minor } } }
-						owner = { add_accepted_culture = native_american_minor }
 					}
 
 				## Oceanic ##
@@ -791,11 +771,6 @@ political_decisions = {
 						owner = { remove_accepted_culture = yupik }
 					}
 
-					random_owned = {
-						limit = { owner = { accepted_culture = native_american_minor } }
-						owner = { remove_accepted_culture = native_american_minor }
-					}
-
 				## Oceanic ##
 
 					random_owned = {
@@ -1178,11 +1153,6 @@ political_decisions = {
 					random_owned = {
 						limit = { owner = { accepted_culture = yupik } }
 						owner = { remove_accepted_culture = yupik }
-					}
-
-					random_owned = {
-						limit = { owner = { accepted_culture = native_american_minor } }
-						owner = { remove_accepted_culture = native_american_minor }
 					}
 
 				## Oceanic ##

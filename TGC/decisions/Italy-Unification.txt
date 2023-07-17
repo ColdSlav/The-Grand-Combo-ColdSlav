@@ -18,7 +18,10 @@ political_decisions = {
 				tag = SAR
 				tag = SVY
 			}
+			OR = {
 			is_vassal = no
+			vassal_of = FRA
+			}
 			NOT = { exists = ITA }
 			has_country_flag = camillo_cavour_appointed
 			NOT = { has_country_flag = plombieres }
@@ -96,6 +99,12 @@ political_decisions = {
 	#Description: Give Savoia to France and annex the North Italian minors to realize the Pact of Plombieres after obtaining Lombardy from the Habsburgs.
 	cavours_diplomacy = {
 		potential = {
+			owns = 465
+			owns = 466
+			owns = 472
+			owns = 726
+			owns = 727
+			owns = 728
 			OR = {
 				AND = {
 					tag = ITA
@@ -117,12 +126,6 @@ political_decisions = {
 			has_country_flag = plombieres
 			NOT = { has_country_flag = plombieres_implemented }
 			NOT = { has_global_flag = plombieres_refused }
-			owns = 465
-			owns = 466
-			owns = 472
-			owns = 726
-			owns = 727
-			owns = 728
 			exists = FRA
 		}
 
@@ -136,7 +139,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = plombieres_implemented
 			leave_alliance = FRA
-			prestige = 50
+			prestige = 100
 			badboy = -10
 			SAR_472 = { #Nizza state
 				limit = {
@@ -273,7 +276,7 @@ political_decisions = {
 				diplomatic_influence = { who = PAP value = -200 }
 				diplomatic_influence = { who = SIC value = -200 }
 			}
-			SIC = { prestige = -20 }
+			SIC = { prestige = -40 }
 		}
 	}
 
@@ -312,7 +315,7 @@ political_decisions = {
 
 		effect = {
 			set_global_flag = garibaldi_redshirts
-			prestige = 20
+			prestige = 40
 			badboy = 6
 			any_country = {
 				limit = {
@@ -339,7 +342,7 @@ political_decisions = {
 					name = red_shirts
 					duration = 830
 				}
-				prestige = -5
+				prestige = -10
 			}
 			random_country = {
 				limit = { tag = PAP exists = yes }
@@ -408,8 +411,7 @@ political_decisions = {
 					NOT = { truce_with = THIS }
 					OR = {
 						AND = {
-							is_greater_power = no
-							is_secondary_power = no
+							NOT = { rank = 16 }
 							NOT = { brigades_compare = 2 }
 						}
 						national_provinces_occupied = 0.20
@@ -600,8 +602,7 @@ political_decisions = {
 					owner = {
 						is_culture_group = germanic
 						capital = 619
-						is_greater_power = no
-						is_secondary_power = no
+						NOT = { rank = 16 }
 					}
 				}
 				is_greater_power = yes
@@ -616,7 +617,7 @@ political_decisions = {
 		effect = {
 			set_global_flag = italian_call_to_union
 			set_country_flag = made_the_call_to_union
-			prestige = 20
+			prestige = 40
 			badboy = 3
 			any_country = {
 				limit = {
@@ -689,7 +690,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = law_of_guarantees
 			capital = 749
-			prestige = 5
+			prestige = 10
 			badboy = -2
 			PAP = { all_core = { remove_core = PAP } }
 			random_owned = {
@@ -850,7 +851,7 @@ political_decisions = {
 			}
 
 			allow = {
-				prestige = 45
+				prestige = 90
 				nationalism_n_imperialism = 1
 				is_greater_power = yes
 				war = no
@@ -881,7 +882,7 @@ political_decisions = {
 			}
 
 			effect = {
-				prestige = 20
+				prestige = 40
 				UTI = {
 					any_country = {
 						limit = {
@@ -974,6 +975,7 @@ political_decisions = {
 			NOT = {
 				is_culture_group = italian
 				exists = ITA
+				exists = LTU
 			}
 			NOT = {
 				has_country_flag = austrian_outside_italy
@@ -1014,7 +1016,7 @@ political_decisions = {
 		}
 
 		effect = {
-			prestige = 25
+			prestige = 50
 			badboy = 4
 			any_country = {
 				limit = {
@@ -1076,13 +1078,7 @@ political_decisions = {
 			tag = FRA
 			has_country_modifier = louis_napoleon_iii
 			is_greater_power = yes
-			has_global_flag = plombieres
 			#NOT = { has_global_flag = plombieres_refused }
-			NOT = {
-				exists = ITA
-				has_country_flag = austrian_outside_italy
-				has_country_flag = french_outside_italy
-			}
 			ITA = {
 				any_core = {
 					OR = {
@@ -1094,9 +1090,46 @@ political_decisions = {
 					}
 				}
 			}
+			NOT = {
+				exists = ITA
+				exists = LTU
+				has_country_flag = austrian_outside_italy
+				has_country_flag = french_outside_italy
+			}
 		}
 
 		allow = {
+			OR = { #Plombieres formed-Italy OR France holding Venice/Lombardy either personally or through sphere/vassal. So for example if France helps Italian minors beat Austria in '48, they don't have to work with Cavour
+				has_global_flag = plombieres 
+					AND = {
+						726 = {
+							OR = {
+								owned_by = THIS
+								owner = {
+									in_sphere = THIS
+									OR = {
+										is_vassal = no
+										vassal_of = THIS
+									}
+								}
+							}
+						}
+						VEN = {
+							all_core = {
+								OR = {
+									owned_by = THIS
+									owner = {
+										in_sphere = THIS
+										OR = {
+											is_vassal = no
+											vassal_of = THIS
+										}
+									}
+								}
+							}
+						}
+					}
+			}
 			war = no
 			nationalism_n_imperialism = 1
 			ITA = {
@@ -1144,7 +1177,7 @@ political_decisions = {
 		}
 
 		effect = {
-			prestige = 10
+			prestige = 20
 			badboy = 10
 			any_country = {
 				limit = {
@@ -1166,6 +1199,7 @@ political_decisions = {
 						province_id = 3363
 						province_id = 721
 						region = SAR_466
+						region = SAR_472
 					}
 				}
 				add_core = THIS
@@ -1178,6 +1212,7 @@ political_decisions = {
 			MOD = { all_core = { add_core = SAR } }
 			RMG = { all_core = { add_core = SAR } }
 			VEN = { all_core = { add_core = SAR } }
+			AUS_726 = { add_core = SAR }
 			TUS_744 = { add_core = TUS remove_core = SAR }
 			751 = { add_core = TUS }
 			752 = { add_core = TUS }
@@ -1186,6 +1221,7 @@ political_decisions = {
 			749 = { add_core = PAP }
 			3374 = { add_core = PAP }
 			3375 = { add_core = PAP }
+			3479 = { add_core = SAR remove_core = TUS }
 			release_vassal = PAP
 			release_vassal = SIC
 			release_vassal = TUS
@@ -1238,8 +1274,14 @@ political_decisions = {
 					}
 					is_greater_power = yes
 				}
-				prestige = -10
+				prestige = -20
 			}
+			#Same Colours
+			SAR = { government = colonial_company }
+			LOM = { government = colonial_company }
+			TUS = { government = colonial_company }
+			SIC = { government = colonial_company }
+			PAP = { government = colonial_company }
 		}
 
 		ai_will_do = { factor = 1 }
@@ -1249,8 +1291,8 @@ political_decisions = {
 	rebuke_sardinian_istria = {
 		picture = italian_islands
 		potential = {
-			is_culture_group = germanic
 			owns = 770
+			is_culture_group = germanic
 			770 = { is_core = SAR }
 			NOT = { exists = ITA }
 		}
@@ -1258,17 +1300,19 @@ political_decisions = {
 		allow = {
 			war = no
 			truce_with = SAR
+			NOT = { truce_with = FRA }
+			NOT = { truce_with = LTU }
 			has_recently_lost_war = no
 		}
 
 		effect = {
-			prestige = 12
+			prestige = 24
 			770 = {
 				remove_core = SAR
 				remove_core = ITA
 			}
-			SAR = {	prestige = -15 }
-			FRA = { country_event = 72764 }
+			SAR = {	prestige = -30 }
+			425 = { owner = { country_event = 72764 } }
 		}
 
 		ai_will_do = { factor = 1 }
@@ -1278,7 +1322,7 @@ political_decisions = {
 	french_outside_italy_sm = {
 		picture = san_marino
 		potential = {
-			tag = FRA
+			#tag = FRA
 			has_country_modifier = louis_napoleon_iii
 			is_greater_power = yes
 			has_country_flag = french_outside_italy
@@ -1390,7 +1434,7 @@ political_decisions = {
 		}
 
 		effect = {
-			prestige = 10
+			prestige = 20
 			badboy = 10
 			inherit = LVN
 			any_country = {
@@ -1466,7 +1510,7 @@ political_decisions = {
 					has_country_modifier = louis_napoleon_iii
 					is_greater_power = yes
 				}
-				prestige = -10
+				prestige = -20
 			}
 		}
 
@@ -1477,8 +1521,8 @@ political_decisions = {
 	rebuke_sardinian_corsica = {
 		picture = italian_islands
 		potential = {
-			is_culture_group = pan_french
 			owns = 473
+			is_culture_group = pan_french
 			has_country_modifier = louis_napoleon_iii
 			473 = { is_core = SRD }
 			NOT = { exists = ITA }
@@ -1491,12 +1535,12 @@ political_decisions = {
 		}
 
 		effect = {
-			prestige = 12
+			prestige = 24
 			473 = {
 				remove_core = SRD
 				remove_core = ITA
 			}
-			SRD = {	prestige = -15 }
+			SRD = {	prestige = -30 }
 			random_country = {
 				limit = {
 					owns = 619

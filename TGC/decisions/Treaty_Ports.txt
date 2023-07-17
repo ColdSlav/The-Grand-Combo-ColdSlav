@@ -39,12 +39,12 @@ political_decisions = {
 	qeshm_treaty_port_alternate = {
 		picture = qeshm_iran
 		potential = {
+			civilized = yes
 			OR = {
 				owns = 1141
 				owns = 1130
 				owns = 1145
 			}
-			civilized = yes
 			#ai = yes
 			NOT = { primary_culture = persian }
 			1071 = { owner = { civilized = no } }
@@ -559,6 +559,7 @@ political_decisions = {
 			OR = {
 				has_global_flag = colonial_railroading_disabled
 				tag = FRA
+				has_country_flag = is_latin_union
 			}
 			2632 = { owner = { has_country_modifier = negotiating_unequal_treaty civilized = no truce_with = THIS } }
 			NOT = { has_country_modifier = chinese_treaty_port }
@@ -667,8 +668,8 @@ political_decisions = {
 	tianjin_treaty_port = {
 		picture = tianjin_china
 		potential = {
-			year = 1895
 			has_country_modifier = negotiating_treaty
+			year = 1895
 			3249 = { owner = { has_country_modifier = negotiating_unequal_treaty civilized = no truce_with = THIS } }
 			NOT = { has_country_modifier = chinese_treaty_port }
 		}

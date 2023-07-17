@@ -8,7 +8,7 @@ nationalvalue = nv_order
 literacy = 0.8
 non_state_culture_literacy = 0.4
 civilized = yes
-prestige = 5
+prestige = 10
 # Political reforms
 slavery = no_slavery
 upper_house_composition = appointed
@@ -37,6 +37,7 @@ border_policy = open_borders
 centralization = confederalism
 colonial_policy = no_colonies
 set_country_flag = protestant_country
+set_country_flag = german_confederation_member
 ruling_party = SWH_conservative_2
 upper_house = {
 	fascist = 0

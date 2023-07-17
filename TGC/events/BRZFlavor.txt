@@ -10,11 +10,7 @@
 		news_desc_short = "EVTDESC46301_NEWS_SHORT"
 
 		trigger = {
-			is_core = 2447
-			OR = { 
-				tag = BRZ
-				tag = KPB
-			}
+			owns = 2447
 			year = 1895
 			NOT = { year = 1910 }
 		}
@@ -22,15 +18,7 @@
 		fire_only_once = yes
 
 		mean_time_to_happen = {
-			months = 18
-			modifier = {
-				factor = 0.55 #increase likelihood to happen
-				year = 1898
-			}
-			modifier = {
-				factor = 0.75 #increase likelihood to happen
-				year = 1902
-			}
+			months = 12
 		}
 
 		title = "EVTNAME46301"
@@ -39,21 +27,20 @@
 
 		option = {
 			name = "EVTOPTA46301"
-
-			set_country_flag = JogoBonito
-			prestige = 1
-			poor_strata = { militancy = 2 }
+			prestige = 2
+			poor_strata = { militancy = -2 }
+			poor_strata = { consciousness = 2 }
+			middle_strata = { consciousness = 1 }
 		}
 	}
 
 	#Description: The Sabinada - slaves gain militancy
 	province_event = {
-
+			
 		id = 46302
-		news = yes
-		news_desc_long = "EVTDESC46302_NEWS_LONG"
-		news_desc_medium = "EVTDESC46302_NEWS_MEDIUM"
-		news_desc_short = "EVTDESC46302_NEWS_SHORT"
+		title = "EVTNAME46302"
+		desc = "EVTDESC46302"
+		picture = "prov_sabinada"
 
 		trigger = {
 			province_id = 2436 #Bahia
@@ -85,9 +72,6 @@
 			}
 		}
 
-		title = "EVTNAME46302"
-		desc = "EVTDESC46302"
-		picture = "Slaves"
 
 		option = {
 			name = "EVTOPTA46302"
@@ -106,7 +90,7 @@
 		picture = "juiz_de_fora"
 
 		trigger = {
-			is_core = 2447
+			owns = 2446
 			OR = { 
 				tag = BRZ
 				tag = KPB
@@ -288,7 +272,7 @@
 				any_owned = { add_province_modifier = { name = provincial_drought duration = 1095 } }
 				any_pop = { reduce_pop = 0.90 }
 			}
-			BRZ_2410 = { # Maranh√£o
+			BRZ_2410 = { # Maranh„o
 				any_owned = { add_province_modifier = { name = provincial_drought duration = 1095 } }
 				any_pop = { reduce_pop = 0.90 }
 			}
@@ -315,7 +299,7 @@
 		option = {
 			name = "EVTOPTA146303"
 
-			prestige = 3
+			prestige = 6
 		}
 	}
 
@@ -374,7 +358,7 @@
 		option = {
 			name = "EVTOPTA146305"
 
-			prestige = 5
+			prestige = 10
 			relation = { who = SIC value = 75 }
 			any_pop = { militancy = -1 }
 		}
@@ -400,12 +384,12 @@
 		option = {
 			name = "EVTOPTA146308"
 
-			prestige = 5
+			prestige = 10
 		}
 	}
 
 	#Description: President Campos Sales visits Argentina - triggered for Argentina by decision from Brazil
-	country_event = { #original VIP event idea by General Per√≥n, scripted by Scythe
+	country_event = { #original VIP event idea by General PerÛn, scripted by Scythe
 		id = 146605
 		title = "EVTNAME146605"
 		desc = "EVTDESC146605"
@@ -423,7 +407,7 @@
 				}
 				relation = { who = THIS value = -35 }
 			}
-			prestige = 3
+			prestige = 6
 		}
 	}
 
@@ -528,7 +512,7 @@
 				name = "EVTOPTB203701"
 
 				badboy = 3
-				prestige = -5
+				prestige = -10
 				slaves = {
 					militancy = 6
 					consciousness = 6
@@ -540,6 +524,7 @@
 
 		#Description: Brazilian Slave Trade events, pre-Aberdeen
 		province_event = {
+			picture = "prov_navio_negreiro"
 			id = 187919
 			title = "EVTNAME187919"
 			desc = "EVTDESC187919"
@@ -686,7 +671,7 @@
 			option = {
 				name = "EVTOPTB187920"
 
-				prestige = 5
+				prestige = 10
 
 				ai_chance = {
 					factor = 80
@@ -713,7 +698,7 @@
 				option = {
 					name = "EVTOPTA187911"
 
-					prestige = -10
+					prestige = -20
 					political_reform = freedom_of_womb
 					set_country_flag = aberdeen_accepted_flag
 					any_pop = {
@@ -741,7 +726,7 @@
 				option = {
 					name = "EVTOPTB187911"
 
-					prestige = 10
+					prestige = 20
 					any_pop = {
 						limit = { NOT = { type = aristocrats } }
 						consciousness = 3
@@ -771,7 +756,7 @@
 				option = {
 					name = "EVTOPTA187912"
 
-					prestige = -5
+					prestige = -10
 					add_casus_belli = {
 						target = FROM
 						type = cut_down_to_size
@@ -866,7 +851,7 @@
 					exists = BRZ
 					CSA = { slavery = yes_slavery }
 					BRZ = { slavery = yes_slavery }
-					prestige = 50
+					prestige = 100
 				}
 
 				mean_time_to_happen = {
@@ -885,7 +870,7 @@
 						limit = { owner = { tag = BRZ } }
 						relation = { who = CSA value = 200 }
 					}
-					prestige = 2
+					prestige = 4
 
 					ai_chance = {
 						factor = 50
@@ -960,7 +945,7 @@
 			option = {
 				name = "EVTOPTA187890"
 
-				prestige = 5
+				prestige = 10
 				set_country_flag = religious_question_started
 
 				ai_chance = { factor = 80 }
@@ -970,7 +955,7 @@
 			option = {
 				name = "EVTOPTB187890"
 
-				prestige = -5
+				prestige = -10
 				set_country_flag = religious_question_decided
 				add_country_modifier = { name = freemason_expulsion_modifier duration = 1825 }
 
@@ -1003,7 +988,7 @@
 			option = {
 				name = "EVTOPTA187892"
 
-				prestige = 5
+				prestige = 10
 				set_country_flag = rq_imprisoned_bishops
 				any_pop = {
 					limit = { has_pop_religion = catholic }
@@ -1018,7 +1003,7 @@
 			option = {
 				name = "EVTOPTB187892"
 
-				prestige = -5
+				prestige = -10
 				set_country_flag = religious_question_decided
 				any_pop = {
 					limit = { has_pop_religion = catholic }
@@ -1051,7 +1036,7 @@
 				name = "EVTOPTA187894"
 
 				set_country_flag = religious_question_decided
-				prestige = -5
+				prestige = -10
 				plurality = -2
 			}
 		}
@@ -1165,7 +1150,7 @@
 		option = {
 			name = "EVTOPTA187918"
 
-			prestige = -10
+			prestige = -20
 			money = -10000
 			any_pop = {
 				limit = { has_pop_culture = afro_brazilian }
@@ -1194,7 +1179,7 @@
 		option = {
 			name = "EVTOPTB187918"
 
-			prestige = 10
+			prestige = 20
 			any_pop = {
 				limit = {
 					has_pop_culture = afro_brazilian
@@ -1228,7 +1213,7 @@
 		option = {
 			name = "EVTOPTA187923"
 
-			prestige = 2
+			prestige = 4
 			random_country = {
 				limit = {
 					OR = {
@@ -1301,7 +1286,7 @@
 			option = {
 				name = "EVTOPTA110074"
 
-				prestige = 5
+				prestige = 10
 				any_pop = { militancy = -1 consciousness = 1 }
 				remove_country_modifier = regency_modifier
 				add_country_modifier = { name = dom_pedro_ii duration = -1 }
@@ -1363,7 +1348,7 @@
 				name = "EVTOPTA50000"
 
 				remove_country_modifier = dom_pedro_ii
-				2461 = { change_province_name = "Florian√≥polis" }
+				2461 = { change_province_name = "FlorianÛpolis" }
 				government = democracy
 				ruling_party_ideology = liberal
 				add_country_modifier = { name = small_immigration_boom_country duration = 1095 }
@@ -1453,7 +1438,7 @@
 			option = {
 				name = "EVTOPTA110075"
 
-				prestige = 5
+				prestige = 10
 				add_country_modifier = { name = national_instability duration = 3650 }
 				aristocrats = {
 					militancy = 3
@@ -1474,8 +1459,8 @@
 			option = {
 				name = "EVTOPTB110075"
 
-				prestige = -10
-				2461 = { change_province_name = "Florian√≥polis" }
+				prestige = -20
+				2461 = { change_province_name = "FlorianÛpolis" }
 				government = democracy
 				ruling_party_ideology = liberal
 				add_country_modifier = { name = small_immigration_boom_country duration = 1095 }
@@ -1613,7 +1598,7 @@
 			option = {
 				name = "EVTOPTB50002"
 
-				prestige = -5
+				prestige = -10
 				any_pop = {
 					scaled_militancy = {
 						factor = 3
@@ -1899,7 +1884,7 @@
 		option = {
 			name = "EVTOPTA97087"
 
-			prestige = 1
+			prestige = 2
 			treasury = -1000
 			## Brazil ##
 				random_owned = {
@@ -2442,7 +2427,7 @@
 			option = {
 				name = "EVTOPTB34629"
 
-				prestige = -10
+				prestige = -20
 				relation = { who = FROM value = -50 }
 
 				FROM = { country_event = 34631 }
@@ -2560,7 +2545,7 @@
 			option = {
 				name = "EVTOPTA34630"
 
-				prestige = 10
+				prestige = 20
 			}
 		}
 
@@ -2598,7 +2583,7 @@
 				option = {
 					name = "EVTOPTA34632"
 
-					prestige = -15
+					prestige = -30
 					badboy = -1
 					random_owned = { limit = { owner = { tag = RGS } } 2459 = { remove_core = RGS } }
 					random_owned = { limit = { owner = { tag = BRZ } } 2459 = { remove_core = BRZ } }
@@ -2887,7 +2872,7 @@
 				option = {
 					name = "EVTOPTA34636"
 
-					prestige = 5
+					prestige = 10
 					relation = { who = FROM value = -20 }
 					FROM = { diplomatic_influence = { who = THIS value = 50 } }
 
@@ -2954,7 +2939,7 @@
 			option = {
 				name = "EVTOPTA34637"
 
-				prestige = 5
+				prestige = 10
 				relation = { who = FROM value = -50 }
 
 				ai_chance = { factor = 20 }
@@ -3074,7 +3059,7 @@
 		}
 	}
 
-	#Description: Garc√≠a Ortiz-Mangabeira Treaty - Amazon border treaty (with Colombia, Ecuador or Peru, depending on who owns the provinces)
+	#Description: GarcÌ≠a Ortiz-Mangabeira Treaty - Amazon border treaty (with Colombia, Ecuador or Peru, depending on who owns the provinces)
 	country_event = {
 		id = 34628
 		title = "EVTNAME34628"
@@ -3088,7 +3073,7 @@
 			name = "EVTOPTA34628"
 
 			set_country_flag = ortiz_mangabeira_accepted
-			prestige = 5
+			prestige = 10
 			badboy = -1
 			random_owned = {
 				limit = { 3295 = { is_core = THIS } }
@@ -3279,7 +3264,7 @@
 			option = {
 				name = "EVTOPTA24604"
 
-				prestige = 2
+				prestige = 4
 				1979 = { remove_core = GUY }
 
 				ai_chance = {
@@ -3303,7 +3288,7 @@
 			option = {
 				name = "EVTOPTB24604"
 
-				prestige = 2
+				prestige = 4
 				random_country = {
 					limit = { owns = 1979 tag = BRZ }
 					1979 = {
@@ -3966,6 +3951,8 @@
 			desc = "EVTDESC97076"
 			picture = "BurkeandWills"
 
+			is_triggered_only = yes
+
 			trigger = {
 				OR = {
 					owns = 2404 # Tefe
@@ -4013,7 +4000,7 @@
 			option = {
 				name = "EVTOPTA97076"
 
-				prestige = 5
+				prestige = 10
 				treasury = -25000
 				2549 = { secede_province = THIS any_pop = { literacy = -0.99 } }
 
@@ -4025,7 +4012,7 @@
 				name = "EVTOPTB97076"
 
 				set_country_flag = ignoring_tarauaca
-				prestige = -2
+				prestige = -4
 
 				ai_chance = {
 					factor = 10
@@ -4225,7 +4212,7 @@
 		option = {
 			name = "EVTOPTA188160"
 
-			prestige = -5
+			prestige = -10
 			relation = { who = FROM value = -50 }
 		}
 	}
@@ -4242,7 +4229,7 @@
 		option = {
 			name = "EVTOPTA188161"
 
-			prestige = 5
+			prestige = 10
 			random_owned = {
 				limit = { has_building = naval_base }
 				sub_unit = { type = dreadnought value = current }
@@ -4306,7 +4293,7 @@
 
 		option = {
 			name = "EVTOPTA57001"
-			prestige = 1
+			prestige = 2
 			relation = { who = USA value = +10 }
 			clr_country_flag = rosevelt_rondon
 			set_country_flag = rosevelt_rondon_ending
@@ -4345,7 +4332,7 @@
 		option = {
 			name = "EVTOPTA57002"
 			years_of_research = 0.2
-			prestige = 2
+			prestige = 4
 			relation = { who = USA value = +10 }
 			#USA = { country_event = Ted_Returns_Event }	
 		}
@@ -4384,7 +4371,7 @@
 		option = {
 			name = "EVTOPTA57003"
 			years_of_research = 0.2
-			prestige = -3
+			prestige = -6
 			relation = { who = USA value = -15 }
 			#USA = { country_event = Ted_Dies_Event }
 		}

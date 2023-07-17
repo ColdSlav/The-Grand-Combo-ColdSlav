@@ -51,7 +51,7 @@
 		option = {
 			name = "EVTOPTA16430"
 
-			prestige = -5
+			prestige = -10
 			any_pop = {
 				limit = { has_pop_culture = dakota }
 				militancy = 10
@@ -132,6 +132,7 @@
 
 	#Description: Apache Raiders - Apache pops gain militancy, province gets militancy and pop growth debuff
 	province_event = {
+		
 		id = 16445
 		title = "EVTNAME16445"
 		desc = "EVTDESC16445"
@@ -248,10 +249,11 @@
 
 	#Description: Seminole Raiders - Seminole pops gain militancy, province gets militancy and immigration attractiveness debuff
 	province_event = {
+		
 		id = 16461
 		title = "EVTNAME16461"
 		desc = "EVTDESC16461"
-		picture = seminole_wars
+		picture = "prov_seminole_wars"
 
 		trigger = {
 			region = USA_200
@@ -514,7 +516,7 @@
 		option = {
 			name = "EVTOPTB16465"
 
-			prestige = -25
+			prestige = -50
 			scaled_militancy = {
 				factor = 3
 				issue = pro_military
@@ -623,7 +625,7 @@
 		option = {
 			name = "EVTOPTA16467"
 
-			prestige = 5
+			prestige = 10
 			war_exhaustion = -20
 			any_pop = {
 				limit = { has_pop_culture = seminole }
@@ -664,8 +666,8 @@
 
 			diplomatic_influence = { who = MSC value = 10 }
 			relation = { who = MSC value = 20 }
-			MSC = { prestige = 5 }
-			USA = { prestige = -5 }
+			MSC = { prestige = 10 }
+			USA = { prestige = -10 }
 
 			ai_chance = {
 				factor = 50
@@ -703,10 +705,11 @@
 
 	#Description: Osceola raids a province
 	province_event = {
+			
 		id = 16469
 		title = "EVTNAME16469"
 		desc = "EVTDESC16469"
-		picture = seminole_wars
+		picture = "prov_seminole_wars"
 
 		trigger = {
 			region = USA_200
@@ -761,7 +764,7 @@
 		option = {
 			name = "EVTOPTA16468"
 
-			prestige = -10
+			prestige = -20
 			badboy = 2
 			any_pop = { consciousness = 1 }
 			any_pop = { limit = { is_culture_group = native_american } militancy = 3 }

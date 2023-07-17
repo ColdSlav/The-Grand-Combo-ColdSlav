@@ -2,10 +2,11 @@
 
 	#Labor Union
 	province_event = {
+			
 		id = 17500
 		title = "EVTNAME17500"
 		desc = "EVTDESC17500"
-		picture = "revolution"
+		picture = "prov_workers"
 
 		trigger = {
 			is_ideology_enabled = socialist
@@ -105,46 +106,6 @@
 			modifier = {
 				factor = 2
 				owner = { war = yes }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 50 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 45 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 40 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 35 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 30 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 25 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 20 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 15 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 10 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 5 }
 			}
 		}
 
@@ -377,10 +338,11 @@
 
 	#Sabotage
 	province_event = {
+			
 		id = 17520
 		title = "EVTNAME17520"
 		desc = "EVTDESC17520"
-		picture = "Factoryattack"
+		picture = "prov_unrest"
 
 		trigger = {
 			is_ideology_enabled = socialist
@@ -409,7 +371,7 @@
 		}
 
 		mean_time_to_happen = {
-			months = 275
+			months = 600
 			modifier = {
 				factor = 1.2
 				owner = {
@@ -485,46 +447,7 @@
 				factor = 1.5
 				NOT = { average_consciousness = 3 }
 			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 50 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 45 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 40 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 35 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 30 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 25 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 20 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 15 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 10 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 5 }
-			}
+
 		}
 
 		option = {
@@ -731,10 +654,11 @@
 
 	#Sympathy Strike
 	province_event = {
+			
 		id = 17540
 		title = "EVTNAME17540"
 		desc = "EVTDESC17540"
-		picture = "Strike"
+		picture = "prov_strike"
 
 		trigger = {
 			is_ideology_enabled = socialist
@@ -764,7 +688,7 @@
 		}
 
 		mean_time_to_happen = {
-			months = 275
+			months = 600
 			modifier = {
 				factor = 0.9
 				has_province_modifier = labor_union
@@ -864,46 +788,7 @@
 				factor = 1.5
 				NOT = { average_consciousness = 3 }
 			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 50 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 45 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 40 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 35 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 30 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 25 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 20 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 15 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 10 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 5 }
-			}
+
 		}
 
 		option = {
@@ -2449,7 +2334,7 @@
 			political_reform = state_press
 			political_reform = state_controlled
 			political_reform = underground_parties
-			prestige = -25
+			prestige = -50
 
 			add_country_modifier = {
 				name = national_confusion
@@ -3713,7 +3598,7 @@
 			name = "EVTOPTA203771"
 
 			government = fascist_dictatorship
-			prestige = -20
+			prestige = -40
 			any_pop = {
 				militancy = 2
 				consciousness = 2
@@ -3738,7 +3623,7 @@
 		option = {
 			name = "EVTOPTB203771"
 
-			prestige = -10
+			prestige = -20
 			consciousness = 1
 			upper_house = { ideology = fascist value = -1 }
 			any_pop = {
@@ -4681,9 +4566,11 @@
 
 	#Communists in $PROVINCENAME$
 	province_event = {
+			
 		id = 17730
 		title = "EVTNAME17730"
 		desc = "EVTDESC17730"
+		picture = "prov_unrest"
 
 		trigger = {
 			is_ideology_enabled = communist
@@ -4811,46 +4698,7 @@
 					owner = { has_country_flag = communist_gov }
 				}
 			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 50 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 45 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 40 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 35 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 30 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 25 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 20 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 15 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 10 }
-			}
-			modifier = {
-				factor = 1.5
-				owner = { num_of_cities = 5 }
-			}
+
 		}
 
 		option = {
@@ -4960,7 +4808,7 @@
 			name = "EVTOPTA203771"
 
 			government = proletarian_dictatorship
-			prestige = -25
+			prestige = -50
 			political_reform = underground_parties
 			political_reform = none_voting
 			political_reform = party_appointed
@@ -4983,7 +4831,7 @@
 		option = {
 			name = "EVTOPTB203771"
 
-			prestige = -10
+			prestige = -20
 			consciousness = 1
 			any_pop = {
 				scaled_militancy = { ideology = socialist factor = 4 }

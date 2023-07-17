@@ -92,8 +92,7 @@
 			war = yes
 			NOT = { has_country_flag = calling_all_allies }
 			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
+				rank = 16
 				has_country_flag = dismantle_declared
 			}
 			OR = {
@@ -444,8 +443,7 @@
 				has_country_flag = dismantling_treaty
 			}
 			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
+				rank = 16
 				colonial_nation = yes
 			}
 			NOT = {
@@ -848,6 +846,7 @@
 				name = punitive_effects
 				duration = 1825
 			}
+			set_country_flag = punitive_effects
 			add_country_modifier = {
 				name = no_more_war
 				duration = 3650
@@ -1679,8 +1678,7 @@
 				tag = TUR
 				tag = JAP
 			}
-			is_greater_power = no
-			is_secondary_power = no
+			NOT = { rank = 16 }
 			colonial_nation = no
 		}
 
@@ -1747,6 +1745,7 @@
 				name = punitive_effects
 				duration = 1825
 			}
+			set_country_flag = punitive_effects
 			add_country_modifier = {
 				name = no_more_war
 				duration = 3650
@@ -1833,10 +1832,7 @@
 						}
 						AND = {
 							any_neighbor_country = { war_with = FROM }
-							OR = {
-								is_greater_power = yes
-								is_secondary_power = yes
-							}
+							rank = 16
 							relation = {
 								who = THIS
 								value = 0
@@ -2027,8 +2023,7 @@
 				}
 				modifier = {
 					factor = 0.5
-					is_greater_power = no
-					is_secondary_power = no
+					NOT = { rank = 16 }
 				}
 				modifier = {
 					factor = 0.5
@@ -2505,6 +2500,7 @@
 							owns = 575
 							owns = 570
 							owns = 578
+							owns = 3603
 						}
 					}
 				}
@@ -2891,6 +2887,7 @@
 				name = punitive_effects
 				duration = 1825
 			}
+			set_country_flag = punitive_effects
 			add_country_modifier = {
 				name = no_more_war
 				duration = 3650
@@ -3904,6 +3901,7 @@
 				name = punitive_effects
 				duration = 1825
 			}
+			set_country_flag = punitive_effects
 			add_country_modifier = {
 				name = no_more_war
 				duration = 3650
@@ -4355,6 +4353,7 @@
 				name = punitive_effects
 				duration = 1825
 			}
+			set_country_flag = punitive_effects
 			add_country_modifier = {
 				name = no_more_war
 				duration = 3650
@@ -4774,6 +4773,7 @@
 				name = punitive_effects
 				duration = 1825
 			}
+			set_country_flag = punitive_effects
 			add_country_modifier = {
 				name = no_more_war
 				duration = 3650
@@ -5143,6 +5143,7 @@
 				name = punitive_effects
 				duration = 1825
 			}
+			set_country_flag = punitive_effects
 			add_country_modifier = {
 				name = no_more_war
 				duration = 3650
@@ -5354,6 +5355,7 @@
 					NOT = { owns = 405 }
 					OR = {
 						tag = BEL
+						tag = BRG
 						tag = NET
 						tag = FLA
 					}
@@ -5649,6 +5651,7 @@
 				name = punitive_effects
 				duration = 1825
 			}
+			set_country_flag = punitive_effects
 			add_country_modifier = {
 				name = no_more_war
 				duration = 3650
@@ -6139,6 +6142,7 @@
 				name = punitive_effects
 				duration = 1825
 			}
+			set_country_flag = punitive_effects
 			add_country_modifier = {
 				name = no_more_war
 				duration = 3650
@@ -6343,12 +6347,16 @@
 						region = TUR_863 #Bursa
 						region = TUR_873 #Konya
 						region = TUR_876 #Ankara
-						#region = TUR_880 #Kastamonu
+						region = TUR_880 #Kastamonu
 						region = TUR_882 #Trabizond
 						region = TUR_890 #Van
 						region = TUR_893 #Diyarbakir
 						region = TUR_894 #Adana
-						region = TUR_885 #Kars
+						### Old Kars (TUR_885) ###
+						region = TUR_885 # Kars
+						region = TUR_1096 # Batum
+						region = RUS_2548 # Sumarli
+						region = TUR_3383 # Qerekose
 						region = TUR_855 #Cyprus
 					}
 				}
@@ -6366,12 +6374,16 @@
 							region = TUR_863 #Bursa
 							region = TUR_873 #Konya
 							region = TUR_876 #Ankara
-							#region = TUR_880 #Kastamonu
+							region = TUR_880 #Kastamonu
 							region = TUR_882 #Trabizond
 							region = TUR_890 #Van
 							region = TUR_893 #Diyarbakir
 							region = TUR_894 #Adana
-							region = TUR_885 #Kars
+							### Old Kars (TUR_885) ###
+							region = TUR_885 # Kars
+							region = TUR_1096 # Batum
+							region = RUS_2548 # Sumarli
+							region = TUR_3383 # Qerekose
 							region = TUR_855 #Cyprus
 						}
 					}
@@ -6504,12 +6516,16 @@
 								region = TUR_863 #Bursa
 								region = TUR_873 #Konya
 								region = TUR_876 #Ankara
-								#region = TUR_880 #Kastamonu
+								region = TUR_880 #Kastamonu
 								region = TUR_882 #Trabizond
 								region = TUR_890 #Van
 								region = TUR_893 #Diyarbakir
 								region = TUR_894 #Adana
-								region = TUR_885 #Kars
+								### Old Kars (TUR_885) ###
+								region = TUR_885 # Kars
+								region = TUR_1096 # Batum
+								region = RUS_2548 # Sumarli
+								region = TUR_3383 # Qerekose
 								region = TUR_855 #Cyprus
 							}
 						}
@@ -6561,12 +6577,16 @@
 							region = TUR_863 #Bursa
 							region = TUR_873 #Konya
 							region = TUR_876 #Ankara
-							#region = TUR_880 #Kastamonu
+							region = TUR_880 #Kastamonu
 							region = TUR_882 #Trabizond
 							region = TUR_890 #Van
 							region = TUR_893 #Diyarbakir
 							region = TUR_894 #Adana
-							region = TUR_885 #Kars
+							### Old Kars (TUR_885) ###
+							region = TUR_885 # Kars
+							region = TUR_1096 # Batum
+							region = RUS_2548 # Sumarli
+							region = TUR_3383 # Qerekose
 							region = TUR_855 #Cyprus
 						}
 						is_core = THIS
@@ -6827,6 +6847,7 @@
 				name = punitive_effects
 				duration = 1825
 			}
+			set_country_flag = punitive_effects
 			add_country_modifier = {
 				name = no_more_war
 				duration = 3650
@@ -7331,10 +7352,7 @@
 				NOT = {
 					any_neighbor_province = {
 						owner = {
-							OR = {
-								is_greater_power = yes
-								is_secondary_power = yes
-							}
+							rank = 16
 							OR = {
 								truce_with = THIS
 								AND = {
@@ -7367,10 +7385,7 @@
 			name = "EVTOPTA96070" #Time to carve up our empire.
 			random_country = {
 				limit = {
-					OR = {
-						is_greater_power = yes
-						is_secondary_power = yes
-					}
+					rank = 16
 					OR = {
 						truce_with = THIS
 						AND = {
@@ -7406,10 +7421,7 @@
 						NOT = {
 							any_neighbor_province = {
 								owner = {
-									OR = {
-										is_greater_power = yes
-										is_secondary_power = yes
-									}
+									rank = 16
 									OR = {
 										truce_with = FROM
 										AND = {
@@ -7436,10 +7448,7 @@
 						NOT = {
 							any_neighbor_province = {
 								owner = {
-									OR = {
-										is_greater_power = yes
-										is_secondary_power = yes
-									}
+									rank = 16
 									OR = {
 										truce_with = FROM
 										AND = {
@@ -7498,10 +7507,7 @@
 					NOT = {
 						any_neighbor_province = {
 							owner = {
-								OR = {
-									is_greater_power = yes
-									is_secondary_power = yes
-								}
+								rank = 16
 								OR = {
 									truce_with = THIS
 									AND = {
@@ -7523,10 +7529,7 @@
 				NOT = { is_core = THIS }
 				any_neighbor_province = {
 					owner = {
-						OR = {
-							is_greater_power = yes
-							is_secondary_power = yes
-						}
+						rank = 16
 						OR = {
 							truce_with = THIS
 							AND = {
@@ -7558,10 +7561,7 @@
 			name = "EVTOPTA96070" #Time to carve up our empire.
 			random_country = {
 				limit = {
-					OR = {
-						is_greater_power = yes
-						is_secondary_power = yes
-					}
+					rank = 16
 					OR = {
 						truce_with = THIS
 						AND = {
@@ -7597,9 +7597,9 @@
 
 		option = {
 			name = "EVTOPTA96071" #Agree
-			prestige = 2
+			prestige = 4
 			FROM = {
-				prestige = -2
+				prestige = -4
 				random_state = {
 					limit = {
 						any_owned_province = {
@@ -7656,10 +7656,7 @@
 					NOT = {
 						any_neighbor_province = {
 							owner = {
-								OR = {
-									is_greater_power = yes
-									is_secondary_power = yes
-								}
+								rank = 16
 								OR = {
 									truce_with = THIS
 									AND = {
@@ -7682,10 +7679,7 @@
 					NOT = { is_core = THIS }
 					any_neighbor_province = {
 						owner = {
-							OR = {
-								is_greater_power = yes
-								is_secondary_power = yes
-							}
+							rank = 16
 							OR = {
 								truce_with = THIS
 								AND = {
@@ -7751,9 +7745,9 @@
 
 		option = {
 			name = "EVTOPTA96071" #Agree
-			prestige = 2
+			prestige = 4
 			FROM = {
-				prestige = -2
+				prestige = -4
 				random_state = {
 					limit = { any_owned_province = { OR = { is_colonial = yes is_overseas = yes } NOT = { is_core = FROM } } }
 					any_owned = { secede_province = THIS }
@@ -8067,6 +8061,116 @@
 					which = successful_communist_rebellions
 					value = 1
 				}
+			}
+		}
+	}
+
+		country_event = {
+		id = 96088
+		title = "EVTNAME96088" #Autocracy - Absolute Monarchy (forced by Gendarme of Europe)
+		desc = "EVTDESC96088"
+		picture = "unite"
+
+		is_triggered_only = yes
+
+		option = {
+		name = "EVTOPTA96088" #We welcome the new regime.
+		ruling_party_ideology = reactionary
+		government = absolute_monarchy
+		nationalvalue = nv_autocracy
+		political_reform = no_slavery
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = first_past_the_post
+		political_reform = no_meeting
+		political_reform = state_press
+		political_reform = no_trade_unions
+		political_reform = underground_parties
+		political_reform = mandatory_service
+		political_reform = primary_culture_only
+		political_reform = serfdom
+		political_reform = open_borders
+		political_reform = totalitarianism
+		social_reform = no_minimum_wage
+		social_reform = no_work_hour_limit
+		social_reform = no_safety
+		social_reform = no_subsidies
+		social_reform = no_pensions
+		social_reform = no_health_care
+		social_reform = no_schools
+		social_reform = capital_punishment
+		social_reform = child_labor_legal
+
+			random_country = {
+				limit = {
+					is_sphere_leader_of = THIS
+					NOT = { has_country_flag = friendly_autocracy }
+				}
+				diplomatic_influence = { who = THIS value = -100 }
+			}
+			random_country = {
+				limit = {
+					has_country_flag = friendly_autocracy
+					truce_with = THIS
+				}
+				relation = { who = THIS value = 400 }
+				diplomatic_influence = { who = THIS value = 400 }
+				create_alliance = THIS
+				clr_country_flag = friendly_autocracy
+			}
+			random_country = {
+				limit = { #France default monarchy is French Empire, this is to make them Bourbon absolutist
+					has_country_flag = got_gendarmed
+					tag = FRA
+				}
+				set_country_flag = 2nd_monarchygov
+			}
+			random_country = {
+				limit = {
+					has_country_flag = got_gendarmed
+					tag = FRA
+				}
+				government = absolute_monarchy2
+			}
+			capital_scope = {
+				any_pop = {
+					ideology = { factor = 0.1 value = reactionary }
+				}
+			}
+			clr_country_flag = got_gendarmed
+			any_pop = {
+				scaled_militancy = {
+					ideology = reactionary
+					factor = -8
+				}
+				scaled_militancy = {
+					ideology = conservative
+					factor = -4
+				}
+				scaled_militancy = {
+					ideology = communist
+					factor = 8
+				}
+				scaled_militancy = {
+					ideology = socialist
+					factor = 6
+				}
+				scaled_militancy = {
+					ideology = fascist
+					factor = 4
+				}
+				scaled_militancy = {
+					ideology = liberal
+					factor = 6
+				}
+			}
+			any_owned = {
+				remove_province_modifier = labor_union
+				remove_province_modifier = militant_trade_union
+				remove_province_modifier = worker_union
+				remove_province_modifier = strike_solution
+				remove_province_modifier = province_strike
+				remove_province_modifier = may_day
 			}
 		}
 	}

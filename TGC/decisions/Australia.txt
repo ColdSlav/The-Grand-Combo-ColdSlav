@@ -1,10 +1,12 @@
+#The triggers in the potentials were optmized in this file, be careful messing with them.
+#The optmization was made with a high deegre of accuracy and it's mostly fine
 political_decisions = {
 
 	#Australia seizes any remaining uncolonised land
 	claim_interior = {
 
 		potential = {
-			OR = { tag = AST tag = FAS }
+			has_country_flag = is_australia
 			civilized = yes
 			NOT = { has_country_flag = claim_interior }
 		}
@@ -41,7 +43,7 @@ political_decisions = {
 				2495 = { secede_province = THIS }
 				2490 = { secede_province = THIS }
 			}
-			prestige = 5
+			prestige = 10
 		}
 
 		ai_will_do = {

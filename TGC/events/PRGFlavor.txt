@@ -445,8 +445,7 @@
 				}
 				modifier = {
 					factor = 1.2
-					is_secondary_power = no
-					is_greater_power = no
+					NOT = { rank = 16 }
 				}
 			}
 		}
@@ -480,7 +479,7 @@
 			name = "EVTOPTA700003"
 
 			USA = { set_country_flag = lopez_insult }
-			prestige = 5
+			prestige = 10
 			badboy = 1
 			relation = {
 				who = USA
@@ -498,8 +497,8 @@
 		option = {
 			name = "EVTOPTB700003"
 
-			USA = { prestige = 10 }
-			prestige = -10
+			USA = { prestige = 20 }
+			prestige = -20
 			relation = {
 				who = USA
 				value = 50
@@ -559,7 +558,7 @@
 		option = {
 			name = "EVTOPTB700004"
 
-			prestige = -10
+			prestige = -20
 			clr_country_flag = lopez_insult
 
 			ai_chance = { factor = 0 }
@@ -656,8 +655,8 @@
 			name = "EVTOPTB700006"
 
 			clr_country_flag = uruguay_military_access
-			PRG = {set_country_flag = usa_expedition }
-			prestige = -15
+			PRG = { set_country_flag = usa_expedition }
+			prestige = -30
 
 			ai_chance = { factor = 0.01 }
 		}
@@ -696,7 +695,7 @@
 			name = "EVTOPTB700007"
 
 			clr_country_flag = not_uruguay_military_access
-			prestige = -15
+			prestige = -30
 
 			ai_chance = { factor = 0.05 }
 		}
@@ -743,11 +742,11 @@
 
 			clr_country_flag = not_uruguay_military_access
 			set_country_flag = asked_for_peace
-			prestige = -10
+			prestige = -20
 			treasury = -500
 			USA = {
 				treasury = 500
-				prestige = 10
+				prestige = 20
 				relation = { who = PRG value = 150 }
 				country_event = 700009
 			}
@@ -761,7 +760,7 @@
 
 			clr_country_flag = usa_expedition
 			set_country_flag = wont_submit
-			prestige = 5
+			prestige = 10
 			USA = {
 				casus_belli = {
 					target = PRG
@@ -903,9 +902,10 @@
 				limit = { NOT = { owns = 2337 } } # Anatuya
 				relation = { who = THIS value = 400 }
 			}
-			2554 = { remove_core = PRG } # Misiones
+			3567 = { remove_core = PRG } # Misiones
 			2366 = { remove_core = PRG } # Formosa
 			2367 = { remove_core = PRG } # Xolotas
+			3535 = { remove_core = PRG } # Pirane
 			social_reform = no_schools
 
 			ai_chance = { factor = 100 }
@@ -978,13 +978,56 @@
 			treasury = -10000
 			FROM = { treasury = 10000 }
 
-			2318 = { remove_core = BOL }
+			## Old Lagunillas (2318) ##
+			2318 = { remove_core = BOL } # Lagunillas
 			random_country = {
 				limit = { FROM = { tag = PBC } }
 				2318 = { remove_core = PBC }
 			}
 			2318 = { add_core = THIS }
 			2318 = { secede_province = THIS }
+			3546 = { remove_core = BOL } # Quijarro
+			random_country = {
+				limit = { FROM = { tag = PBC } }
+				3546 = { remove_core = PBC }
+			}
+			3546 = { add_core = THIS }
+			3546 = { secede_province = THIS }
+			3547 = { remove_core = BOL } # Yaqui
+			random_country = {
+				limit = { FROM = { tag = PBC } }
+				3547 = { remove_core = PBC }
+			}
+			3547 = { add_core = THIS }
+			3547 = { secede_province = THIS }
+			3548 = { remove_core = BOL } # Japapias
+			random_country = {
+				limit = { FROM = { tag = PBC } }
+				3548 = { remove_core = PBC }
+			}
+			3548 = { add_core = THIS }
+			3548 = { secede_province = THIS }
+			3549 = { remove_core = BOL } # Las Cutas
+			random_country = {
+				limit = { FROM = { tag = PBC } }
+				3549 = { remove_core = PBC }
+			}
+			3549 = { add_core = THIS }
+			3549 = { secede_province = THIS }
+			3550 = { remove_core = BOL } # Puerto Suarez
+			random_country = {
+				limit = { FROM = { tag = PBC } }
+				3550 = { remove_core = PBC }
+			}
+			3550 = { add_core = THIS }
+			3550 = { secede_province = THIS }
+			3558 = { remove_core = BOL } # Gral Garay
+			random_country = {
+				limit = { FROM = { tag = PBC } }
+				3558 = { remove_core = PBC }
+			}
+			3558 = { add_core = THIS }
+			3558 = { secede_province = THIS }
 
 			ai_chance = {
 				factor = 0.95
@@ -1057,7 +1100,7 @@
 		option = {
 			name = "EVTOPTB146500"
 
-			prestige = -2
+			prestige = -4
 
 			ai_chance = { factor = 0 }
 		}

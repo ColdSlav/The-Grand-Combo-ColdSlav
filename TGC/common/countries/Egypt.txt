@@ -1,10 +1,11 @@
 color = { 255  205  155 }
+colonial_company = { 233 255 219 }
 graphical_culture = MiddleEasternGC
 
 party = {
 	name = "EGY_conservative"
 	start_date = 1800.1.1
-	end_date = 1935.1.1
+	end_date = 2000.1.1
 
 	ideology = conservative
 
@@ -19,7 +20,7 @@ party = {
 party = {
 	name = "EGY_liberal"
 	start_date = 1800.1.1
-	end_date = 1935.1.1
+	end_date = 2000.1.1
 
 	ideology = liberal
 
@@ -34,7 +35,7 @@ party = {
 party = {
 	name = "EGY_reactionary"
 	start_date = 1800.1.1
-	end_date = 1935.1.1
+	end_date = 2000.1.1
 
 	ideology = reactionary
 
@@ -49,7 +50,7 @@ party = {
 party = {
 	name = "EGY_conservative_2"
 	start_date = 1907.1.1
-	end_date = 1952.1.1
+	end_date = 2000.1.1
 
 	ideology = conservative
 
@@ -64,7 +65,7 @@ party = {
 party = {
 	name = "EGY_liberal_2"
 	start_date = 1907.1.1
-	end_date = 1935.1.1
+	end_date = 2000.1.1
 
 	ideology = liberal
 

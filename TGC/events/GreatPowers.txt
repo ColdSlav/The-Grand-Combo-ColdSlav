@@ -159,7 +159,7 @@ country_event = {
 				}
 			}
 		}
-		prestige = -5
+		prestige = -10
 	}
 }
 
@@ -177,7 +177,7 @@ country_event = {
 	trigger = {
 		is_greater_power = yes
 		colonial_nation = yes
-		prestige = 100
+		prestige = 200
 	}
 
 	mean_time_to_happen = {
@@ -185,11 +185,11 @@ country_event = {
 
 		modifier = {
 			factor = 0.9
-			prestige = 150
+			prestige = 300
 		}
 		modifier = {
 			factor = 0.9
-			prestige = 200
+			prestige = 400
 		}
 		modifier = {
 			factor = 1.2
@@ -203,7 +203,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA19010"
-		prestige = 20
+		prestige = 40
 		capital_scope = {
 			any_pop = {
 				militancy = -1
@@ -215,7 +215,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB19010"
 		any_greater_power = {
-			prestige = -1
+			prestige = -2
 		}
 		capital_scope = {
 			any_pop = {
@@ -235,10 +235,7 @@ country_event = {
 	trigger = {
 		ai = yes
 		war = no
-		OR = {
-			is_greater_power = yes
-			is_secondary_power = yes
-		}
+		rank = 16
 		OR = {
 			any_greater_power = {
 				alliance_with = THIS
@@ -355,7 +352,7 @@ country_event = {
 	id = 19017
 	title = "EVTNAME19017"
 	desc = "EVTDESC19017"
-	picture = ""
+	picture = "treaty"
 
 	trigger = {
 		war = no
@@ -419,7 +416,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA19018"
-		prestige = -10
+		prestige = -20
 		random_country = {
 			limit = {
 				alliance_with = THIS
@@ -477,7 +474,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA19019"
-		prestige = -10
+		prestige = -20
 		random_country = {
 			limit = {
 				is_greater_power = yes
@@ -494,9 +491,11 @@ country_event = {
 #Provincename Botanical Expedition
 
 	province_event = {
+	
 		id = 19020
 		title = "EVTNAME19020"
 		desc = "EVTDESC19020"
+		picture = "prov_science_plant"
 
 		trigger = {
 			owner = {
@@ -534,13 +533,13 @@ country_event = {
 			set_global_flag = botanical_expedition_in_progress
 
 			owner = {
-				prestige = 5
+				prestige = 10
 				treasury = -1000
 			}
 			any_country = {
 				limit = {
 					civilized = yes
-					prestige = 25
+					prestige = 50
 					NOT = {
 						tag = THIS
 						relation = {
@@ -563,7 +562,7 @@ country_event = {
 		option = {
 			name = "EVTOPTB19020"
 			owner = {
-				prestige = -5
+				prestige = -10
 			}
 			ai_chance = {
 				factor = 50
@@ -583,12 +582,12 @@ country_event = {
 		option = {
 			name = "EVTOPTA19022"
 			set_country_flag = participates_in_botanical_expedition
-			prestige = 5
+			prestige = 10
 		}
 
 		option = {
 			name = "EVTOPTB19022"
-			prestige = -5
+			prestige = -10
 		}
 	}
 
@@ -609,7 +608,7 @@ country_event = {
 		option = {
 			name = "EVTOPTA19023"
 			clr_country_flag = participates_in_botanical_expedition
-			prestige = -5
+			prestige = -10
 			ai_chance = {
 				factor = 50
 			}
@@ -649,7 +648,7 @@ country_event = {
 		option = {
 			name = "EVTOPTA19024"
 			clr_country_flag = participates_in_botanical_expedition
-			prestige = -2
+			prestige = -4
 		}
 
 		option = {
@@ -679,7 +678,7 @@ country_event = {
 
 		option = {
 			name = "EVTOPTA19025"
-			prestige = 5
+			prestige = 10
 			any_pop = {
 				consciousness = 0.1
 			}
@@ -688,7 +687,7 @@ country_event = {
 		option = {
 			name = "EVTOPTB19025"
 			set_country_flag = botanical_expedition_threatened
-			prestige = 2
+			prestige = 4
 		}
 	}
 
@@ -714,7 +713,7 @@ country_event = {
 			name = "EVTOPTA19026"
 			clr_country_flag = participates_in_botanical_expedition
 			clr_country_flag = botanical_expedition_threatened
-			prestige = -10
+			prestige = -20
 		}
 	}
 
@@ -743,7 +742,7 @@ country_event = {
 			name = "EVTOPTA19027"
 			set_country_flag = victoria_regina
 			set_global_flag = victoria_regina_found
-			prestige = 10
+			prestige = 20
 			clr_country_flag = botanical_expedition_threatened
 			any_country = {
 				limit = {
@@ -771,7 +770,7 @@ country_event = {
 			clr_country_flag = botanical_expedition_threatened
 			clr_country_flag = participates_in_botanical_expedition
 			years_of_research = 0.2
-			prestige = -5
+			prestige = -10
 		}
 	}
 
@@ -797,7 +796,7 @@ country_event = {
 			name = "EVTNAME19029"
 			clr_country_flag = botanical_expedition_in_progress
 			clr_country_flag = botanical_expedition_threatened
-			prestige = 10
+			prestige = 20
 			years_of_research = 0.5
 		}
 	}
@@ -818,7 +817,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA19200"
-		prestige = -50
+		prestige = -100
 		leave_alliance = FROM
 		relation = {
 			who = FROM
@@ -837,7 +836,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB19200"
 		set_global_flag = franco_prussian_war_has_begun
-		prestige = -10
+		prestige = -20
 		leave_alliance = FROM
 		casus_belli = {
 			target = FROM
@@ -900,7 +899,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA19310"
-		prestige = 5
+		prestige = 10
 		any_pop = {
 			militancy = -1
 		}
@@ -930,7 +929,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA19320"
-		prestige = 5
+		prestige = 10
 		any_pop = {
 			militancy = -3
 		}
@@ -1191,7 +1190,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTB19366"
-		prestige = -10
+		prestige = -20
 		diplomatic_influence = { who = FROM value = -25 }
 		FROM = { country_event = 19368 }
 		ai_chance = {
@@ -1237,7 +1236,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA19368"
-		prestige = -5
+		prestige = -10
 		relation = { who = FROM value = -25 }
 		random_country = {
 			limit = {
@@ -1604,6 +1603,7 @@ country_event = {
 				OR = {
 					is_core = KAZ
 					is_core = BUK
+					is_core = DRV
 					is_core = KOK
 					is_core = KHI
 				}
@@ -1611,6 +1611,7 @@ country_event = {
 					civilized = no
 					OR = {
 						tag = BUK
+						tag = DRV
 						tag = KHI
 						tag = KOK
 						tag = KAZ
@@ -1635,7 +1636,11 @@ country_event = {
 					limit = {
 						OR = {
 							province_id = 1199
-							province_id = 1207
+							### Old Kulob (1207) ###
+							province_id = 1207 # Kulob
+							province_id = 3634 # Kulab
+							province_id = 3635 # Kalai Khumb
+							province_id = 3642 # Jamarj-e Bala
 						}
 					}
 					secede_province = RUS
@@ -1655,7 +1660,8 @@ country_event = {
 				any_owned = {
 					limit = {
 						OR = {
-							province_id = 1203
+							province_id = 1203 # Talas
+							province_id = 3633 # Osh
 							province_id = 1201
 							province_id = 1195
 						}
@@ -1683,7 +1689,40 @@ country_event = {
 				}
 			}
 		}
+		#Wakhan
+		random_owned = {
+			limit = {
+				is_core = WKH
+				owner = {
+					civilized = no
+					tag = WKH
+					truce_with = RUS
+				}
+			}
+			owner = {
+				any_owned = {
+					limit = { is_core = WKH }
+					secede_province = RUS
+				}
+			}
+		}
 		#Return any non-Afghan cores
+		random_owned = {
+			limit = {
+				is_core = AFG
+				owner = {
+					civilized = no
+					tag = AFG
+					truce_with = ENG
+				}
+			}
+			owner = {
+				any_owned = {
+					limit = { is_core = DRV }
+					secede_province = DRV
+				}
+			}
+		}
 		random_owned = {
 			limit = {
 				is_core = AFG
@@ -1742,7 +1781,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB81002212"
 		set_country_flag = abandoned_neutrality
-		prestige = -20
+		prestige = -40
 		remove_country_modifier = neutrality
 		ai_chance = {
 			factor = 0
@@ -1772,7 +1811,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA81002213"
 		clr_country_flag = titanic_sinks
-		prestige = -25
+		prestige = -50
 		any_pop = { consciousness = 1 }
 	}
 }
@@ -1799,10 +1838,10 @@ country_event = {
 	option = {
 		name = "EVTOPTA81002214"
 		clr_country_flag = titanic_arrives
-		prestige = 25
+		prestige = 50
 		random_country = {
 			limit = {
-				prestige = 10
+				prestige = 20
 				NOT = { tag = HAI }
 				capital_scope = { continent = north_america }
 				OR = {
@@ -1908,7 +1947,7 @@ country_event = {
 		option = {
 			name = "EVTOPTA81002216"
 			set_global_flag = tangier_protocol_succeeded
-			prestige = 10
+			prestige = 20
 			random_owned = {
 				limit = { owner = { has_country_flag = agreed_to_tangier_protocol } province_id = 1686 }
 				owner = {
@@ -2080,7 +2119,7 @@ country_event = {
 		option = {
 			name = "EVTOPTA810003" #We will abolish the sound dues
 			badboy = -2
-			prestige = -40
+			prestige = -80
 			372 = { trade_goods = grain remove_province_modifier = sound_dues_toll }
 			set_global_flag = sound_dues_abolished
 			treasury = 300000
@@ -2106,7 +2145,7 @@ country_event = {
 		option = {
 			name = "EVTOPTB810003" #We will NOT abolish the sound dues
 			badboy = 3
-			prestige = 40
+			prestige = 80
 			set_global_flag = sound_dues_resisted
 			FROM = { country_event = { id = 810007 days = 7 } }
 
@@ -2139,7 +2178,7 @@ country_event = {
 
 		option = {
 			name = "EVTOPTA810004" #We will pay our part
-			prestige = 30
+			prestige = 60
 			diplomatic_influence = { who = FROM value = 50 }
 			random_owned = { limit = { owner = { ai = no } } owner = { treasury = -100000 } }
 			random_owned = {
@@ -2195,7 +2234,7 @@ country_event = {
 
 		option = {
 			name = "EVTOPTB810004" #We will pay everything
-			prestige = 100
+			prestige = 200
 			diplomatic_influence = { who = FROM value = 200 }
 			random_owned = { limit = { owner = { ai = no } } owner = { treasury = -300000 } }
 			random_owned = {
@@ -2223,7 +2262,7 @@ country_event = {
 
 		option = {
 			name = "EVTOPTA810005" #We will pay our part
-			prestige = 30
+			prestige = 60
 			random_owned = { limit = { owner = { ai = no } } owner = { treasury = -100000 } }
 			random_owned = {
 				limit = { owner = { ai = yes } }
@@ -2239,7 +2278,7 @@ country_event = {
 
 		option = {
 			name = "EVTOPTB810005" #We will pay in installments
-			prestige = 20
+			prestige = 40
 			set_variable = { which = owed_cash_money value = 100 }
 			random_list = {
 				50 = { FROM = { country_event = { id = 810008 days = 7 } } }
@@ -2279,7 +2318,7 @@ country_event = {
 
 		option = {
 			name = "EVTOPTA810006" #We will pay their part
-			prestige = 30
+			prestige = 60
 			casus_belli = { target = FROM type = war_reparations months = 48 } relation = { who = FROM value = -150 }
 			random_owned = { limit = { owner = { ai = no } } owner = { treasury = -100000 } }
 			random_owned = {
@@ -2291,7 +2330,7 @@ country_event = {
 
 		option = {
 			name = "EVTOPTB810006" #We will pay their part in installments
-			prestige = 20
+			prestige = 40
 			casus_belli = { target = FROM type = war_reparations months = 48 } relation = { who = FROM value = -150 }
 			random_owned = {
 				limit = { owner = { NOT = { check_variable = { which = owed_cash_money value = 1 } } } }

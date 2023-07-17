@@ -1,3 +1,5 @@
+#The triggers in the potentials were optmized in this file, be careful messing with them.
+#The optmization was made with an OK deegre of accuracy and most big errors were taken out, but revision wouldnt be a bad idea
 political_decisions = {
 
 	build_museum = {
@@ -5,26 +7,22 @@ political_decisions = {
 		potential = {
 			rank = 16
 			NOT = { has_country_flag = museum_build }
-			OR = {
-				has_country_modifier = mycenaean_excavations_modifier
-				has_country_modifier = egyptian_excavations
-				has_country_modifier = inca_excavations
-				has_country_modifier = maya_excavations
-				has_country_modifier = mesopotamian_excavations
-				has_country_modifier = minoan_excavations
-				has_country_modifier = pompeji_excavations
-			}
+			has_country_flag = excavation_ongoing
 		}
 
 		allow = {
 			invention = early_archaeology
 			money = 15000
+			any_owned_province = { has_building = university }
 		}
 
 		effect = {
 			set_country_flag = museum_build
 			money = -15000
-			prestige = 15
+			prestige = 30
+			random_owned = { limit = { has_building = university }
+							 add_province_modifier = { name = arch_museum duration = -1 }
+			}
 		}
 	}
 
@@ -40,10 +38,7 @@ political_decisions = {
 							continent = south_america
 						}
 					}
-					OR = {
-						is_secondary_power = yes
-						is_greater_power = yes
-					}
+					rank = 16
 				}
 				2302 = { owner = { in_sphere = THIS } }
 			}
@@ -146,7 +141,7 @@ political_decisions = {
 		}
 
 		allow = {
-			prestige = 25
+			prestige = 50
 			1767 = { owner = { NOT = { truce_with = THIS war_with = THIS } } }
 		}
 
@@ -198,7 +193,7 @@ political_decisions = {
 		allow = {
 			functionalism = 1
 			invention = early_archaeology
-			prestige = 100
+			prestige = 200
 			840 = { owner = { in_sphere = THIS } }
 		}
 
@@ -259,7 +254,7 @@ political_decisions = {
 
 		allow = {
 			social_alienation = 1
-			prestige = 100
+			prestige = 200
 			invention = modern_archaeology
 			847 = { owner = { in_sphere = THIS } }
 		}
@@ -319,7 +314,7 @@ political_decisions = {
 			invention = vaccination
 			invention = prophylaxis_against_malaria
 			invention = early_archaeology
-			prestige = 50
+			prestige = 100
 			money = 5000
 		}
 
@@ -363,10 +358,7 @@ political_decisions = {
 		alert = no
 		potential = {
 			ai = no
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
+			rank = 16
 			has_global_flag = machupicchu
 			NOT = { has_global_flag = andean_gold_found }
 			NOT = {
@@ -384,7 +376,7 @@ political_decisions = {
 		allow = {
 			aeronautics = 1
 			invention = modern_archaeology
-			prestige = 200
+			prestige = 400
 			money = 10000
 		}
 
@@ -445,7 +437,7 @@ political_decisions = {
 		allow = {
 			social_science = 1
 			invention = modern_archaeology
-			prestige = 100
+			prestige = 200
 			money = 7500
 		}
 

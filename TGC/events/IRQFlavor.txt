@@ -42,6 +42,10 @@ country_event = {
 			secede_province = IRQ
 			add_core = IRQ
 		}
+		3611 = {
+			secede_province = IRQ
+			add_core = IRQ
+		}
 		IRQ = {
 			capital = 926
 			any_pop = { militancy = -8 }
@@ -58,7 +62,7 @@ country_event = {
 			}
 		}
 		IRQ = {
-			prestige = 10
+			prestige = 20
 			small_arms = 50
 			regular_clothes = 50
 			military_reform = yes_foreign_training
@@ -83,7 +87,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB999456"
 
-		prestige = -15
+		prestige = -30
 		any_pop = {
 			limit = { has_pop_culture = turkish }
 			dominant_issue = {
@@ -100,6 +104,7 @@ country_event = {
 			militancy = -6
 		}
 		901 = { add_core = IRQ }
+		3611 = { add_core = IRQ }
 		any_owned = {
 			limit = {
 				is_core = IRQ

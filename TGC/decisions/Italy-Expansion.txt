@@ -24,14 +24,11 @@ political_decisions = {
 		}
 
 		allow = {
-			prestige = 50
+			prestige = 100
 			war = no
 			is_vassal = no
 			has_recently_lost_war = no
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
+			rank = 16
 		}
 
 		effect = {
@@ -80,14 +77,11 @@ political_decisions = {
 		}
 
 		allow = {
-			prestige = 50
+			prestige = 100
 			war = no
 			is_vassal = no
 			has_recently_lost_war = no
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
+			rank = 16
 		}
 
 		effect = {
@@ -112,7 +106,10 @@ political_decisions = {
 	italia_irredenta = {
 		picture = italia_irredenta
 		potential = {
+			OR = {
+			has_country_flag = is_latin_union
 			tag = ITA
+			}
 			NOT = {
 				has_country_flag = treaty_of_venice
 				has_country_flag = treaty_of_aosta
@@ -130,15 +127,17 @@ political_decisions = {
 						}
 						mass_politics = 1
 						great_wars_enabled = yes
-						734 = { #Trient
-							owner = {
-								NOT = { is_culture_group = italian }
-								OR = {
+						734 = { owner = {
+				        NOT = { relation = { who = THIS value = 150 } }
+				        NOT = { alliance_with = THIS }
+				        NOT = { is_sphere_leader_of = THIS }
+						NOT = { overlord = { is_sphere_leader_of = THIS } }
+						OR = {      NOT = { is_culture_group = italian }
 									is_greater_power = no
 									is_disarmed = yes
 								}
-							}
-						}
+						    }
+				}
 					}
 				}
 				AND = {
@@ -217,15 +216,17 @@ political_decisions = {
 							}
 							mass_politics = 1
 							great_wars_enabled = yes
-							734 = { #Trient
-								owner = {
-									NOT = { is_culture_group = italian }
-									OR = {
-										is_greater_power = no
-										is_disarmed = yes
-									}
+							734 = { owner = {
+				        NOT = { relation = { who = THIS value = 150 } }
+				        NOT = { alliance_with = THIS }
+				        NOT = { is_sphere_leader_of = THIS }
+						NOT = { overlord = { is_sphere_leader_of = THIS } }
+						OR = {      NOT = { is_culture_group = italian }
+									is_greater_power = no
+									is_disarmed = yes
 								}
-							}
+						    }
+				}
 						}
 					}
 				}
@@ -291,7 +292,10 @@ political_decisions = {
 	conquest_of_the_adriatic = {
 		picture = conquest_adriatic
 		potential = {
+			OR = {
+			has_country_flag = is_latin_union
 			tag = ITA
+			}
 			has_unclaimed_cores = no
 			has_global_flag = italian_claimed_venetia
 			NOT = { has_country_flag = conquest_adriatic_happened }
@@ -301,7 +305,7 @@ political_decisions = {
 			is_greater_power = yes
 			nationalism_n_imperialism = 1
 			war_policy = jingoism
-			prestige = 100
+			prestige = 200
 			military_score = 80
 			OR = {
 				ruling_party_ideology = conservative
@@ -311,7 +315,7 @@ political_decisions = {
 		}
 
 		effect = {
-			prestige = 10
+			prestige = 20
 			badboy = 6
 			set_country_flag = conquest_adriatic_happened
 			AUS_774 = { add_core = THIS	} #Lika
@@ -340,7 +344,10 @@ political_decisions = {
 	italian_islands = {
 		picture = "italian_islands"
 		potential = {
+			OR = {
+			has_country_flag = is_latin_union
 			tag = ITA
+			}
 			has_unclaimed_cores = no
 			has_global_flag = italian_claimed_venetia
 			NOT = { has_country_flag = italian_islands_claimed }
@@ -350,7 +357,7 @@ political_decisions = {
 			is_greater_power = yes
 			nationalism_n_imperialism = 1
 			war_policy = jingoism
-			prestige = 150
+			prestige = 300
 			military_score = 100
 			OR = {
 				ruling_party_ideology = conservative
@@ -361,7 +368,7 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = italian_islands_claimed
-			prestige = 10
+			prestige = 20
 			badboy = 4
 			854 = { add_core = THIS } #Malta
 			473 = { add_core = THIS } #Corsica
@@ -390,7 +397,10 @@ political_decisions = {
 	italy_claim_albania = {
 		picture = italy_claim_albania
 		potential = {
+			OR = {
+			has_country_flag = is_latin_union
 			tag = ITA
+			}
 			NOT = { has_country_flag = italy_claim_albania }
 			has_country_flag = conquest_adriatic_happened
 		}
@@ -418,13 +428,16 @@ political_decisions = {
 	take_malta = {
 		picture = treaty_signing
 		potential = {
+			owns = 762
+			OR = {
+			has_country_flag = is_latin_union
+			tag = ITA
+			}
 			OR = {
 				854 = { owner = { war_with = THIS } }
 				854 = { owner = { truce_with = THIS } }
 			}
 			NOT = { owns = 854 }
-			owns = 762
-			tag = ITA
 			is_greater_power = yes
 		}
 
@@ -469,7 +482,10 @@ political_decisions = {
 	italian_somaliland = {
 		picture = "italian_somaliland"
 		potential = {
+			OR = {
+			has_country_flag = is_latin_union
 			tag = ITA
+			}
 			is_greater_power = yes
 			has_global_flag = berlin_conference
 			NOT = { has_country_flag = communist_gov }
@@ -516,7 +532,7 @@ political_decisions = {
 		}
 
 		effect = {
-			prestige = 5
+			prestige = 10
 			treasury = -30000
 			inherit = GEL
 			inherit = MAJ
@@ -547,9 +563,9 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = treaty_of_ouchy
-			prestige = 10
+			prestige = 20
 			TUR = {
-				prestige = 5
+				prestige = 10
 				any_owned = {
 					limit = {
 						OR = {
@@ -582,6 +598,7 @@ political_decisions = {
 	#Description: If you have Italy as a puppet, you can give them lands that they claim. DEVNOTE: This probably needs a rework to be in line with other "add lands to your puppet" decision.
 	outside_italia_irredenta = {
 		potential = {
+			is_greater_power = yes
 			NOT = {
 				tag = AUS
 				tag = KUK
@@ -589,7 +606,6 @@ political_decisions = {
 				tag = GCF
 				tag = YUG
 			}
-			is_greater_power = yes
 			ITA = { exists = yes vassal_of = THIS }
 		}
 

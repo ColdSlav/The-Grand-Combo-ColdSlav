@@ -71,7 +71,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA33801"
 		treasury = -50
-		prestige = -1
+		prestige = -2
 	}
 
 }
@@ -81,7 +81,7 @@ province_event = {
 	id = 33802
 	title = "EVTNAME33802"
 	desc = "EVTDESC33802"
-	picture = "cityfire"
+	picture = "prov_unrest"
 
 	trigger = {
 		province_id = 528 #Hamburg
@@ -108,7 +108,7 @@ province_event = {
 		name = "EVTOPTA33802"
 		owner = {
 			clipper_convoy = 5
-			prestige = 5
+			prestige = 10
 		}
 	}
 

@@ -1,7 +1,8 @@
 color = { 255 25 40 }
 graphical_culture = EuropeanGC
-colonial_company = { 64 43 72 }
-dominion = { 64 43 72 }
+colonial_company = { 34 77 83 }
+#colonial_company = { 64 43 72 }
+dominion = { 34 77 83}
 
 party = {
 	name = "POL_conservative"
@@ -21,7 +22,7 @@ party = {
 party = {
 	name = "POL_liberal"
 	start_date = 1820.1.1
-	end_date = 1936.1.1
+	end_date = 2000.1.1
 
 	ideology = liberal
 

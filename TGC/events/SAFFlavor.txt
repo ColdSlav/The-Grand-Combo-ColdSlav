@@ -26,7 +26,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA6000"
-		prestige = -15
+		prestige = -30
 		set_country_flag = frontiers_lost
 		SAF = { remove_country_modifier = opened_frontiers }
 		ai_chance = {
@@ -108,10 +108,7 @@ country_event = {
 
 	trigger = {
 		primary_culture = boer
-		OR = {
-			is_greater_power = yes
-			is_secondary_power = yes
-		}
+		rank = 16
 		owns = 2088
 		owns = 2087
 		2083 = { empty = yes }
@@ -127,7 +124,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA6003"
 		set_country_flag = walvis_bay
-		prestige = 5
+		prestige = 10
 		treasury = -10000
 		2083 = { secede_province = THIS change_province_name = "Walvisbaai" life_rating = 25 any_pop = { literacy = -0.99 } }
 		ai_chance = {
@@ -142,7 +139,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB6003"
 		set_country_flag = walvis_bay
-		prestige = -5
+		prestige = -10
 		ai_chance = { factor = 0 }
 	}
 }
@@ -281,7 +278,7 @@ country_event = { #Transvaal wants to bring about a confederation with Oranje
 				}
 				consciousness = 2
 			}
-		prestige = 3
+		prestige = 6
 	}
 }
 
@@ -395,7 +392,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTB6006"
-		prestige = -3
+		prestige = -6
 		relation = {
 			who = ORA
 			value = 50
@@ -506,7 +503,7 @@ country_event = {
 		2111 = { add_core = THIS }
 		2113 = { add_core = THIS }
 		2112 = { add_core = THIS }
-		prestige = 5
+		prestige = 10
 		set_country_flag = united_boer_saf_fired
 	}
 }
@@ -524,7 +521,7 @@ country_event = {
 		owns = 2106
 		civilized = yes
 		year = 1880
-		THIS = { capital_scope = { continent = africa } }
+		THIS = { capital_scope = { continent = south_africa } }
 		NOT = { has_country_flag = mineral_revolution }
 	}
 
@@ -719,7 +716,7 @@ country_event = {
 		name = "EVTOPTB6012"
 		set_country_flag = rename_mashonaland_boer
 		2068 = { change_province_name = "Herculaastad" }
-		2068 = { state_scope = { change_region_name = RhodesiÃ« } }
+		2068 = { state_scope = { change_region_name = Rhodesië } }
 	}
 
 	option = {
@@ -741,7 +738,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA6013"
-		capital = 2087
+		capital = 2087 # Cape Town
 		2087 = {
 			life_rating = 5
 			add_province_modifier = {
@@ -753,7 +750,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTB6013"
-		capital = 2101
+		capital = 2101 # Bloemfontein
 		2101 = {
 			life_rating = 5
 			add_province_modifier = {
@@ -765,19 +762,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTC6013"
-		capital = 2111
-		2111 = {
-			life_rating = 5
-			add_province_modifier = {
-				name = recently_built_city
-				duration = 365
-			}
-		}
-	}
-
-	option = {
-		name = "EVTOPTD6013"
-		capital = 2105
+		capital = 2105 # Pretoria
 		2105 = {
 			life_rating = 5
 			add_province_modifier = {
@@ -788,8 +773,20 @@ country_event = {
 	}
 
 	option = {
+		name = "EVTOPTD6013"
+		capital = 2111 # Pietermaritzburg
+		2111 = {
+			life_rating = 5
+			add_province_modifier = {
+				name = recently_built_city
+				duration = 365
+			}
+		}
+	}
+
+	option = {
 		name = "EVTOPTE6013"
-		capital = 2106
+		capital = 2106 # Johannesburg
 		2106 = {
 			life_rating = 5
 			add_province_modifier = {
@@ -903,7 +900,7 @@ country_event = {
 		remove_country_modifier = native_reintegration
 		any_owned = {
 			limit = {
-				continent = africa
+				continent = south_africa
 				any_pop = { is_culture_group = southern_african }
 			}
 			add_province_modifier = {
@@ -950,7 +947,7 @@ country_event = {
 		remove_country_modifier = native_reintegration
 		any_owned = {
 			limit = {
-				continent = africa
+				continent = south_africa
 				any_pop = { is_culture_group = southern_african }
 			}
 			add_province_modifier = {
@@ -1011,9 +1008,11 @@ country_event = {
 }
 
 province_event = {
+			
 	id = 6016
 	title = "EVTNAME6016" #The African Exodus
 	desc = "EVTDESC6016"
+	picture = "prov_exodus"
 
 	trigger = {
 		NOT = { has_country_flag = no_slaughter }
@@ -1060,9 +1059,11 @@ province_event = {
 }
 
 province_event = {
+			
 	id = 6017
 	title = "EVTNAME6017" #The African Extermination
 	desc = "EVTDESC6017"
+	picture = "prov_warcrime"
 
 	trigger = {
 		NOT = { has_country_flag = no_slaughter }
@@ -1634,7 +1635,7 @@ country_event = {
 	}
 	option = {
 		name = "EVTOPTB6027"
-		prestige = -1
+		prestige = -2
 		small_arms = -5
 		canned_food = -10
 		money = -300
@@ -1685,7 +1686,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB6027"
 		set_country_flag = border_raid_zulu
-		prestige = -1
+		prestige = -2
 		small_arms = -5
 		canned_food = -10
 		money = -500
@@ -1734,7 +1735,7 @@ country_event = {
 	}
 	option = {
 		name = "EVTOPTB6027"
-		prestige = -1
+		prestige = -2
 		small_arms = -5
 		canned_food = -10
 		money = -500
@@ -1823,7 +1824,7 @@ country_event = { #Petition Portugal for port access
 		money = 10000 #This will cost money for the railroads
 		2110 = { owned_by = THIS } #Transvaal owns Zotspanberg
 		2105 = { owned_by = THIS } #Transvaal owns Pretoria
-		2049 = { owned_by = POR } #Portugal owns LourenÃ§o Marques
+		2049 = { owned_by = POR } #Portugal owns Lourenço Marques
 		relation = { #Needs positive relations with Portugal
 			who = POR
 			value = 1
@@ -1967,7 +1968,7 @@ country_event = { #We have a port of our own
 		set_country_flag = we_have_port
 		clr_country_flag = portugal_port_access
 		remove_country_modifier = access_to_the_sea
-		prestige = 3
+		prestige = 6
 		ai_chance = {
 			factor = 100
 		}
@@ -2124,7 +2125,7 @@ country_event = { #We have a port of our own
 		name = "EVTOPTA6040"
 		clr_country_flag = cape_port_access
 		remove_country_modifier = access_to_the_sea
-		prestige = 3
+		prestige = 6
 		ai_chance = {
 			factor = 100
 		}
@@ -2256,7 +2257,7 @@ country_event = { #Petition Britain for annexing Transvaal to the Oranje Free St
 			war = no
 			is_vassal = no
 			nationalism_n_imperialism = 1
-			prestige = 5
+			prestige = 10
 			in_sphere = ENG
 			owns = 2101
 			owns = 2102
@@ -2285,7 +2286,7 @@ country_event = { #Petition Britain for annexing Transvaal to the Oranje Free St
 
 	option = {#Not worth the trouble
 		name = "EVTOPTB6045"
-		prestige = 3
+		prestige = 6
 		set_country_flag = ora_petition
 		ai_chance = {
 			factor = 5
@@ -2317,7 +2318,7 @@ country_event = { #Oranje Asks for the Transvaal
 
 	option = {#Transvaal is ours
 		name = "EVTOPTB6046"
-		prestige = 3
+		prestige = 6
 		relation = { who = ORA value = -50 }
 		badboy = 2
 		ai_chance = {
@@ -2391,7 +2392,7 @@ country_event = {
 	option = { #Chicken Out
 		name = "EVTOPTB6047"
 		set_global_flag = first_boer_war
-		prestige = -5
+		prestige = -10
 		ai_chance = { factor = 0 }
 	}
 }
@@ -2738,7 +2739,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB995444"
 
-		prestige = 2
+		prestige = 4
 	}
 }
 
@@ -2793,7 +2794,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA44315"
 		clr_country_flag = SAF_independence_refused
-		prestige = -20
+		prestige = -40
 		badboy = -5
 		random_owned = { limit = { province_id = 2113 } change_province_name = "Richards Bay" add_core = SAF }
 		random_owned = { limit = { province_id = 2112 } change_province_name = "Ladysmith" add_core = SAF }
@@ -2823,7 +2824,7 @@ country_event = {
 		release_vassal = SAF
 		SAF = {
 			government = hms_government
-			prestige = -80
+			prestige = -160
 			capital = 2087
 		}
 		relation = {
@@ -2959,7 +2960,7 @@ country_event = {
 	option = {
 		name = "EVTOPTC44334"
 		clr_country_flag = SAF_independence_refused
-		prestige = -20
+		prestige = -40
 		badboy = -5
 		any_pop = {
 			limit = { location = { is_core = SAF } }
@@ -2970,7 +2971,7 @@ country_event = {
 		}
 		release_vassal = SAF
 		SAF = {
-			prestige = -80
+			prestige = -160
 			capital = 2087
 		}
 		relation = {
@@ -3043,7 +3044,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA44315"
 		clr_country_flag = RHO_independence_refused
-		prestige = -20
+		prestige = -40
 		badboy = -5
 		any_pop = {
 			limit = { location = { is_core = RHO } }
@@ -3155,7 +3156,7 @@ country_event = {
 		option = {
 		name = "EVTOPTC44341"
 		clr_country_flag = RHO_independence_refused
-		prestige = -20
+		prestige = -40
 		badboy = -5
 		any_pop = {
 			limit = { location = { is_core = RHO } }

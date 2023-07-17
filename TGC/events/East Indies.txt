@@ -52,7 +52,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTB952501"
-		prestige = -10
+		prestige = -20
 		ai_chance = { factor = 0 }
 	}
 }
@@ -429,9 +429,11 @@ country_event = {
 
 #Aceh is free - cleaning nationalism
 province_event = {
+			
 	id = 952512
 	title = "EVTNAME952512"
 	desc = "EVTDESC952512"
+	picture = "prov_flags"
 
 	trigger = {
 		OR = {
@@ -495,7 +497,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA95250"
-		prestige = -5
+		prestige = -10
 		1394 = {
 			add_core = SWK
 			remove_core = BRU
@@ -528,7 +530,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTB95250"
-		prestige = 5
+		prestige = 10
 		1394 = {
 			add_core = SWK
 			secede_province = SWK
@@ -805,7 +807,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA95251"
 		badboy = 2
-		prestige = -2
+		prestige = -4
 		random_country = {
 			limit = {
 				OR = {
@@ -892,7 +894,7 @@ country_event = {
 	}
 	option = {
 		name = "EVTOPTB95251"
-		prestige = -5
+		prestige = -10
 		VOC = {
 		any_neighbor_country = {
 			limit = {
@@ -1052,7 +1054,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTB95255"
-		prestige = 1
+		prestige = 2
 		relation = {
 			who = FROM
 			value = -100
@@ -1096,7 +1098,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA97125"
-		prestige = 5
+		prestige = 10
 		random_country = {
 			limit = {
 				OR = {
@@ -1135,7 +1137,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTB97125"
-		prestige = -5
+		prestige = -10
 		relation = {
 			who = POR
 			value = -15
@@ -1152,9 +1154,11 @@ country_event = {
 
 ## Indonesian colony spread, theoretically should work fine for VOC
 province_event = {
+			
 	id = 97130
 	title = "EVTNAME98800"
 	desc = "EVTDESC97130"
+	picture = "prov_new_state"
 
 	trigger = {
 		OR = {
@@ -1243,9 +1247,11 @@ province_event = {
 }
 
 province_event = {
+			
 	id = 97131
 	title = "EVTNAME98800"
 	desc = "EVTDESC97130"
+	picture = "prov_new_state"
 
 	trigger = {
 		OR = {
@@ -1318,9 +1324,11 @@ province_event = {
 }
 
 province_event = {
+			
 	id = 97132
 	title = "EVTNAME98800"
 	desc = "EVTDESC97130"
+	picture = "prov_new_state"
 
 	trigger = {
 		OR = {
@@ -1450,7 +1458,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB97120"
 
-		prestige = 1
+		prestige = 2
 		relation = { who = FROM value = -100 }
 		leave_alliance = FROM
 
@@ -1659,10 +1667,12 @@ country_event = {
 	}
 }
 
-province_event = { #Kota Bahru founded
+province_event = {
+			 #Kota Bahru founded
 	id = 95658
 	title = "EVTNAME95658"
 	desc = "EVTDESC95658"
+	picture = "prov_new_state"
 
 	trigger = {
 		province_id = 1391
@@ -1795,7 +1805,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB956582"
 		FROM = { relation = { who = THIS value = -400 } }
-		prestige = -20
+		prestige = -40
 		ai_chance = { factor = 0 }
 	}
 }
@@ -1907,9 +1917,11 @@ country_event = {
 
 #Migration to Singapore
 province_event = {
+			
 	id = 99901
 	title = "EVTNAME99901"
 	desc = "EVTDESC99901"
+	picture = "liberty"
 
 	trigger = {
 		province_id = 1384
@@ -1950,9 +1962,11 @@ province_event = {
 
 #Migration to Singapore #2, not exactly sure whats going on here, might need adaption for VOC
 province_event = {
+			
 	id = 99936
 	title = "EVTNAME99936"
 	desc = "EVTDESC99936"
+	picture = "liberty"
 
 	trigger = {
 		year = 1860
@@ -2067,7 +2081,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA36955"
-		prestige = 5
+		prestige = 10
 		badboy = 2
 		relation = { who = BUR value = -200 }
 		diplomatic_influence = { who = BUR value = -200 }
@@ -2091,7 +2105,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTB36955"
-		prestige = -25
+		prestige = -50
 		relation = { who = BUR value = 25 }
 		any_pop = {
 			limit = { is_primary_culture = yes }
@@ -2155,7 +2169,7 @@ country_event = {
 
 	option = {
 		name = "EVT99991OPTA"
-		prestige = 5
+		prestige = 10
 		badboy = 3
 		relation = { who = BUR value = -200 }
 		diplomatic_influence = { who = BUR value = -200 }
@@ -2176,7 +2190,7 @@ country_event = {
 
 	option = {
 		name = "EVT99991OPTB"
-		prestige = -25
+		prestige = -50
 		relation = { who = BUR value = 25 }
 		set_country_flag = burma_3
 		any_pop = {

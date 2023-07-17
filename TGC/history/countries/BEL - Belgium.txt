@@ -1,13 +1,13 @@
 capital = 387
 primary_culture = french
 religion = catholic
-government = hms_government
+government = prussian_constitutionalism
 plurality = 25.0
 nationalvalue = nv_liberty
 literacy = 0.45
 non_state_culture_literacy = 0.5 #Germans/Dutch
 civilized = yes
-prestige = 5
+prestige = 10
 # Political reforms
 slavery = no_slavery
 upper_house_composition = state_equal_weight
@@ -35,6 +35,7 @@ border_policy = open_borders
 centralization = unitary
 colonial_policy = no_colonies
 set_country_flag = catholic_country
+set_country_flag = is_real_belgium
 ruling_party = BEL_conservative
 last_election = 1834.1.1
 upper_house = {

@@ -51,6 +51,9 @@ AOE-exp/
 !TGC.mod
 
 # Submods
+!/TGCApocalypse1836
+!/TGC Niche Submods
+!/TGCApocalypse1836.mod
 !/TGCHFMStyleCultureColors/
 !TGCHFMStyleCultureColors.mod
 !/TGCHFMMap/
@@ -59,9 +62,20 @@ AOE-exp/
 !TGCPastelMap.mod
 !/TGCStatehoodMechanic/
 !TGCStatehoodMechanic.mod
+!/TGCLessCombatRNG/
+!TGCLessCombatRNG.mod
 !/TGCCountriesEndonymicLocalization/
 !TGCCountriesEndonymicLocalization.mod
 !/TGCDirectImmigration/
 !TGCDirectImmigration.mod
 !/TGCPerformanceAddon/
 !TGCPerformanceAddon.mod
+!/TGCStreamerMode/
+!TGCStreamerMode.mod
+TGCStatehoodMechanic/localisation/00_statehood_mechanic.csv
+TGCStatehoodMechanic/localisation/00_decisions-states.csv
+TGCStatehoodMechanic/decisions/StateMechanic.txt
+TGCStatehoodMechanic/common/defines.lua
+TGCCountriesEndonymicLocalization/localisation/000000_A_TGC Endonymic Names.csv
+TGCCountriesEndonymicLocalization.mod
+TGCStatehoodMechanic.mod

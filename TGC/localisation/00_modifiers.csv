@@ -95,6 +95,8 @@ begin_disunited_states;Disunited States;;;;;;;;;;;;;x
 begin_disunited_states_desc;With the transition of the United States away from democracy, the Sons of Liberty have arisen in an effort fight what they call tyranny. It will take time for this resistance to calm, and until it does there shall be much talk of secession and even open revolt.;;;;;;;;;;;;;x
 begin_revolution;Revolutionary State;;;;;;;;;;;;;x
 begin_revolution_desc;Our country is a fledgling state, founded in the midst of chaos and rebellion. But the people are willing to fight!;;;;;;;;;;;;;x
+begin_revolution2;Revolutionary State;;;;;;;;;;;;;x
+begin_revolution2_desc;Our country is a fledgling state, founded in the midst of chaos and rebellion. But the people are willing to fight!;;;;;;;;;;;;;x
 being_dismantled;Under Dismantlement;;;;;;;;;;;;;
 being_dismantled_desc;Our country has lost and its empire is being divided by the winners.;;;;;;;;;;;;;
 benefactor_ai;Benevolent Ruler;;;;;;;;;;;;;x
@@ -109,12 +111,12 @@ bigben_construction;Reconstruction of the Palace of Westminster;;;;;;;;;;;;;x
 bigben_construction_desc;The Palace of Westminster is being reconstructed and with it, a huge clock tower.;;;;;;;;;;;;;x
 bioweapon_cooldown;Solomon Virus Under Cooldown;;;;;;;;;;;;;x
 bioweapon_cooldown_desc;You must wait till the modifier disappears before deploying The Solomon Virus again.;;;;;;;;;;;;;x
-birthrate_push_high;State Enforced Birthing Campaign;;;;;;;;;;;;;x
-birthrate_push_high_desc;State Enforced Birthing Campaign;;;;;;;;;;;;;x
-birthrate_push_low;Basic Growth Incentives;;;;;;;;;;;;;x
-birthrate_push_low_desc;Basic Growth Incentives;;;;;;;;;;;;;x
-birthrate_push_medium;Aggressive Pop-growth Campaign;;;;;;;;;;;;;x
-birthrate_push_medium_desc;Aggressive Pop-growth Campaign;;;;;;;;;;;;;x
+birthrate_push_high;High Population Incentives;;;;;;;;;;;;;x
+birthrate_push_high_desc;§YCampaign Cost:§! Roughly §R20%§! of your maximum monthly tax income every month.;;;;;;;;;;;;;x
+birthrate_push_low;Basic Population Incentives;;;;;;;;;;;;;x
+birthrate_push_low_desc;§YCampaign Cost:§! Roughly §R10%§! of your maximum monthly tax income every month.;;;;;;;;;;;;;x
+birthrate_push_medium;Medium Population Incentives;;;;;;;;;;;;;x
+birthrate_push_medium_desc;§YCampaign Cost:§! Roughly §R15%§! of your maximum monthly tax income, every month.;;;;;;;;;;;;;x
 black_shirts;Blackshirts;;;;;;;;;;;;;x
 black_shirts_desc;Blackshirts are provoking the residents in the province.;;;;;;;;;;;;;x
 blacks_to_liberia;Afro American Resettlement;;;;;;;;;;;;;x
@@ -198,7 +200,8 @@ caudillo_leaders_desc;A caudillo is a type of militia leader with a charismatic 
 central_american_ai;AI: Central America;;;;;;;;;;;;;x
 central_bank_established;Central Bank;;;;;;;;;;;;;x
 central_bank_established_desc;Our government’s central bank maintains a strict monopoly on the issuance of currency.;;;;;;;;;;;;;x
-china_isolationism;Chinese Isolationism;;;;;;;;;;;;;x
+china_isolationism;Isolationism;;;;;;;;;;;;;x
+china_isolationism_desc;We are better alone!;;;;;;;;;;;;;x
 chinese_floods;Provincial Floods;;;;;;;;;;;;;x
 chinese_substate;Qing Oppression;;;;;;;;;;;;;x
 chinese_substate_desc;The oppression by the Qing Emperor has left our nation in disarray.;;;;;;;;;;;;;x
@@ -285,6 +288,8 @@ cuza_reforms;Cuza’s Reforms;;;;;;;;;;;;;x
 cuza_reforms_desc;The westernizing reforms of A. I. Cuza have greatly changed our country.;;;;;;;;;;;;;x
 daimyo_draft;Emergency Draft;;;;;;;;;;;;;x
 daimyo_draft_desc;We must recruit all able-bodied men to fight!;;;;;;;;;;;;;x
+damaged_city;Damaged City;;;;;;;;;;;;;x
+damaged_city_desc;This city has been damaged by a terrible disaster.;;;;;;;;;;;;;x
 dar_al_funun;The Dar al-Funun.;Le Dar al Funun.;Der Dar al Funun.;;;;;;;;;;;x
 dar_al_funun_desc;The first modern university in Persia.;;;;;;;;;;;;;x
 debt_default_to;Debt Default To;;;;;;;;;;;;;x
@@ -531,6 +536,9 @@ great_depression_desc;A stock market crash in one of the Great Powers has caused
 great_eastern_crisis;The Great Eastern Crisis;;;;;;;;;;;;;x
 great_eastern_crisis_desc;The Great Powers of Europe are convening to decide the fate of the Ottoman Empire;;;;;;;;;;;;;x
 great_famine_years;Great Famine Years;;;;;;;;;;;;;x
+great_famine_years_desc;Harsh winter and late summer caused a bad harvest. Thousands are starving.;;;;;;;;;;;;;x
+great_famine_years_severe;Great Famine Years;;;;;;;;;;;;;x
+great_famine_years_severe_desc;Harsh winter and late summer caused a bad harvest. Thousands are starving.;;;;;;;;;;;;;x
 great_reformer;Great Reformer;;;;;;;;;;;;;x
 great_reformer_desc;A champion of reform, our leader is seen as someone who can enact significant change in our country.;;;;;;;;;;;;;x
 great_statesman;Great Statesman;;;;;;;;;;;;;x
@@ -635,8 +643,8 @@ kalmar_union;Kalmar Union;;;;;;;;;;;;;x
 kalmar_union_desc;We have agreed in principle to a closer bond with the other Scandinavian nations.;;;;;;;;;;;;;x
 karadzic_reforms;Karadzic Reforms;;;;;;;;;;;;;x
 karadzic_reforms_desc;Vuk Karadzic has reformed language education in our schools. Our children can now learn the Serbian language more easily than before.;;;;;;;;;;;;;x
-kebabbies;Integration Policy;;;;;;;;;;;;;x
-kebabbies_desc;Our policy to remove untoward elements in our country has proved successful, but new immigrants or acquisitions to the nation have not forgotten. Our core population, however, is experiencing a new state of euphoria.;;;;;;;;;;;;;x
+remove_undesireables;Integration Policy;;;;;;;;;;;;;x
+remove_undesireables_desc;The violence unleashed by liberation wars against Muslim inhabitants of our lands is still felt today.;;;;;;;;;;;;;x
 kettler_denkmal;Memorial to Foreign Diplomat;;;;;;;;;;;;;x
 kettler_denkmal_desc;This memorial to a foreign diplomat stands as a permanent reminder to our people that our independence is being sold short by our government.;;;;;;;;;;;;;x
 kiel_canal;Kiel Canal;;;;;;;;;;;;;x
@@ -739,6 +747,8 @@ loss_of_support_desc;The ruling party has lost support in this area.;;;;;;;;;;;;
 lost_war;Lost War;;;;;;;;;;;;;x
 louis_napoleon_iii;Louis-Napoléon Bonaparte;;;;;;;;;;;;;x
 louis_napoleon_iii_desc;Nephew and heir of Napoleon I, he is a man of the people and carries with him a legacy that makes him seemingly invincible—even if, at times, his decisions are reckless and of questionable military value.;;;;;;;;;;;;;x
+louis_napoleon_iv;Louis-Napoléon IV Bonaparte;;;;;;;;;;;;;x
+louis_napoleon_iv_desc;Son and heir of Napoleon III, and as any Bonaparte, extremely popular among the French, an astute young man with a military career, aspires to follow his predecessors as a man of the people and army;;;;;;;;;;;;;x
 low_health_care_poorly_funded_desc;Less government investment in administration results in a poorly funded healthcare system.;;;;;;;;;;;;;x
 lower_taxes;Lowered Taxes;;;;;;;;;;;;;x
 lower_taxes_desc;In order to reduce the resistance level in our Lowland areas, we have decided to lower taxes. Though, we had to do the same in all areas of Germany, as to not favour them over the rest of Germany.;;;;;;;;;;;;;x
@@ -925,8 +935,10 @@ opened_frontiers;Opened Frontiers;;;;;;;;;;;;;x
 organic_work;Organic Work;;;;;;;;;;;;;x
 organic_work_desc;A movement dedicated to work as a form of resistance operates in this province.;;;;;;;;;;;;;x
 orleans_growth;New Orleans Growing;;;;;;;;;;;;;x
-orthodoxy_autocracy_nationality;Orthodoxy, Autocracy and Nationality!;;;;;;;;;;;;;x
-orthodoxy_autocracy_nationality_desc;The Official Nationality policy entered into effect and it’s speeding up the assimilation of other cultures at the cost of some unrest.;;;;;;;;;;;;;x
+orthodoxy_autocracy_nationality;Orthodoxy, Autocracy, Nationality!;;;;;;;;;;;;;x
+orthodoxy_autocracy_nationality_desc;The Official Nationality policy is aimed towards Orthodox primacy, safekeeping the absolutism, and loyalty to the Tsar;;;;;;;;;;;;;x
+gendarme_of_europe;Gendarme of Europe;;;;;;;;;;;;;x
+gendarme_of_europe_desc;It is upon us to safeguard the Autocracy of Europe. We have justified Casus Bellis on revolutionary nations!;;;;;;;;;;;;;x
 otto_von_bismarck;Otto von Bismarck;;;;;;;;;;;;;x
 otto_von_bismarck_desc;The current Chancellor of our nation, von Bismarck is a remarkable statesman… perhaps one of the finest our nation will ever know.;;;;;;;;;;;;;x
 ottoman_bank;Osmanli Bankasi;;;;;;;;;;;;;x
@@ -1056,7 +1068,7 @@ reading_desc;A great work of literature inspired the people to read. The masses 
 rebel_cell_discovered;Rebel Cell Discovered;;;;;;;;;;;;;x
 rebel_cell_discovered_desc;With one rebel cell uncovered, it’s only a matter of time before we discover the rest and stamp them out!;;;;;;;;;;;;;x
 rebuilding_city;Rebuilding;;;;;;;;;;;;;x
-rebuilding_city_desc;Our city is rebuilding.;;;;;;;;;;;;;x
+rebuilding_city_desc;Our population is recovering from a great disaster that affected the city.;;;;;;;;;;;;;x
 recent_crisis;Recent Crisis;;;;;;;;;;;;;x
 recent_crisis_desc;We have been the instigators in a recent crisis. Until memories fade, the world will likely tend to overlook any further demands we make for our territories.;;;;;;;;;;;;;x
 recent_safari2;Too many safaris;;;;;;;;;;;;;x
@@ -1095,6 +1107,10 @@ ruhr_boom_city_desc;Cities all across Germany are growing and changing from rura
 ruhr_boom_desc;Cities all across Germany are growing and changing from rural townships to modern centres of industry thanks to the examples set by the burgeoning Ruhr industrialism.;;;;;;;;;;;;;x
 ruling_party_scandal;National Scandal;;;;;;;;;;;;;x
 ruling_party_scandal_desc;A recent scandal has rocked the government and eroded support for the ruling party.;;;;;;;;;;;;;x
+rus_organic_statute_cpl;Organic Statute of the Kingdom of Poland;;;;;;;;;;;;;x
+rus_organic_statute_cpl_desc;After the failed Rebellion of 1831, the Tsar seized the chance to repeal the liberal 1815 Constitution of our Kingdom and proclaim the conservative Statute in 1832, changing the nominal personal union of Poland and Russia into the "eternally incorporated Kingdom of Poland", curtailing many of our rights and governmental jurisdictions;;;;;;;;;;;;;x
+russian_absolutist_encroachment;Russian Oversight;;;;;;;;;;;;;x
+russian_absolutist_encroachment_desc;Our Petrogradian Overlord is keeping a watchful eye on the Krolestwo affairs.;;;;;;;;;;;;;x
 russian_army_education;Dmitry Milyutin’s Army Reform;;;;;;;;;;;;;x
 russian_army_education_desc;As part of Dmitry Milyutin’s Army Reforms, the system of military education was reformed, and elementary education was made available to all draftees.;;;;;;;;;;;;;x
 russian_protectionism;High Protectionism;;;;;;;;;;;;;
@@ -1125,6 +1141,9 @@ silver_age_desc;Our most excellent leader will take us through a time of trouble
 silver_mine;Silver Mine;;;;;;;;;;;;;x
 singapore_port;Free Port of Singapore;;;;;;;;;;;;;x
 sixtysix_famine;The Famine of 1866;;;;;;;;;;;;;x
+sixtysix_famine_desc;A rainy summer caused staple crops to rot. Many people are starving.;;;;;;;;;;;;;x
+sixtysix_famine_severe;The Famine of 1866;;;;;;;;;;;;;x
+sixtysix_famine_severe_desc;A rainy summer caused staple crops to rot. Many people are starving;;;;;;;;;;;;;x
 slave_growth;Slave Demographics;;;;;;;;;;;;;x
 slave_growth_desc;The population of slaves changed in our country.;;;;;;;;;;;;;x
 slave_market;Slave Market;;;;;;;;;;;;;x
@@ -1133,8 +1152,10 @@ slave_trade_cooldown_country;Slaves Traded;;;;;;;;;;;;;x
 slavepopupdated;AI: Slave Population Updated;;;;;;;;;;;;;x
 slavery_propaganda;Slavery Propaganda;;;;;;;;;;;;;x
 slavery_propaganda_desc;To improve our grip on slavery, we must spread word amongst the people that slavery is good, and will lead to a better nation. So long as there is $COUNTRY_ADJ$ doubt about slavery, this propaganda must go on.;;;;;;;;;;;;;x
-slavery_timer;Slavery;;;;;;;;;;;;;x
-slavery_timer_desc;Slavery in our nation continues on, making our country a bit less attractive as the world moves on.;;;;;;;;;;;;;x
+slavery_timer;Slavery timer;;;;;;;;;;;;;x
+slavery_timer_desc;This is a timer for slavery.;;;;;;;;;;;;;x
+slightly_damaged_city;Slightly Damaged City;;;;;;;;;;;;;x
+slightly_damaged_city_desc;A terrible disaster affected this city! Thankfully our government enacted some measures to help the population.;;;;;;;;;;;;;x
 slow_down_progress;Reform Restrictions;;;;;;;;;;;;;x
 slow_down_progress_desc;Perhaps it is best if we apply brakes to the rate of reforms. We must allow our people to catch up!;;;;;;;;;;;;;x
 slow_immigration_boom;Immigration Boom;;;;;;;;;;;;;x
@@ -1156,6 +1177,8 @@ social_reform_movement;Social Reform Movement;;;;;;;;;;;;;x
 social_reform_movement_desc;Socialists and communists have initiated a countrywide agenda for better living conditions.;;;;;;;;;;;;;x
 social_reformed_nation;Full Welfare State;;;;;;;;;;;;;x
 social_reformed_nation_desc;Our country social reforms match every socialist demand, having some scholars call us a welfare state.;;;;;;;;;;;;;x
+politically_reformed_nation;Fully-fledged Democracy;;;;;;;;;;;;;x
+politically_reformed_nation_desc;Our country political reforms match every liberal demand, having some scholars call us a true democracy.;;;;;;;;;;;;;x
 socialism_in_1;Socialism in 1;;;;;;;;;;;;;x
 solano_lopez_industrialization;Solano Lopez Industrialization;;;;;;;;;;;;;x
 solano_lopez_industrialization_desc;Following his rise to power, Carlos Solano Lopez started an aggressive program of industrialization and militarization of our country that included subsides to industry, minimum spending on military and a strong focus on productivity.;;;;;;;;;;;;;x
@@ -1397,3 +1420,125 @@ rgo_boycott_modifier_desc;They are refusing to work!;;;;;;;;;;;;;x
 religious_insurrection;Religious Insurrection;;;;;;;;;;;;;x
 religious_insurrection_desc;Locals are rebelling on blind fate!;;;;;;;;;;;;;x
 neutrality_timer;Neutrality Timer;;;;;;;;;;;;;x
+neutrality_timer_desc;Our country deliberately takes no sides.;;;;;;;;;;;;;x
+bank_timer;Bank cooldown.;;;;;;;;;;;;;x
+univerisity_timer;University cooldown.;;;;;;;;;;;;;x
+bank_timer_desc;A new Bank has been built.;;;;;;;;;;;;;x
+univerisity_timer_desc;A new University has been built.;;;;;;;;;;;;;x
+central_ukraine_modifier;Central Ukrainian Mineral Basin;;;;;;;;;x
+central_ukraine_modifier_desc;The mineral basin, located in the eponymous region, is very rich in coal and other useful minerals.;;;;;;;;;x
+donbass_modifier;The Donbass;;;;;;;;;x
+donbass_modifier_desc;The Donbass, short for Donets Basin, is an area centered around the Donets River. Preliminary explorations have shown that this basin is one of the richest in the world. With billions of tonnes of coal to supply our nation for more the decades to come.;;;;;;;;;x
+polish_revolt;Polish Rebellion;;;;;;;;;x
+polish_revolt_desc;Guerrilla Warfare causes disruption in this area;;;;;;;;;x
+bank_cooldown;Bank cooldown.;;;;;;;;;;;;;x
+university_cooldown;University cooldown.;;;;;;;;;;;;;x
+bank_cooldown_desc;A new Bank has been built.;;;;;;;;;;;;;x
+lyon_textiles;Lyon Textile Industry;;;;;;;;;;;;;x
+manchester_textiles;Manchester Textile Industry;;;;;;;;;;;;;x
+chinese_silk;Fine Asian Silk;;;;;;;;;;;;;x
+chinese_silk_desc;This province excels at producing high quality silk;;;;;;;;;;;;;x
+university_cooldown_desc;A new University has been built.;;;;;;;;;;;;;x
+austrian_betrayal;Vienna Betrayal;;;;;;;;;;;;;x
+austrian_betrayal_desc;Austria turned their backs on us in Crimean War. We will never forget this.;;;;;;;;;;;;;x
+prussian_military;Prussian Military;;;;;;;;;;;;;x
+decadent_autocracy;Decadent Autocracy;;;;;;;;;;;;;x
+decadent_autocracy_desc;Our Tsarist apparatus is under strenuous pressure to retain Autocracy;;;;;;;;;;;;;x
+decadent_autocracy2;Highly Decadent Autocracy;;;;;;;;;;;;;x
+decadent_autocracy2_desc;Our Tsarist apparatus is under strenuous pressure to retain Autocracy and may burst at any moment;;;;;;;;;;;;;x
+border_clashes;Colonial Border Clashes;;;;;;;;;;;;;x
+redemption_payments;Redemption Payments;;;;;;;;;;;;;x
+redemption_payments_desc;Former Serf subjects are paying us back the money they borrowed with interest to buy land from aristocracy;;;;;;;;;;;;;x
+population_20mil;Population: 20 Million, Coffers: 5,000,000;;;;;;;;;;;;;x
+population_40mil;Population: 40 Million, Coffers: 10,000,000;;;;;;;;;;;;;x
+population_80mil;Population: 80 Million, Coffers: 20,000,000;;;;;;;;;;;;;x
+population_160mil;Population: 160 Million, Coffers: 30,000,000;;;;;;;;;;;;;x
+population_320mil;Population: 320 Million, Coffers: 40,000,000;;;;;;;;;;;;;x
+goloty_i_glodomerji;Goloty i Glodomerji;;;;;;;;;;;;;x
+goloty_i_glodomerji_desc;Dubbed locally as Kingdom of Bareness and Starvation, this region is one of the poorest and most backward in Europe;;;;;;;;;;;;;x
+russian_menace;Russian Bear Menace;;;;;;;;;;;;;x
+russian_menace_desc;Russian domination in Eastern Europe and Middle East threatens us;;;;;;;;;;;;;x
+outraged_europe_rus;European Powers are Alarmed;;;;;;;;;;;;;x
+outraged_europe_rus_desc;Europe is alarmed at our gains;;;;;;;;;;;;;x
+lucrative_russia_trade;Lucrative trade with Russia;;;;;;;;;;;;;x
+lucrative_russia_trade_desc;As we are the only major European neighbour at peace with Russia, our trade is prospering;;;;;;;;;;;;;x
+german_threat;Germany is a Threat;;;;;;;;;;;;;x
+triple_entente;Member of Triple Entente;;;;;;;;;;;;;x
+central_powers;Member of Central Powers;;;;;;;;;;;;;x
+infamy_removal;Active Diplomatic Campaign;;;;;;;;;;;;;x
+infamy_removal_desc;You are focusing budgetary resources to fund this campaign. §YCampaign Cost:§! Roughly §R10%§! of your maximum monthly tax income, every month.;;;;;;;;;;;;;x
+more_colonial_settlement;Active Colonial Campaign;;;;;;;;;;;;;x
+more_colonial_settlement_desc;§YCampaign Cost:§! Roughly §R10%§! of your maximum monthly tax income, every month.;;;;;;;;;;;;;x
+less_emigration;Active Anti-Emigration Campaign;;;;;;;;;;;;;x
+less_emigration_desc;We are actively trying to keep our citizens in our country with better pay and jobs. §YCampaign Cost:§! Roughly §R10%§! of your maximum monthly tax income, every month;;;;;;;;;;;;;x
+renovated_hagia_sophia;The Church of Hagia Sophia;;;;;;;;;;;;;x
+renovated_hagia_sophia_desc;Renovated and reconsecrated, it yet again stands the grandest Church in the World;;;;;;;;;;;;;x
+constantinople_patriarchate;Spiritual Center of Orthodoxy;;;;;;;;;;;;;x
+constantinople_patriarchate_desc;With Hagia Sophia restored to Orthodoxy, Ecumenical Patriarchate of Constantinople is yet again a focal point of religious affairs within Orthodox Christianity.;;;;;;;;;;;;;x
+bosnian_question;The Bosnian Question;;;;;;;;;;;;;x
+free_economic_society;Free Economic Society for the Encouragement of Agriculture and Husbandry;;;;;;;;;;;;;x
+free_economic_society_desc;Free Economic Society represents a Bulwark of Liberalism in the Russian Empire;;;;;;;;;;;;;x
+capital_of_the_motherland;Capital of the Motherland;;;;;;;;;;;;;x
+popov_tea_company;Popov's Tea Company;;;;;;;;;;;;;x
+win_or_die_oe;Win or Die;;;;;;;;;;;;;x
+turk_revolt;Turkish Nationalist Revolt;;;;;;;;;;;;;x
+caliph_powerless_figurehead;Caliph is a Powerless Figurehead;;;;;;;;;;;;;x
+caliph_powerless_figurehead_desc;Caliph is a joke for our people, the real power lies with the Tsar;;;;;;;;;;;;;x
+tsars_puppet;Tsar's Puppet;;;;;;;;;;;;;x
+tsars_puppet_desc;Our Caliph is nothing more than a Petrogradian Toy;;;;;;;;;;;;;x
+humiliated_ottoman_caliph;Humiliated Ottoman Caliph;;;;;;;;;;;;;x
+humiliated_ottoman_caliph_desc;The Caliph is Humiliated;;;;;;;;;;;;;x
+russian_menace;Russian Menace;;;;;;;;;;;;;x
+russian_menace_desc;We must militarize our society in order to defend against the Russian Bear;;;;;;;;;;;;;x
+outraged_europe_rus;Europe is Outraged;;;;;;;;;;;;;x
+outraged_europe_rus_desc;Our actions have caused alarm in all European capitals and our isolation is all but certain;;;;;;;;;;;;;x
+cpl_boom;Polish Industrial Boom;;;;;;;;;;;;;x
+cpl_boom_desc;Polish Industry is Booming;;;;;;;;;;;;;x
+cpl_boom_city;Polish Industrial Boom;;;;;;;;;;;;;x
+francophy_the_rhine;Francophy the Rhine;;;;;;;;;;;;;x
+recently_reformed_local_government;Recently reformed local government;;;;;;;;;;;;;x
+recently_reformed_local_government_desc;Recently reformed local government;;;;;;;;;;;;;x
+religious_resurgence;Religious Resurgence;;;;;;;;;;;;;x
+religious_resurgence_desc;We have achieved our religious goals and our faith is resurging as a result.;;;;;;;;;;;;;x
+cultural_revival;Cultural Revival.;;;;;;;;;;;;;x
+cultural_revival_desc;We have acheived our core cultural objectives and as a result our culture heritage is being revived.;;;;;;;;;;;;;x
+destiny_fullfiled;Destiny Fullfiled.;;;;;;;;;;;;;x
+destiny_fullfiled_desc;We have achieved our destiny reaching heights a few years ago only imaginable in the wildest dreams of hopeless romantics.;;;;;;;;;;;;;x
+universal_imperium;Universal Empire;;;;;;;;;;;;;x
+universal_imperium_desc;Our Empire has Unified its two ancestral mandates and has claimed dominion over mankind. The lands that are not yet under our rule soon will be.;;;;;;;;;;;;;x
+renovated_constantinople;Renovated City of World's Desire;;;;;;;;;;;;;x
+metternich;Klemens von Metternich;;;;;;;;;;;;;x
+metternich_desc;At the center of Concert of Europe stands its chief architect, Prince Metternich. Heavily conservative and anti-revolutionary, he is determined to retain Habsburg Absolutism and Europe's status quo.;;;;;;;;;;;;;x
+research_campaign;Active Research Campaign;;;;;;;;;;;;;x
+research_campaign_desc;We are currently focusing part of our annual budget on funding more research for our country. §YCampaign Cost:§! Roughly §R10%§! of your maximum daily tax income, scaled by country size, every month.;;;;;;;;;;;;;x
+church_property_confiscation;Church Property Confiscated;;;;;;;;;;;;;x
+church_property_confiscation_desc;We are fixing our budget holes with the property of the Catholic Church and its monasteries;;;;;;;;;;;;;x
+soldier_fix;Recent Reservits;;;;;;;;;;;;;x
+soldier_fix;We just recently called up the reservists;;;;;;;;;;;;;x
+arch_museum;Archaeological Museum;;;;;;;;;;;;;x
+arch_museum_desc;This city holds an marvellous Archaeological Museum;;;;;;;;;;;;;x
+latin_customs_union;Latin Customs Union;;;;;;;;;;;;;x
+latin_customs_union_desc;Our country is a member of the Latin Customs Union. We have synchronized our custom laws and duties which allows for trade and economy within the Union to prosper.;;;;;;;;;;;;;x
+french_threat;Rising French Threat;;;;;;;;;;;;;x
+french_threat_desc;Our society is teetering on the brink of militarization as the French Power looms over the Continent;;;;;;;;;;;;;x
+outraged_europe_fra;Europe is Outraged;;;;;;;;;;;;;x
+outraged_europe_fra_desc;European Great Powers are alarmed at our gains and will hurdle together to try and contain us;;;;;;;;;;;;;x
+implementing_reforms;Implementing Reforms;;;;;;;;;;;;;x
+implementing_reforms_desc;We are currently trying to reform one of the key government aspects in our country;;;;;;;;;;;;;x
+political_crisis;Political Crisis;;;;;;;;;;;;;x
+political_crisis_desc;A political turmoil is widespread in the newly minted Union - it will take time to stabilize the situation.;;;;;;;;;;;;;x
+disorganized_union;Disorganized Union;;;;;;;;;;;;;x
+disorganized_union;Our country is governed by several legal and administrative systems, ranging from Napoleonic Code in France to decrepit 18th century laws in Spain and Italy.;;;;;;;;;;;;;x
+assimilation_technique_go_brr;Neolatin Standardization Center;;;;;;;;;;;;;x
+punctation_of_olmutz;Punctation of Olmutz;;;;;;;;;;;;;x
+punctation_of_olmutz_desc;Backed into a corner by other Great Powers, we had to abandon ambitions of leading Germany, for now.;;;;;;;;;;;;;x
+militarization_of_society;Militarization of Society;;;;;;;;;;;;;x
+militarization_of_society_desc;Militarizing our society;;;;;;;;;;;;;x
+loyalists_surge;Loyalists Control;;;;;;;;;;;;;x
+loyalists_surge_desc;Loyalists of the Crown are dominant in our Dominion;;;;;;;;;;;;;x
+patriot_open_revolts;Republican Surge;;;;;;;;;;;;;x
+patriot_open_revolts_desc;Republicans that call themselves "Patriots" have secretly started rearming the militias. We have turned a blind eye.;;;;;;;;;;;;;x
+american_dominions;American Dominions;;;;;;;;;;;;;x
+american_dominions_desc;The Crown dominates the Atlantic Seaboard. It is a costly venture.;;;;;;;;;;;;;x
+under_the_british_crown;Under the British Crown;;;;;;;;;;;;;x
+under_the_british_crown_desc;We are subjects of Great Britain;;;;;;;;;;;;;x

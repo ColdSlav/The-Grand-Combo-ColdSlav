@@ -89,11 +89,23 @@ political_decisions = {
 			NOT = { citizenship_policy = residency }
 			citizens_rights = all_voting_pops
 			OR = {
-				liberal = 30
-				socialist = 30
+				upper_house = {
+					ideology =liberal
+					value = 30
+				}
+				upper_house = {
+					ideology = socialist
+					value = 30
+				}
 				AND = {
-					liberal = 15
-					socialist = 15
+					upper_house = {
+						ideology = liberal
+						value = 15
+					}
+					upper_house = {
+						ideology = socialist
+						value = 15
+					}
 				}
 			}
 		}
@@ -176,11 +188,25 @@ political_decisions = {
 			badboy = 10
 			EGY_897 = { add_core = TUR }
 			TUR_923 = { add_core = TUR }
-			RUS_1098 = { add_core = TUR }
-			RUS_1102 = { add_core = TUR }
+			### Old Armenia (RUS_1098) ###
+			RUS_1098 = { add_core = TUR } # Erivan
+			RUS_1101 = { add_core = TUR } # Nakhichevan
+			RUS_3767 = { add_core = TUR } # Borchali
+			### Old Azerbaijan (RUS_1102) ###
+			RUS_1102 = { add_core = TUR } # Baku
+			RUS_1103 = { add_core = TUR } # Southern Dagestan
+			RUS_1104 = { add_core = TUR } # Nukha
+			RUS_1105 = { add_core = TUR } # Yelizavetpol
+			RUS_1106 = { add_core = TUR } # Karabakh
+			RUS_1107 = { add_core = TUR } # Lenkoran
+			RUS_3351 = { add_core = TUR } # Zakatal
+			RUS_3713 = { add_core = TUR } # Shemakha
 			1108 = { add_core = TUR }
 			1109 = { add_core = TUR }
-			1110 = { add_core = TUR }
+			### Old Urmia (1110) ###
+			1110 = { add_core = TUR } # Urmia
+			3608 = { add_core = TUR } # Dustan
+			3612 = { add_core = TUR } # Qotur
 			1111 = { add_core = TUR }
 			1112 = { add_core = TUR }
 			1117 = { add_core = TUR }
@@ -323,7 +349,7 @@ political_decisions = {
 			treasury = 10000
 			set_country_flag = armenian_genocide
 			any_owned = {
-				limit = { is_core = ARM NOT = { region = RUS_1098 } }
+				limit = { is_core = ARM NOT = { region = RUS_1098 region = RUS_1101 region = RUS_3767 } }
 				remove_core = ARM
 			}
 			random = {
@@ -647,7 +673,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = yazidi_kurdistan
 			primary_culture = yazidis
-			prestige = 5
+			prestige = 10
 			KDS = { all_core = { add_core = BHT } }
 		}
 
@@ -673,7 +699,7 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = became_kurdistan
-			prestige = 5
+			prestige = 10
 			change_tag = KDS
 			any_country = {
 				limit = {
@@ -687,10 +713,13 @@ political_decisions = {
 			}
 			any_owned = {
 				remove_core = BHT
+				remove_core = MLN
+				remove_core = KHL
 				remove_core = MKN
 				remove_core = SRN
 				remove_core = BNB
 				remove_core = BDN
+				remove_core = BZD
 				remove_core = BTL
 				remove_core = RDL
 			}
@@ -718,7 +747,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = centralized_kurdish_states
 			badboy = 2
-			prestige = 5
+			prestige = 10
 			any_country = {
 				limit = { primary_culture = kurdish }
 				relation = { who = THIS value = -400 }
@@ -754,6 +783,24 @@ political_decisions = {
 			random_country = {
 				limit = {
 					exists = yes
+					tag = MLN
+					vassal_of = TUR
+				}
+				TUR = { release_vassal = MLN diplomatic_influence = { who = MLN value = -400 } }
+			}
+
+			random_country = {
+				limit = {
+					exists = yes
+					tag = KHL
+					vassal_of = TUR
+				}
+				TUR = { release_vassal = KHL diplomatic_influence = { who = KHL value = -400 } }
+			}
+
+			random_country = {
+				limit = {
+					exists = yes
 					tag = BNB
 					vassal_of = TUR
 				}
@@ -769,15 +816,27 @@ political_decisions = {
 				TUR = { release_vassal = BDN diplomatic_influence = { who = BDN value = -400 } }
 			}
 
+			random_country = {
+				limit = {
+					exists = yes
+					tag = BZD
+					vassal_of = TUR
+				}
+				TUR = { release_vassal = BZD diplomatic_influence = { who = BZD value = -400 } }
+			}
+
 			any_country = {
 				limit = {
 					exists = yes
 					OR = {
 						tag = BDN
+						tag = BZD
 						tag = BNB
 						tag = BTL
 						tag = SRN
 						tag = BHT
+						tag = MLN
+						tag = KHL
 					}
 				}
 				country_event = 986500
@@ -921,10 +980,7 @@ political_decisions = {
 	claim_arab_coast = {
 		picture = nejd_sanjak
 		potential = {
-			OR = {
-				tag = TUR
-				tag = EGY
-			}
+			has_country_flag = turkey_n_egypt
 			OR = {
 				has_country_flag = absolute_monarchy_gov
 				has_country_flag = constitutional_monarchy_gov
@@ -933,8 +989,8 @@ political_decisions = {
 			NOT = { has_country_flag = claimed_arab_coast }
 			NOT = { 1163 = { is_core = THIS } }
 			NOT = { 1164 = { is_core = THIS } }
-			owns = 935#Kuwait
-			is_canal_enabled = 2#Suez
+			owns = 935 # Kuwait
+			is_canal_enabled = 2 # Suez
 		}
 
 		allow = {
@@ -980,10 +1036,7 @@ political_decisions = {
 	revoke_kuwait_autonomy = {
 		picture = bahrain_trade
 		potential = {
-			OR = {
-				tag = TUR
-				tag = EGY
-			}
+			has_country_flag = turkey_n_egypt
 			has_country_flag = monarchy_gov
 			NOT = { has_country_flag = revoke_kuwait_autonomy }
 			KWT = {
@@ -1126,7 +1179,7 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = released_albania
-			prestige = -5
+			prestige = -10
 			any_owned = {
 				limit = { is_core = ALB }
 				secede_province = ALB
@@ -1142,6 +1195,7 @@ political_decisions = {
 	reclaim_hejaz = {
 		picture = the_holy_city
 		potential = {
+			has_country_flag = turkey_n_egypt
 			OR = {
 				AND = {
 					tag = EGY
@@ -1178,7 +1232,7 @@ political_decisions = {
 		}
 
 		effect = {
-			prestige = 5
+			prestige = 10
 			badboy = 2
 			inherit = HDJ
 			set_country_flag = reclaim_hejaz
@@ -1277,7 +1331,7 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = reforms_of_abdulmejid_I
-			prestige = 5
+			prestige = 10
 			badboy = 2
 			ruling_party_ideology = reactionary
 			political_reform = none_voting
@@ -1331,7 +1385,7 @@ political_decisions = {
 
 #from Irredentism.txt
 	greater_assyria = {
-	picture = greater_assyria
+		picture = greater_assyria
 		potential = {
 			tag = ASY
 			owns = 923
@@ -1351,23 +1405,30 @@ political_decisions = {
 				owns = 890
 				owns = 928
 				government = fascist_dictatorship
-				is_secondary_power = yes
-				is_greater_power = yes
+				rank = 16
 			}
 		}
 
 		effect = {
 			set_country_flag = claimed_greater_assyria
-			prestige = 5
+			prestige = 10
 			923 = { change_province_name = "Nineveh" } # TODO move to rename decisions
 			889 = { add_core = ASY }
 			890 = { add_core = ASY }
 			891 = { add_core = ASY }
-			892 = { add_core = ASY }
+			### Old Hakkari (892) ###
+			892 = { add_core = ASY } # Van
+			3609 = { add_core = ASY } # Hakkari
 			893 = { add_core = ASY }
 			899 = { add_core = ASY }
-			1110 = { add_core = ASY }
-			2414 = { add_core = ASY }
+			### Old Urmia (1110) ###
+			1110 = { add_core = ASY } # Urmia
+			3608 = { add_core = ASY } # Dustan
+			3612 = { add_core = ASY } # Qotur
+			### Old Jezira (2414) ###
+			2414 = { add_core = ASY } # Jezira
+			3610 = { add_core = ASY } # Ridvan
+			3613 = { add_core = ASY } # Viransehir
 			925 = { add_core = ASY }
 			928 = { add_core = ASY }
 			898 = { add_core = ASY }
@@ -1426,6 +1487,7 @@ political_decisions = {
 			TUR_894 = { add_core = SYR }
 			#TUR_923 = { add_core = SYR }
 			TUR_931 = { add_core = SYR }
+			TUR_3292 = { add_core = SYR }
 			TUR_935 = { add_core = SYR }
 			TUR_893 = { add_core = SYR }
 		}
@@ -1457,7 +1519,7 @@ political_decisions = {
 		}
 
 		effect = {
-			prestige = 40
+			prestige = 80
 			EGY = {
 				annex_to = THIS
 				all_core = {
@@ -1495,7 +1557,7 @@ political_decisions = {
 		}
 
 		effect = {
-			prestige = 10
+			prestige = 20
 			TUN = {
 				annex_to = THIS
 				all_core = { add_core = TUR }
@@ -1534,7 +1596,7 @@ political_decisions = {
 		}
 
 		effect = {
-			prestige = 10
+			prestige = 20
 			HDJ = {
 				annex_to = THIS
 				all_core = { add_core = TUR }
@@ -1550,12 +1612,11 @@ political_decisions = {
 			tag = TUR
 			exists = GRE
 			war_with = GRE
-			year = 1901
+			mass_politics = 1
 			NOT = { has_country_flag = greek_genocide_enacted }
 		}
 
 		allow = {
-			war = no
 			invention = rhetoric_of_hate
 			average_militancy = 5
 		}
@@ -1563,13 +1624,13 @@ political_decisions = {
 		effect = {
 			set_country_flag = greek_genocide_enacted
 
-			badboy = 7
+			badboy = 15
 			remove_accepted_culture = greek
 			TUR = { any_owned = { remove_core = GRE } }
 			any_pop = {
 				limit = { has_pop_culture = greek }
 				reduce_pop = 0.60
-				militancy = 5
+				militancy = 8
 			}
 			any_pop = {
 				limit = { has_pop_culture = turkish }
@@ -1584,7 +1645,7 @@ political_decisions = {
 				factor = 0
 				OR = {
 					NOT = { war_exhaustion = 20 }
-					badboy = 18
+					badboy = 10
 				}
 			}
 		}
@@ -1593,19 +1654,14 @@ political_decisions = {
 	secularize_society = {
 		picture = the_holy_city
 		potential = {
-			OR = {
-				has_country_flag = sunni_country
-				has_country_flag = shiite_country
-				has_country_flag = ibadi_country
-				has_country_flag = bektashi_country
-			}
+			has_country_flag = muslim_country
 			civilized = yes
 			NOT = { has_country_flag = secularized_muslim_society }
 		}
 
 		allow = {
 			invention = secularization
-			prestige = 25
+			prestige = 50
 			NOT = {
 				government = theocracy
 				religious_policy = pluralism
@@ -1671,17 +1727,14 @@ political_decisions = {
 	claim_bahrain_qatar_peninsula = {
 		picture = bahrain_trade
 		potential = {
+			has_country_flag = can_claim_bahrain_qatar_peninsula
 			OR = {
 				AND = {
 					tag = TUR
 					NOT = { has_country_flag = qatar_protection }
 					year = 1880
 				}
-				tag = PER
-				tag = NEJ
-				tag = HAL
-				tag = ARA
-				tag = OMA
+				NOT = { tag = TUR }
 			}
 			NOT = { has_country_flag = claimed_the_persian_gulf }
 			NOT = { owns = 1165 }

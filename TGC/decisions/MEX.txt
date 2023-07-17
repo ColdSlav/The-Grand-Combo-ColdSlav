@@ -21,7 +21,7 @@ political_decisions = {
 
 		allow = {
 			war = no
-			prestige = 20
+			prestige = 40
 			military_score = 20
 		}
 
@@ -42,32 +42,7 @@ political_decisions = {
 	refute_manifest_destiny = {
 		picture = manifest_destiny
 		potential = {
-			OR = {
-				tag = TEX
-				tag = DES
-				tag = CAL
-				AND = {
-					tag = MEX
-					all_core = {
-						OR = {
-							owner = {
-								is_vassal = no
-								NOT = { capital_scope = { continent = north_america } }
-								NOT = { capital_scope = { continent = south_america } }
-							}
-							owner = {
-								is_vassal = yes
-								overlord = {
-									NOT = { capital_scope = { continent = north_america } }
-									NOT = { capital_scope = { continent = south_america } }
-								}
-							}
-							owned_by = THIS
-							empty = yes
-						}
-					}
-				}
-			}
+			has_country_flag = can_refute_manifest_destiny
 			exists = yes
 			USA = { has_country_flag = hasmanifestdestiny }
 			NOT = {
@@ -77,6 +52,24 @@ political_decisions = {
 		}
 
 		allow = {
+			all_core = {
+				OR = {
+					owner = {
+						is_vassal = no
+						NOT = { capital_scope = { continent = north_america } }
+						NOT = { capital_scope = { continent = south_america } }
+					}
+					owner = {
+						is_vassal = yes
+						overlord = {
+							NOT = { capital_scope = { continent = north_america } }
+							NOT = { capital_scope = { continent = south_america } }
+						}
+					}
+					owned_by = THIS
+					empty = yes
+				}
+			}
 			war = no
 			NOT = { has_recently_lost_war = yes }
 			OR = {
@@ -94,9 +87,9 @@ political_decisions = {
 		effect = {
 			set_global_flag = manifest_destiny_refuted
 			set_country_flag = manifest_destiny_refuted_country
-			prestige = 10
+			prestige = 20
 			USA = {
-				prestige = -10
+				prestige = -20
 				relation = { who = THIS value = -200 }
 			}
 
@@ -134,22 +127,21 @@ political_decisions = {
 		picture = CAL_greater_california
 		potential = {
 			tag = MEX
+			has_country_flag = treaty_of_guadalupe_hidalgo_enforced
+			NOT = { has_country_flag = mexico_reconquest }
+		}
+
+		allow = {
 			OR = {
 				USA = { is_greater_power = no }
 				USA = { exists = no }
-				is_greater_power = yes
-				is_secondary_power = yes
+				rank = 16
 			}
 			OR = {
 				has_global_flag = USA_CAN_denied
 				has_global_flag = treaty_of_new_york
 				USA = { has_country_flag = western_collapse }
 			}
-			has_country_flag = treaty_of_guadalupe_hidalgo_enforced
-			NOT = { has_country_flag = mexico_reconquest }
-		}
-
-		allow = {
 			war = no
 			OR = {
 				war_policy = pro_military
@@ -242,12 +234,12 @@ political_decisions = {
 		picture = cascadia_bioregion
 		potential = {
 			tag = MEX
-			has_global_flag = manifest_destiny_refuted
 			is_greater_power = yes
 			NOT = { has_global_flag = pacific_reclamation }
 		}
 
 		allow = {
+		has_global_flag = manifest_destiny_refuted
 			nationalism_n_imperialism = 1
 			NOT = {
 				relation = { who = USA value = 100 }
@@ -257,7 +249,7 @@ political_decisions = {
 
 		effect = {
 			set_global_flag = pacific_reclamation
-			prestige = 30
+			prestige = 60
 			badboy = 12
 			## Owners of 1, 13 and 78 or their overlords get relations hit ##
 				random_country = {
@@ -332,13 +324,13 @@ political_decisions = {
 		picture = new_france_louisiana
 		potential = {
 			tag = MEX
-			has_global_flag = manifest_destiny_refuted
-			has_global_flag = pacific_reclamation
 			is_greater_power = yes
 			NOT = { has_global_flag = mexican_louisiana }
 		}
 
 		allow = {
+			has_global_flag = manifest_destiny_refuted
+			has_global_flag = pacific_reclamation
 			nationalism_n_imperialism = 1
 			USA_78 = { owned_by = THIS }
 			USA_81 = { owned_by = THIS }
@@ -347,7 +339,7 @@ political_decisions = {
 
 		effect = {
 			set_global_flag = mexican_louisiana
-			prestige = 20
+			prestige = 40
 			badboy = 10
 			random_country = {
 				limit = { owns = 139 } # New Orleans
@@ -363,20 +355,20 @@ political_decisions = {
 		potential = {
 			tag = MEX
 			has_global_flag = manifest_destiny_refuted
-			has_global_flag = pacific_reclamation
-			has_global_flag = mexican_louisiana
 			is_greater_power = yes
 			NOT = { has_global_flag = mexican_florida }
 		}
 
 		allow = {
+			has_global_flag = pacific_reclamation
+			has_global_flag = mexican_louisiana
 			nationalism_n_imperialism = 1
 			USA_139 = { owned_by = THIS }
 		}
 
 		effect = {
 			set_global_flag = mexican_florida
-			prestige = 10
+			prestige = 20
 			badboy = 5
 			random_country = {
 				limit = { owns = 200 } # Dade
@@ -394,7 +386,11 @@ political_decisions = {
 		potential = {
 			tag = MEX
 			is_greater_power = yes
-			all_core = {
+			NOT = { has_country_flag = mexico_caribbean }
+		}
+
+		allow = {
+		all_core = {
 				OR = {
 					owner = {
 						is_vassal = no
@@ -412,10 +408,6 @@ political_decisions = {
 					empty = yes
 				}
 			}
-			NOT = { has_country_flag = mexico_caribbean }
-		}
-
-		allow = {
 			war = no
 			is_disarmed = no
 			OR = {
@@ -442,6 +434,10 @@ political_decisions = {
 		potential = {
 			tag = MEX
 			is_greater_power = yes
+			NOT = { has_country_flag = mexico_central_america }
+		}
+
+		allow = {
 			all_core = {
 				OR = {
 					owner = {
@@ -460,10 +456,6 @@ political_decisions = {
 					empty = yes
 				}
 			}
-			NOT = { has_country_flag = mexico_central_america }
-		}
-
-		allow = {
 			war = no
 			is_disarmed = no
 			OR = {
@@ -589,13 +581,13 @@ political_decisions = {
 		}
 
 		allow = {
-			prestige = 25
+			prestige = 50
 			is_greater_power = yes
 		}
 
 		effect = {
 			set_country_flag = reassurance_in_central_america
-			prestige = 5
+			prestige = 10
 			CLM_1723 = { remove_core = CLM }
 			2205 = { remove_core = CLM }
 			random_owned = {
@@ -621,6 +613,7 @@ political_decisions = {
 			}
 			FRA = {
 				exists = yes
+				has_country_flag = 2nd_empire
 				has_country_flag = monarchy_gov
 			}
 			NOT = { has_country_flag = mexican_empire }
@@ -640,7 +633,7 @@ political_decisions = {
 			government = hms_government
 			any_pop = { scaled_militancy = { ideology = liberal factor = 8 } }
 			FRA = {
-				relation = { who = THIS value = 100 }
+				relation = { who = THIS value = 100 } #event for the expedition?
 				diplomatic_influence = { who = THIS value = 100 }
 			}
 		}
@@ -871,7 +864,7 @@ political_decisions = {
 
 		effect = {
 			set_global_flag = righful_heir
-			prestige = 5
+			prestige = 10
 			badboy = 1
 			add_accepted_culture = spanish
 			add_accepted_culture = afro_american
@@ -960,7 +953,7 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = protecting_legacy_pbc
-			prestige = 5
+			prestige = 10
 			PEU = { government = democracy all_core = { limit = { NOT = { is_core = THIS } } add_core = PBC } }
 			BOL = { government = democracy all_core = { limit = { NOT = { is_core = THIS } } add_core = PBC } }
 			CHL = { government = democracy all_core = { limit = { NOT = { is_core = THIS } } add_core = PBC } }
@@ -1064,7 +1057,7 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = protecting_legacy_GCO
-			prestige = 5
+			prestige = 10
 			CLM = { government = democracy all_core = { limit = { NOT = { is_core = THIS } } add_core = GCO } }
 			VNZ = { government = democracy all_core = { limit = { NOT = { is_core = THIS } } add_core = GCO } }
 			ECU = { government = democracy all_core = { limit = { NOT = { is_core = THIS } } add_core = GCO } }
@@ -1184,7 +1177,7 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = protecting_legacy_lpl
-			prestige = 5
+			prestige = 10
 			ARG = { government = democracy all_core = { limit = { NOT = { is_core = THIS } } add_core = LPL } }
 			ARC = { government = democracy all_core = { limit = { NOT = { is_core = THIS } } add_core = LPL } }
 			URU = { government = democracy all_core = { limit = { NOT = { is_core = THIS } } add_core = LPL } }
@@ -1282,6 +1275,7 @@ political_decisions = {
 			}
 			LSK = { exists = no }
 			NOT = { has_country_flag = krepost_ross_purchase }
+			NOT = { RUS = { has_country_flag = russian_america_ambition } }
 		}
 
 		allow = {
@@ -1289,7 +1283,7 @@ political_decisions = {
 			money = 10000
 			OR = {
 				introspectionism = 1
-				prestige = 15
+				prestige = 30
 			}
 			3366 = {
 				owner = {
@@ -1318,6 +1312,7 @@ political_decisions = {
 
 	#Description: Mexico can, if at war with the USA, gets the help of historical generals.
 	glory_in_battle_blood_in_the_field = { #madebyFinnBroandAndJPADUN
+		picture = mexican_soldiers
 		potential = {
 			tag = MEX
 			war_with = USA
@@ -1395,10 +1390,7 @@ political_decisions = {
 	rancho = {
 		picture = MEX_rancho
 		potential = {
-			OR = {
-				tag = MEX
-				tag = CAL
-			}
+			has_country_flag = can_rancho
 			NOT = {	has_global_flag = rancho }
 		}
 
@@ -1557,7 +1549,7 @@ political_decisions = {
 
 		effect = {
 			set_global_flag = golden_circle_defeated
-			prestige = 10
+			prestige = 20
 			plurality = 5
 			capital = 2172
 			2172 = { add_province_modifier = { name = new_capital_modifier duration = 3650 } }
@@ -1565,28 +1557,6 @@ political_decisions = {
 				limit = { is_core = CSA is_core = THIS }
 				remove_core = CSA
 			}
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-
-	#Description: If Mexico refutes Manifest Destiny and is a Great Power, they can get a 5 year baby boom.
-	the_mexican_boom = { #madebyFinnBroandAndJPADUN
-		picture = trail_of_tears
-		potential = {
-			tag = MEX
-			is_greater_power = yes
-			has_country_flag = manifest_destiny_refuted_country
-			NOT = { has_country_flag = the_mexican_boom }
-		}
-
-		allow = {
-			war = no
-		}
-
-		effect = {
-			set_country_flag = the_mexican_boom
-			add_country_modifier = { name = global_baby_boom duration = 1825 } # 5 years
 		}
 
 		ai_will_do = { factor = 1 }
@@ -1620,7 +1590,7 @@ political_decisions = {
 
 		effect = {
 			set_global_flag = mexican_frontier
-			prestige = 5
+			prestige = 10
 			plurality = 5
 			## Colorado ##
 				103 = { change_province_name = "Pueblo" }
@@ -1805,7 +1775,7 @@ political_decisions = {
 
 		allow = {
 			war = no
-			prestige = 75
+			prestige = 150
 			money = 500000
 			num_of_ports = 10
 			total_amount_of_ships = 64
@@ -1814,7 +1784,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = king_of_the_pacific
 
-			prestige = 10
+			prestige = 20
 			badboy = 2
 			money = -500000
 			relation = { who = USA value = -20 }
@@ -2033,7 +2003,7 @@ political_decisions = {
 		allow = {
 			war = no
 			part_of_sphere = no
-			prestige = 20
+			prestige = 40
 			OR = {
 				state_n_government = 1
 				romanticism = 1
@@ -2070,7 +2040,7 @@ political_decisions = {
 
 		allow = {
 			war = no
-			prestige = 20
+			prestige = 40
 			OR = {
 				state_n_government = 1
 				romanticism = 1
@@ -2109,7 +2079,8 @@ political_decisions = {
 		}
 		effect = {
 			remove_country_modifier = bad_immigration_policy
-			prestige = 5
+			clr_country_flag = bad_immigration_policy
+			prestige = 10
 			any_pop = {
 				limit = { has_pop_religion = catholic }
 				militancy = 3

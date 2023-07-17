@@ -25,10 +25,28 @@
 			treasury = -10000
 			random_owned = {
 				limit = {
+					OR = {
+						province_id = 346
+						province_id = 344
+						province_id = 341
+						province_id = 342
+					}
+				}
+				add_province_modifier = { name = sixtysix_famine_severe duration = 180 }
+			}
+			random_owned = {
+				limit = {
 					NOT = {
-						province_id = 339
-						province_id = 343
-						province_id = 348
+						OR = {
+							province_id = 339
+							province_id = 343
+							province_id = 348
+							province_id = 346
+							province_id = 344
+							province_id = 341
+							province_id = 342
+							has_province_modifier = sixtysix_famine
+						}
 					}
 				}
 				add_province_modifier = { name = sixtysix_famine duration = 180 }
@@ -36,21 +54,16 @@
 			random_owned = {
 				limit = {
 					NOT = {
-						province_id = 339
-						province_id = 343
-						province_id = 348
-						has_province_modifier = sixtysix_famine
-					}
-				}
-				add_province_modifier = { name = sixtysix_famine duration = 180 }
-			}
-			random_owned = {
-				limit = {
-					NOT = {
-						province_id = 343
-						province_id = 336
-						province_id = 338
-						has_province_modifier = sixtysix_famine
+						OR = {
+							province_id = 343
+							province_id = 336
+							province_id = 338
+							province_id = 346
+							province_id = 344
+							province_id = 341
+							province_id = 342
+							has_province_modifier = sixtysix_famine
+						}
 					}
 				}
 				add_province_modifier = { name = sixtysix_famine duration = 180 }
@@ -63,10 +76,28 @@
 
 			random_owned = {
 				limit = {
+					OR = {
+						province_id = 346
+						province_id = 344
+						province_id = 341
+						province_id = 342
+					}
+				}
+				add_province_modifier = { name = sixtysix_famine_severe duration = 274 }
+			}
+			random_owned = {
+				limit = {
 					NOT = {
-						province_id = 339
-						province_id = 343
-						province_id = 348
+						OR = {
+							province_id = 339
+							province_id = 343
+							province_id = 348
+							province_id = 346
+							province_id = 344
+							province_id = 341
+							province_id = 342
+							has_province_modifier = sixtysix_famine
+						}
 					}
 				}
 				add_province_modifier = { name = sixtysix_famine duration = 274 }
@@ -74,21 +105,16 @@
 			random_owned = {
 				limit = {
 					NOT = {
-						province_id = 339
-						province_id = 343
-						province_id = 348
-						has_province_modifier = sixtysix_famine
-					}
-				}
-				add_province_modifier = { name = sixtysix_famine duration = 274 }
-			}
-			random_owned = {
-				limit = {
-					NOT = {
-						province_id = 343
-						province_id = 336
-						province_id = 338
-						has_province_modifier = sixtysix_famine
+						OR = {
+							province_id = 343
+							province_id = 336
+							province_id = 338
+							province_id = 346
+							province_id = 344
+							province_id = 341
+							province_id = 342
+							has_province_modifier = sixtysix_famine
+						}
 					}
 				}
 				add_province_modifier = { name = sixtysix_famine duration = 274 }
@@ -122,14 +148,27 @@
 			any_owned = {
 				limit = {
 					NOT = {
-						OR = {
-							province_id = 339
-							province_id = 343
-							province_id = 348
-						}
+						province_id = 339
+						province_id = 343
+						province_id = 348
+						province_id = 346
+						province_id = 344
+						province_id = 341
+						province_id = 342
 					}
 				}
 				add_province_modifier = { name = great_famine_years duration = 560 }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 346
+						province_id = 344
+						province_id = 341
+						province_id = 342
+					}
+				}
+				add_province_modifier = { name = great_famine_years_severe duration = 560 }
 			}
 			country_event = { #foreign help arrives
 				id = 61105
@@ -153,14 +192,27 @@
 			any_owned = {
 				limit = {
 					NOT = {
-						OR = {
-							province_id = 339
-							province_id = 343
-							province_id = 348
-						}
+						province_id = 339
+						province_id = 343
+						province_id = 348
+						province_id = 346
+						province_id = 344
+						province_id = 341
+						province_id = 342
 					}
 				}
 				add_province_modifier = { name = great_famine_years duration = 560 }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 346
+						province_id = 344
+						province_id = 341
+						province_id = 342
+					}
+				}
+				add_province_modifier = { name = great_famine_years_severe duration = 560 }
 			}
 			country_event = { #foreign help arrives
 				id = 61105
@@ -220,6 +272,8 @@
 			any_owned = {
 				limit = { has_province_modifier = great_famine_years }
 				remove_province_modifier = great_famine_years
+				limit = { has_province_modifier = great_famine_years_severe }
+				remove_province_modifier = great_famine_years_severe
 			}
 			country_event = {
 				id = 61100
@@ -703,7 +757,7 @@
 		option = {
 			name = "EVTOPTA32515"
 
-			prestige = 10
+			prestige = 20
 			badboy = -3
 			relation = { who = FIN value = 100 }
 			any_country = {
@@ -752,7 +806,7 @@
 		option = {
 			name = "EVTOPTA32516"
 
-			prestige = -20
+			prestige = -40
 			any_pop = {
 				limit = { is_primary_culture = yes }
 				dominant_issue = {
@@ -771,7 +825,7 @@
 		option = {
 			name = "EVTOPTB32516"
 
-			prestige = 5
+			prestige = 10
 			any_country = {
 				limit = {
 					OR = {
@@ -1059,7 +1113,7 @@
 			name = "EVTOPTA61004"
 
 			any_pop = { militancy = -1 }
-			prestige = 10
+			prestige = 20
 			#RUS = { country_event = 61005 }
 
 			ai_chance = { factor = 1 }
@@ -1139,7 +1193,7 @@
 		option = {
 			name = "EVTOPTB11109"
 
-			prestige = 1
+			prestige = 2
 			relation = {
 				who = FROM
 				value = -100

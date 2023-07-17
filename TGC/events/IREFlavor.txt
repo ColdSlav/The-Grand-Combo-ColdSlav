@@ -45,7 +45,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA1010011"
-		prestige = -50
+		prestige = -100
 		treasury = -150000
 		set_country_flag = help_for_the_irish
 		set_country_flag = great_irish_famine
@@ -100,7 +100,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTB1010011"
-		prestige = -10
+		prestige = -20
 		treasury = -10000
 		set_country_flag = little_help_for_the_irish
 		set_country_flag = great_irish_famine
@@ -187,10 +187,11 @@ country_event = {
 }
 
 province_event = {
+			
 	id = 1010012
 	title = "EVTNAME1010012" #Irish Famine Spreads - No Help
 	desc = "EVTDESC1010012"
-	picture = "famine"
+	picture = "prov_famine"
 
 	trigger = {
 		is_core = IRE
@@ -226,10 +227,11 @@ province_event = {
 }
 
 province_event = {
+			
 	id = 1010013
 	title = "EVTNAME1010012" #Irish Famine Spreads - Little Help
 	desc = "EVTDESC1010013"
-	picture = "famine"
+	picture = "prov_famine"
 
 	trigger = {
 		is_core = IRE
@@ -265,10 +267,11 @@ province_event = {
 }
 
 province_event = {
+			
 	id = 1010014
 	title = "EVTNAME1010012" #Irish Famine Spreads - Helped
 	desc = "EVTDESC1010014"
-	picture = "famine"
+	picture = "prov_famine"
 
 	trigger = {
 		is_core = IRE
@@ -365,9 +368,11 @@ country_event = {
 }
 
 province_event = {
+			
 	id = 1010016
 	title = "EVTNAME1010016" #Ireland's Opportunity
 	desc = "EVTDESC1010016"
+	picture = "prov_congress"
 
 	trigger = {
 		is_core = IRE
@@ -512,6 +517,7 @@ country_event = {
 }
 
 province_event = {
+			
 	id = 1010021
 	title = "EVTNAME1010021" #Fenians in $PROVINCENAME$
 	desc = "EVTDESC1010021"
@@ -618,6 +624,7 @@ province_event = {
 }
 
 province_event = {
+			
 	id = 1010022
 	title = "EVTNAME1010022" #Fenian revolt in $PROVINCENAME$
 	desc = "EVTDESC1010022"
@@ -650,6 +657,7 @@ province_event = {
 }
 
 province_event = {
+			
 	id = 1010023
 	title = "EVTNAME1010023" #The Easter Rising
 	desc = "EVTDESC1010023"
@@ -775,7 +783,7 @@ province_event = {
 	option = {
 		name = "EVTOPTB1010023"
 		owner = {
-			prestige = -30
+			prestige = -60
 			set_country_flag = easter_rising
 			any_owned = {
 				limit = {
@@ -908,7 +916,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB1010024"
 		set_country_flag = sinn_fein_victory
-		prestige = -50
+		prestige = -100
 		any_pop = {
 			limit = { has_pop_culture = british }
 			dominant_issue = {
@@ -1024,7 +1032,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB1010025"
 		badboy = -3
-		prestige = -20
+		prestige = -40
 		IRE = {
 			all_core = { remove_core = ENG }
 		}
@@ -1130,6 +1138,7 @@ country_event = {
 }
 
 province_event = {
+			
 	id = 1010031
 	title = "EVTNAME1010031" #The $STATENAME$ Volunteers
 	desc = "EVTDESC1010031"
@@ -1268,7 +1277,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA1010032"
 		clr_country_flag = IRE_independence_refused
-		prestige = -50
+		prestige = -100
 		badboy = -3
 		any_pop = {
 			limit = {
@@ -1281,7 +1290,7 @@ country_event = {
 		IRE = { all_core = { remove_core = THIS } }
 		release_vassal = IRE
 		IRE = {
-			prestige = -80
+			prestige = -160
 			government = dominion
 			any_owned = {
 				limit = { region = ENG_254
@@ -1403,7 +1412,7 @@ country_event = {
 	option = {
 		name = "EVTOPTC1010032"
 		clr_country_flag = IRE_independence_refused
-		prestige = -50
+		prestige = -100
 		badboy = -3
 		any_pop = {
 			limit = {
@@ -1419,7 +1428,7 @@ country_event = {
 		release_vassal = IRE
 		IRE = {
 			government = dominion
-			prestige = -80
+			prestige = -160
 			any_owned = {
 				limit = { region = ENG_254
 				NOT = { province_id = 257 }

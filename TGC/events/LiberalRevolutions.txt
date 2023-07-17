@@ -222,11 +222,11 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.1
-			prestige = 40
+			prestige = 80
 		}
 		modifier = {
 			factor = 1.1
-			prestige = 50
+			prestige = 100
 		}
 		modifier = {
 			factor = 1.1
@@ -364,7 +364,7 @@ country_event = {
 		clr_country_flag = liberal_revolution_in_progress
 		clr_country_flag = liberal_revolution_fired
 		set_country_flag = had_liberal_revolution
-		prestige = 5
+		prestige = 10
 	}
 }
 
@@ -414,7 +414,7 @@ country_event = {
 		clr_country_flag = liberal_revolution_fired
 		clr_country_flag = liberal_revolution_in_progress
 		set_country_flag = had_liberal_revolution
-		prestige = 15
+		prestige = 30
 	}
 }
 
@@ -494,7 +494,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTB10100"
-		prestige = -2
+		prestige = -4
 		random_owned = {
 			limit = {
 				total_pops = 30000
@@ -1967,9 +1967,11 @@ country_event = {
 
 #Liberal Agitation Spreads
 province_event = {
+			
 	title = "EVTNAME10170"
 	desc = "EVTDESC10170"
 	id = 10170
+	picture = "prov_unrest"
 
 	trigger = {
 		owner = {
@@ -2219,9 +2221,11 @@ country_event = {
 
 # Fiery Sermon
 province_event = {
+			
 	title = "EVTNAME10190"
 	desc = "EVTDESC10190"
 	id = 10190
+	picture = "prov_preacher2"
 
 	trigger = {
 		owner = {
@@ -2346,9 +2350,11 @@ province_event = {
 
 # Insurrection
 province_event = {
+			
 	title = "EVTNAME10200"
 	desc = "EVTDESC10200"
 	id = 10200
+	picture = "prov_uprising"
 
 	trigger = {
 		has_province_modifier = liberal_agitation
@@ -2737,9 +2743,11 @@ country_event = {
 
 # revolt
 province_event = {
+			
 	title = "EVTNAME10210"
 	desc = "EVTDESC10210"
 	id = 10210
+	picture = "prov_uprising"
 
 	trigger = {
 		has_province_modifier = liberal_agitation
@@ -2968,10 +2976,11 @@ country_event = {
 
 # Nationalist Uprising
 province_event = {
+			
 	id = 10216
 	title = "EVTNAME10216"
 	desc = "EVTDESC10216"
-	picture = "nationalists"
+	picture = "prov_unrest"
 
 	trigger = {
 		owner = {
@@ -3195,9 +3204,11 @@ province_event = {
 
 # Agitation dies down
 province_event = {
+			
 	title = "EVTNAME10220"
 	desc = "EVTDESC10220"
 	id = 10220
+	picture = "prov_flags"
 
 	trigger = {
 		has_province_modifier = liberal_agitation
@@ -3410,7 +3421,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA10221"
-		prestige = 5
+		prestige = 10
 		political_reform = universal_voting
 		political_reform = secret_ballots
 		random_owned = {
@@ -3536,7 +3547,13 @@ country_event = {
 		any_owned = {
 			limit = {
 				is_core = HUN
-				NOT = { is_core = CRO }
+				NOT = { region = AUS_777
+				        region = AUS_774
+						region = AUS_771
+						region = AUS_780
+				        province_id = 2538
+						province_id = 792
+				} #Representing Konigr. Croatia-Slavonia and Serbs of Vojvodina siding with Austria at the very outbreak of the war
 			}
 			secede_province = HUN
 		}
@@ -3551,8 +3568,15 @@ country_event = {
 		}
 		add_country_modifier = {
 			name = no_more_war
-			duration = 7
+			duration = 45
 		}
+		any_country = {
+						limit = {
+							ai = yes
+							alliance_with = AUS
+						}
+						leave_alliance = AUS #This is so gorillion German minors do not intervene
+					}
 		HUN = {
 			capital = 641
 			political_reform = mandatory_service
@@ -3572,7 +3596,7 @@ country_event = {
 			clr_country_flag = anarcho_liberal_gov
 			add_country_modifier = {
 				name = no_more_war
-				duration = 7
+				duration = 45
 			}
 			relation = {
 				who = RUS
@@ -3590,12 +3614,15 @@ country_event = {
 		any_owned = {
 			limit = {
 				is_core = HUN
-				NOT = { is_core = CRO }
+				NOT = { region = AUS_777
+				        region = AUS_774
+						region = AUS_771
+						region = AUS_780 } #Croatia-Slavonia, Dalmatia
 			}
 			secede_province = HUN
 		}
 		relation = { who = HUN value = -100 }
-		prestige = -25
+		prestige = -50
 		casus_belli = {
 			target = HUN
 			type = acquire_state
@@ -3663,7 +3690,12 @@ country_event = {
 		any_owned = {
 			limit = {
 				is_core = HUN
-				NOT = { is_core = CRO }
+				NOT = { region = AUS_777
+				        region = AUS_774
+						region = AUS_771
+						region = AUS_780
+				        province_id = 2538
+						province_id = 792 }
 			}
 			secede_province = HUN
 		}
@@ -3678,7 +3710,7 @@ country_event = {
 		}
 		add_country_modifier = {
 				name = no_more_war
-				duration = 14
+				duration = 45
 		}
 		casus_belli = {
 			target = HUN
@@ -3690,7 +3722,7 @@ country_event = {
 			capital = 641
 			add_country_modifier = {
 				name = no_more_war
-				duration = 14
+				duration = 45
 			}
 		}
 		change_tag_no_core_switch = HUN
@@ -3725,7 +3757,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA10226"
 		AUS_771 = { add_core = HUN }
-		prestige = 10
+		prestige = 20
 		AUS = { country_event = 10227 }
 		clr_global_flag = hungarian_revolution_occurred
 		any_pop = {
@@ -3799,7 +3831,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB10227"
 		set_country_flag = austria_let_hungary_go
-		prestige = -25
+		prestige = -50
 		badboy = -2
 		relation = {
 			who = HUN
@@ -3861,7 +3893,10 @@ country_event = {
 
 	trigger = {
 		tag = NET
-		exists = BEL
+		OR = {
+			exists = BEL
+			exists = BRG
+		}
 		OR = {
 			has_country_flag = absolute_monarchy_gov
 			has_country_flag = semi_constitutional_monarchy_gov
@@ -3886,7 +3921,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA10228"
-		prestige = -10
+		prestige = -20
 		add_country_modifier = {
 			name = thorbecke_reforms
 			duration = 7300
@@ -3938,7 +3973,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTB10228"
-		prestige = -5
+		prestige = -10
 		ruling_party_ideology = liberal
 		political_reform = yes_meeting
 		political_reform = free_press
@@ -3971,7 +4006,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTC10228"
-		prestige = 5
+		prestige = 10
 		random_owned = {
 			limit = {
 				province_id = 375
@@ -4045,7 +4080,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA10229"
 		set_country_flag = march_revolution
-		prestige = -10
+		prestige = -20
 		upper_house = {
 			ideology = conservative
 			value = 0.5
@@ -4448,7 +4483,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA10280"
-		prestige = -4
+		prestige = -8
 		rich_strata = {
 			militancy = 1
 		}
@@ -4657,7 +4692,7 @@ country_event = {
 			}
 			militancy = 1
 		}
-		prestige = 5
+		prestige = 10
 	}
 
 	option = {
